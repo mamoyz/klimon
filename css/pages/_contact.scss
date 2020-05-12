@@ -1,0 +1,220 @@
+@import '../variables';
+.contact-hero {
+    background: #000 url('../images/texturebg.svg') no-repeat;
+    background-size: 100%;
+    padding-top: 210px;
+    position: relative;
+    max-height: 100vh;
+    height: 1080px;
+    @include down-sm {
+        height: auto;
+        max-height: unset;
+        padding-top: 45vw;
+        padding-bottom: 8vw;
+        background-size: cover;
+    }
+    .container-fluid {
+        color: #FFF;
+        padding: 0 50px 200px 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include down-sm {
+            position: static;
+            padding: 0 20px;
+        }
+    }
+    .contact-heading {
+        position: relative;
+        padding-bottom: 60px;
+        @include down-sm {
+            padding-bottom: 6vw;
+        }
+    }
+    h1 {
+        font: 400 224px/195px $font-heavitas;
+        @include down-sm {
+            font: 400 17vw/20vw $font-heavitas;
+        }
+    }
+    h2 {
+        color: #fcc968;
+        font: 400 110px/146px $font-rail;
+        text-transform: lowercase;
+        position: absolute;
+        bottom: -10px;
+        left: 390px;
+        @include down-sm {
+            font: 400 8.5vw/38vw $font-rail;
+            bottom: -10vw;
+            left: 29vw;
+        }
+    }
+    p {
+        max-width: 75%;
+        font: 400 22px/40px $font-acumin;
+        @include down-sm {
+            font: 400 4vw/6.5vw $font-acumin;
+            max-width: 100%;
+        }
+    }
+}
+
+.contact-form {
+    background: #FFF;
+    padding: 115px 50px 80px 50px;
+    @include down-sm {
+        padding: 50px 20px 50px;
+    }
+    .select {
+        position: relative;
+        .klimon-input {
+            -webkit-appearance: none;
+        }
+        &:after {
+            content: ' ';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 25px 0 25px;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            @include down-sm {
+                border-width: 8px 8px 0 8px;
+                top: 14px;
+            }
+        }
+    }
+    label {
+        color: #000;
+        font-size: 44px;
+        text-transform: uppercase;
+        font-family: $font-lemon;
+        margin-bottom: 8px;
+        display: block;
+        @include down-sm {
+            font-size: 5vw;
+        }
+    }
+    textarea.klimon-input {
+        border: 25px solid #000;
+        padding: 50px;
+        margin-bottom: 30px;
+        @include down-sm {
+            border: 5px solid #000;
+            padding: 15px;
+        }
+    }
+    .klimon-input {
+        width: 100%;
+        font-family: $font-lemon;
+        color: #000;
+        font-size: 44px;
+        text-transform: uppercase;
+        margin-bottom: 150px;
+        border: none;
+        border-bottom: 25px solid #000;
+        padding: 20px 0;
+        outline: 0;
+        &::placeholder {
+            color: #000 !important;
+        }
+        &::-ms-input-placeholder {
+            color: #000 !important;
+        }
+        &:-ms-input-placeholder {
+            color: #000 !important;
+        }
+        @include down-sm {
+            font-size: 5vw;
+            border-bottom: 1vw solid #000;
+            padding: 10px 0;
+            margin-bottom: 15vw;
+        }
+    }
+    input[type='submit'] {
+        background: #6fc59e;
+        border: none;
+        font: bold 44px/50px $font-acumin;
+        padding: 50px 120px;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        @include down-sm {
+            font-size: 5vw;
+            padding: 5vw 15vw;
+        }
+    }
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        @include down-sm {
+            flex-direction: column;
+        }
+        .form-col-6 {
+            flex: 0 1 calc(50% - 70px);
+        }
+    }
+}
+
+@include desk {
+    .contact-hero {
+        padding-top: 11vw;
+        height: 56.3vw;
+        .container-fluid {
+            padding: 0 2.7vw 11.6vw 2.7vw;
+        }
+        .contact-heading {
+            position: relative;
+            padding-bottom: 3.2vw;
+        }
+        h1 {
+            font: 400 11.7vw/10.2vw $font-heavitas;
+        }
+        h2 {
+            font: 400 5.8vw/7.7vw $font-rail;
+            bottom: -0.6vw;
+            left: 20.4vw;
+        }
+        p {
+            font: 400 1.2vw/2.1vw $font-acumin;
+        }
+    }
+    .contact-form {
+        background: #FFF;
+        padding: 6vw 2.7vw 4.2vw 2.7vw;
+        .select {
+            &:after {
+                border-width: 1.4vw 1.4vw 0 1.4vw;
+                top: 1.6vw;
+            }
+        }
+        label {
+            font-size: 2.3vw;
+            margin-bottom: 0.5vw;
+        }
+        textarea.klimon-input {
+            border: 1.4vw solid #000;
+            padding: 2.7vw;
+            margin-bottom: 1.6vw;
+        }
+        .klimon-input {
+            font-size: 2.3vw;
+            margin-bottom: 7.9vw;
+            border-bottom: 1.4vw solid #000;
+            padding: 1.1vw 0;
+        }
+        input[type='submit'] {
+            font: bold 2.3vw/2.7vw $font-acumin;
+            padding: 2.7vw 6.3vw;
+        }
+        .form-row {
+            .form-col-6 {
+                flex: 0 1 calc(50% - 3.7vw);
+            }
+        }
+    }
+}

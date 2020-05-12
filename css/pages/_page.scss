@@ -1,0 +1,14 @@
+@import '../variables';
+.page-hero {
+    max-height: 500px;
+    text-align: center;
+    h1 {
+        font: 400 80px/100px $font-rail;
+    }
+}
+
+.page-content {
+    padding: 80px 0;
+    font-size: 24px;
+    font-family: $font-acumin;
+}

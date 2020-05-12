@@ -1,0 +1,535 @@
+@import "../variables";
+.about {
+  background: #fff;
+}
+
+.about-hero {
+  background-color: #fff;
+  padding-top: 210px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include down-sm {
+    padding-top: 25vw;
+    min-height: auto;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 0 70px;
+    @include down-sm {
+      padding: 0 20px;
+      flex-direction: column;
+      > div {
+        position: relative;
+      }
+    }
+    img {
+      max-width: 450px;
+      transform: translate(15%, 0);
+      opacity: 0;
+      @include down-sm {
+        max-width: 60%;
+        margin-top: 15vw;
+        margin-bottom: 10vw;
+      }
+    }
+    h1 {
+      font: 400 224px/197px $font-heavitas;
+      position: relative;
+      transform: translate(-15%, 0);
+      opacity: 0;
+
+      &:before {
+        content: " ";
+        position: absolute;
+        background: url(../images/o-drip.svg) no-repeat;
+        width: 167px;
+        background-size: cover;
+        background-position: 0 0;
+        left: 440px;
+        top: 38px;
+        height: 0;
+        @include down-sm {
+          width: 14.2vw;
+          left: 37.4vw;
+          top: 3.4vw;
+        }
+      }
+      @include down-sm {
+        font: 400 19vw/17vw $font-heavitas;
+      }
+    }
+    h2 {
+      color: #fcc968;
+      font: 400 150px/146px $font-rail;
+      position: absolute;
+      text-transform: lowercase;
+      bottom: -70px;
+      left: 50px;
+      transform: translate(0, 50%);
+      opacity: 0;
+      span {
+        font-size: 217px;
+      }
+      @include down-sm {
+        span {
+          font-size: 20vw;
+        }
+        font: 400 12vw/10vw $font-rail;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+    }
+  }
+  &.init {
+    h1 {
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: all 1s;
+      &:before {
+        height: 163px;
+        transition: all 0.5s;
+        transition-delay: 1s;
+        @include down-sm {
+          height: 14vw;
+        }
+        @include desk {
+          height: 8.48vw;
+        }
+      }
+    }
+    h2 {
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+    }
+    .container-fluid img {
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: all 1s;
+    }
+  }
+  > div {
+    position: relative;
+  }
+}
+
+.about-flavors {
+  background: #000 url("../images/texturebg.svg") no-repeat;
+  padding-top: 300px;
+  background-size: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  @include down-sm {
+    padding-top: 25vw;
+    padding-bottom: 0;
+  }
+  &:after {
+    content: " ";
+    background: url(../images/liquid.svg) no-repeat;
+    position: absolute;
+    background-size: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10.5vw;
+    top: -1px;
+    background-position: -5px -2px;
+  }
+}
+
+.flavors-row {
+  display: flex;
+  justify-content: space-evenly;
+  &.about-carousel {
+    padding: 0 150px;
+    @include desk {
+      padding: 0 7.8vw;
+    }
+    @include down-sm {
+      padding: 0 6vw;
+    }
+  }
+
+  .col {
+    flex: 0 1 25%;
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    img {
+      width: 85%;
+      position: absolute;
+      top: -0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+.about-desc {
+  background: #000;
+  border: 30px solid #000;
+  overflow: hidden;
+  @include down-sm {
+    border: 10px solid #000;
+  }
+  .about-desc-wrapper {
+    background: #fff;
+    padding: 0 0 30px 0;
+    position: relative;
+    @include down-sm {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+    &.dairy-free {
+      .desc-bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 800px;
+        z-index: 20;
+        @include down-sm {
+          position: relative;
+          width: 80%;
+          right: -35vw;
+        }
+      }
+      &:before {
+        content: " ";
+        background: url("../images/mint.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 20px;
+        z-index: 6;
+        width: 1007px;
+        height: 1135px;
+        background-position: 0 -350px;
+        @include down-sm {
+          content: " ";
+          background: url(../images/mint.png) no-repeat;
+          background-size: contain;
+          position: absolute;
+          right: -4vw;
+          z-index: 6;
+          width: 80vw;
+          height: 80vw;
+          background-position: 0;
+          bottom: 22vw;
+          transform: rotate(255deg);
+        }
+      }
+      &:after {
+        content: " ";
+        background: url("../images/mint.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 6;
+        width: 1007px;
+        height: 1035px;
+        bottom: -240px;
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+        right: -580px;
+        @include down-sm {
+          display: none;
+        }
+      }
+      .decoration {
+        color: #6fc59e;
+        position: absolute;
+        top: 120px;
+        left: -50px;
+        transform: rotate(-4deg) translate(30%, 0);
+        z-index: 5;
+
+        @include down-sm {
+            font: 400 40vw/27vw $font-rail !important;
+
+          top: 50px;
+          left: 0;
+        }
+      }
+    }
+    &.plant-based {
+      padding-top: 50px;
+      &:before {
+        content: " ";
+        background: url("../images/tukanakini.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: -150px;
+        z-index: 6;
+        bottom: 700px;
+        width: 524px;
+        height: 471px;
+        background-position: 0;
+        @include down-sm {
+          left: -17vw;
+          bottom: 71vw;
+          width: 50vw;
+          height: 50vw;
+        }
+      }
+      &:after {
+        content: " ";
+        background: url("../images/tukanakini.png") no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 360px;
+        z-index: 6;
+        bottom: -250px;
+        width: 594px;
+        height: 551px;
+        -webkit-transform: rotate(84deg);
+        transform: rotate(84deg);
+        background-position: 0;
+        @include down-sm {
+          bottom: -25vw;
+          left: 28vw;
+          width: 70vw;
+          height: 70vw;
+        }
+      }
+      .cube {
+        position: absolute;
+        left: 540px;
+        top: 270px;
+        width: 200px;
+        @include down-sm {
+          left: 45vw;
+          bottom: 93vw;
+          width: 20vw;
+          top: unset;
+        }
+      }
+      .desc-item {
+        padding-top: 360px;
+        padding-bottom: 50px;
+        @include down-sm {
+          padding-top: 100px;
+          padding-bottom: 130vw;
+        }
+        img {
+          max-width: 315px;
+          margin: 50px auto 0;
+          display: block;
+          @include down-sm {
+            max-width: 60%;
+          }
+        }
+      }
+      .desc-bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 800px;
+        z-index: 20;
+        @include down-sm {
+          width: 85%;
+        }
+      }
+      .desc-item {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .decoration {
+        color: #ea5361;
+        position: absolute;
+        right: 0;
+        transform: rotate(-4deg) translate(-30%, 0);
+        font: 400 310px/215px $font-rail;
+        top: 110px;
+        @include down-sm {
+          top: 0px;
+          left: 0;
+        font: 400 25vw/22vw $font-rail !important;
+
+        }
+      }
+    }
+    .decoration {
+      &.init {
+        transform: rotate(-4deg) translate(0, 0);
+        transition: all 0.5s;
+      }
+    }
+  }
+  .desc-item {
+    padding-top: 440px;
+    @include down-sm {
+      padding-top: 38vw;
+    }
+    .decoration {
+      font: 400 400px/260px $font-rail;
+    
+    }
+    > div {
+      max-width: 40%;
+      position: relative;
+      z-index: 10;
+      @include down-sm {
+        max-width: 100%;
+      }
+
+      h2 {
+        font: 400 58px/70px $font-lemon;
+        color: #000000;
+        transform: translate(0, 50px);
+        opacity: 0;
+        &.init {
+          transition: all 0.3s;
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        @include down-sm {
+          font: 400 9vw/11vw $font-lemon;
+        }
+      }
+      p {
+        font: 400 33px/43px $font-acumin;
+        color: #000000;
+        transform: translate(0, 50px);
+        opacity: 0;
+
+        &.init {
+          transition: all 0.3s 0.5s;
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        @include down-sm {
+          font: 400 4.5vw/6.5vw $font-acumin;
+        }
+      }
+    }
+  }
+}
+
+@include desk {
+  .about-hero {
+    padding-top: 11vw;
+    min-height: calc(100vh - 3.2vw);
+    .container-fluid {
+      padding: 0 5.3vw 0 3.7vw;
+      img {
+        max-width: 23.5vw;
+      }
+      h1 {
+        font: 400 11.7vw/10.3vw $font-heavitas;
+        &:before {
+          width: 8.69vw;
+          left: 23vw;
+          top: 1.9vw;
+        }
+      }
+      h2 {
+        font: 400 7.9vw/7.7vw $font-rail;
+        bottom: -3.7vw;
+        left: 2.7vw;
+        span {
+          font-size: 11.4vw;
+        }
+      }
+    }
+  }
+  .about-flavors {
+    padding-top: 15.7vw;
+    background-size: 100%;
+    padding-bottom: 5.3vw;
+  }
+  .flavors-row {
+    .col {
+      margin-bottom: 2.7vw;
+      padding-top: 0.6vw;
+      img {
+        width: 85%;
+      }
+    }
+  }
+  .about-desc {
+    border: 1.6vw solid #000;
+    .about-desc-wrapper {
+      padding: 0 0 1.6vw 0;
+      &.dairy-free {
+        .desc-bg {
+          width: 41.7vw;
+        }
+        &:before {
+          right: 1.1vw;
+          width: 52.5vw;
+          height: 59.2vw;
+          background-position: 0 -18.3vw;
+        }
+        &:after {
+          width: 52.5vw;
+          height: 54vw;
+          bottom: -12.5vw;
+          right: -30.3vw;
+        }
+        .decoration {
+          top: 6.3vw;
+          left: -2.7vw;
+        }
+      }
+      &.plant-based {
+        padding-top: 2.7vw;
+        &:before {
+          left: -7.9vw;
+          bottom: 36.5vw;
+          width: 27.3vw;
+          height: 24.6vw;
+        }
+        &:after {
+          left: 18.8vw;
+          bottom: -13.1vw;
+          width: 31vw;
+          height: 28.7vw;
+        }
+        .cube {
+          left: 28.2vw;
+          top: 14.1vw;
+          width: 10.5vw;
+        }
+        .desc-item {
+          padding-top: 18.8vw;
+          padding-bottom: 2.7vw;
+          img {
+            max-width: 16.5vw;
+            margin: 2.7vw auto 0;
+          }
+        }
+        .desc-bg {
+          width: 41.7vw;
+        }
+        .decoration {
+          font: 400 16.2vw/11.2vw $font-rail;
+          top: 5.8vw;
+        }
+      }
+    }
+    .desc-item {
+      padding-top: 23vw;
+      .decoration {
+        font: 400 20.9vw/13.6vw $font-rail;
+      }
+      > div {
+        h2 {
+          font: 400 3.1vw/3.7vw $font-lemon;
+        }
+        p {
+          font: 400 1.8vw/2.3vw $font-acumin;
+        }
+      }
+    }
+  }
+}
