@@ -1,0 +1,21 @@
+<svg id="left_arrow" data-name="left arrow" xmlns="http://www.w3.org/2000/svg" width="131.01" height="131.016" viewBox="0 0 87.34 87.344">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 7.292px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1678,618h87.33v87.333H1678V618h0Z" transform="translate(-1678 -618)"/>
+  <path id="Shape_568_copy_2" data-name="Shape 568 copy 2" class="cls-2" d="M1731,644l-18,18,17,17" transform="translate(-1678 -618)"/>
+</svg>

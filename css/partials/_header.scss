@@ -1,274 +1,398 @@
-@import "../variables";
-.home {
-  header {
-    .menu-btn {
-      @include up-sm {
+header {
+  display: flex;
+  justify-content: flex-start;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  &:before {
+    background: #f2f3f4;
+  }
+  @include down-sm() {
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+  }
+  @include fourk() {
+    left: auto;
+  }
+
+  .menu-toggle {
+    width: 99px;
+    height: 124px;
+    background: #fff;
+    z-index: 50;
+    @extend .button-reset;
+    @include down-sm() {
+      width: 17vw;
+      height: 19vw;
+      background: #fff;
+    }
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      #MENU {
+        transition: 0.3s all 0.3s;
+      }
+      #close {
+        transition: 0.3s all 0.3s;
         opacity: 0;
-        transform: translateY(-100px);
-        transition: all 0.5s;
-        transition-delay: 1s;
       }
-    }
-    &.init {
-      .logo img.animatedLogo {
-        @include up-sm {
-          width: 200px;
-          transform: translate(0, 0);
-          transition: all 300ms;
-          transition-delay: 1s;
-        }
-        // @include down-sm {
-        //     width: 20vw;
-        // }
+      path {
+        transition: all 0.3s;
       }
-      .menu-btn {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-      @include desk {
-        .logo img.animatedLogo {
-          width: 10.5vw;
+      #menu_lines {
+        path {
+          transform-origin: center;
         }
       }
     }
-    .logo {
-      img {
-        @include down-sm {
-          &.animatedLogo {
-            display: none;
-          }
-          width: 20vw;
-        }
-        @include up-sm {
+    &.open {
+      svg {
+        #MENU {
           opacity: 0;
         }
-        @include up-sm {
-          &.animatedLogo {
-            opacity: 1;
-            position: absolute;
-            left: 30px;
-            right: 30px;
-            width: 500px;
-            transform: translateX(calc(50vw - 250px - 60px))
-              translateY(calc(50vh - 250px));
+        #close {
+          opacity: 1;
+        }
+        #menu_lines {
+          path {
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(-3px, 12px);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(3px, -8px);
+            }
           }
         }
       }
     }
   }
-}
-header {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 30px 0 30px;
-  z-index: 50;
-  @include down-sm {
-    padding: 15px;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-
-  .logo {
+  .logo-mobile {
+    display: flex;
+    align-items: center;
+    width: 17vw;
     img {
-      @include down-sm {
-        &.animatedLogo {
-          display: none;
-        }
-        width: 20vw;
-      }
-      // left: 30px;
-      // right: 30px;
-      width: 200px;
+      width: 100%;
+      height: auto;
     }
   }
-  .menu-btn {
-    margin: 0 20px 0 0;
-    position: relative;
-    z-index: 15;
-
-    img {
-      width: 4.16vw;
-    }
-    @include down-sm {
-      margin: 0;
-      img {
-        width: 10vw;
-      }
-    }
-    &.inverse {
-      img {
-        filter: brightness(50);
-      }
-    }
-    .btn-default {
-      display: none;
-    }
-    .btn-close {
-      display: block;
-    }
-    &.collapsed {
-      .btn-default {
-        display: block;
-      }
-      .btn-close {
-        display: none;
-      }
+  .header-banner {
+    background: #000;
+    width: 381px;
+    color: #fff;
+    font: 400 47px/55px $font-rail;
+    text-transform: uppercase;
+    @extend .flex-center;
+    @include down-sm() {
+      width: 17vw;
+      font: 400 3.8vw/3.8vw "third_rail";
     }
   }
   nav {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    transition: transform 0.5s, 0s box-shadow 0.45s;
     position: fixed;
-    left: 30px;
-    top: 30px;
-    width: calc(100% - 60px);
-    height: calc(100vh - 60px - 10.5vw);
-    background: #000;
-    background-size: 100%;
-    padding: 80px;
-    z-index: 10;
-    transform: scaleY(0);
-    transform-origin: top;
-&.init{
-  transition: all 0.7s 0s cubic-bezier(0.1, 0.38, 0.88, 0.31);
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: #fff;
+    width: 480px;
+    padding: 40px;
+    transform: translate(0, -101%);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
 
-}
-    &:after {
-      content: " ";
-      background: url(../images/liquid-i.svg) no-repeat;
-      position: absolute;
-      background-size: calc(100% + 10px);
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 10.5vw;
-      bottom: calc(-10.5vw + 1px);
-      background-position: -5px -2px;
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #fff;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #ddd;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ccc;
     }
     @include down-sm {
-      left: 0;
-      top: 0;
       width: 100%;
-      height: 100vh;
-      padding: 30px;
-      background-size: cover;
+      padding: 8vw;
     }
-
-    ul {
-      padding: 0;
+    @include fourk() {
+      left: auto;
+    }
+    &:before {
+      content: " ";
+      background: url("../../assets/img/menu-decor.png") no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      background-size: 100%;
+      background-position: right bottom;
       opacity: 0;
-      li {
-        a {
-          font: 400 86px/113px $font-rail;
-          text-decoration: none;
-          color: #fff;
+      transition: 0.5s all 0.5s;
+    }
+    .nav-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 205px;
+      position: relative;
+      z-index: 10;
+      @include down-sm {
+        margin-bottom: 15vw;
+      }
+      .social {
+        display: flex;
+        align-items: center;
+        .h3 {
+          font: 400 18.6px/24px $font-lemon;
           text-transform: uppercase;
-          transition: all 300ms;
           @include down-sm {
-            font: 400 10vw/15vw $font-rail;
+            font: 400 3.2vw/3.6vw $font-lemon;
           }
+        }
+        a {
+          display: inline-block;
+          margin-left: 20px;
+          @include down-sm {
+            margin-left: 3vw;
+          }
+        }
+        img {
+          height: 35px;
+          @include down-sm {
+            height: 7.5vw;
+          }
+        }
+      }
+      .menu-close {
+        cursor: pointer;
+
+        flex: 0 1 150px;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      &.secondary-menu {
+        margin-top: 40px;
+        li {
+          a {
+            font: 400 18px/32px $font-lemon;
+            letter-spacing: 1px;
+            @include down-sm {
+              font: 400 3.5vw/5vw $font-lemon;
+            }
+          }
+        }
+      }
+      li {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          font: 400 34px/42px $font-lemon;
+
+          text-decoration: none;
+          color: #000;
+          text-transform: uppercase;
           &:hover {
-            color: #f2c672;
+            color: #feae56;
+          }
+          @include down-sm {
+            font: 400 5vw/7vw $font-lemon;
           }
         }
       }
     }
-    .nav-logo {
+    > ul {
       opacity: 0;
+      transition: 0.5s all 0.5s;
 
+      transform: translate(0, 50px);
+      > li {
+        margin-bottom: 40px;
+        @include down-sm {
+          margin-bottom: 4vw;
+        }
+        ul {
+          margin-top: 30px;
+          @include down-sm {
+            margin-top: 3vw;
+          }
+          li {
+            margin-bottom: 30px;
+            @include down-sm {
+              margin-bottom: 3vw;
+            }
+            a {
+              font: 400 24px/28px $font-lemon;
+              @include down-sm {
+                font: 400 3vw/5.5vw $font-lemon;
+              }
+              @include down-xs {
+                font: 400 4vw/5.5vw $font-lemon;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.open {
+      transform: translate(0, 0);
+      box-shadow: 0vw 0px 0px 100vw rgba(0, 0, 0, 0.5);
       @include down-sm {
-        display: none;
+        box-shadow: none;
       }
-      max-width: 480px;
-      img {
-        width: 100%;
+      &:before {
+        opacity: 0.1;
       }
-    }
-   
-    &.collapsed {
-      display: flex;
-      transform: scaleY(1);
-      opacity: 1;
-      ul,
-      .nav-logo {
-        transform: translateY(50px);
-        animation: 0.3s navFadeIn 0.65s forwards;
+      > ul {
+        opacity: 1;
+        transform: translate(0, 0);
       }
     }
+  }
+}
+.klimon-hero {
+  display: flex;
+  justify-content: flex-start;
+  @include down-sm {
+    flex-direction: column;
+  }
+  .hero-left {
+    flex: 0 1 480px;
+    min-width: 480px;
+    @extend .flex-center;
+    @include down-sm {
+      flex: auto;
+      min-width: auto;
+    }
+  }
+  .hero-right {
+    flex: 0 1 1440px;
+    overflow: hidden;
+    @include down-sm {
+      flex: auto;
+    }
+  }
+}
+
+.page-h1 {
+  font: 400 51px/78px $font-lemon;
+  -webkit-text-stroke-width: 3px;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke-color: black;
+  letter-spacing: 7.5px;
+  @include down-sm {
+    font: 400 7vw/9vw $font-lemon;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 1.2vw;
   }
 }
 
 @include desk {
   header {
-    left: 1.6vw;
-    right: 1.6vw;
-    top: 1.6vw;
-    padding: 1.6vw 1.6vw 0 1.6vw;
+    .menu-toggle {
+      width: 5.17vw;
+      height: 6.45vw;
+    }
+    .header-banner {
+      width: 19.84vw;
+      font: 400 2.45vw/2.86vw $font-rail;
+    }
 
-    .logo {
-      img {
-        width: 10.5vw;
-        &.animatedLogo {
-          left: 1.6vw;
-          right: 1.6vw;
-          width: 26.1vw;
-          transform: translateX(calc(50vw - 13.1vw - 3.2vw))
-            translateY(calc(50vh - 13.1vw));
+    nav {
+      width: 25vw;
+      padding: 2.08vw;
+      .nav-top {
+        margin-bottom: 10.68vw;
+        .social {
+          .h3 {
+            font: 400 0.97vw/1.25vw $font-lemon;
+          }
+          a {
+            margin-left: 1.04vw;
+          }
+          img {
+            height: 1.82vw;
+          }
+        }
+        .menu-close {
+          flex: 0 1 7.81vw;
         }
       }
-    }
-    .menu-btn {
-      margin: 0 1vw 0 0;
-    }
-    nav {
-      left: 1.6vw;
-      top: 1.6vw;
-      width: calc(100% - 3.2vw);
-      height: calc(100vh - 13.7vw);
-      padding: 4.2vw;
       ul {
+        &.secondary-menu {
+          margin-top: 2.08vw;
+          li {
+            a {
+              font: 400 0.94vw/1.67vw $font-lemon;
+              letter-spacing: 1px;
+            }
+          }
+        }
         li {
+          &:last-child {
+          }
           a {
-            font: 400 4.5vw/5.9vw $font-rail;
+            font: 400 1.77vw/2.19vw $font-lemon;
           }
         }
       }
-      .nav-logo {
-        max-width: 25vw;
+      > ul {
+        transform: translate(0, 2.6vw);
+        > li {
+          margin-bottom: 2.08vw;
+          ul {
+            margin-top: 1.56vw;
+            li {
+              margin-bottom: 1.5vw;
+
+              a {
+                font: 400 1.25vw/1.46vw $font-lemon;
+              }
+            }
+          }
+        }
+      }
+      &.open {
+        box-shadow: 0vw 1px 1px 100vw rgba(0, 0, 0, 0.5);
       }
     }
   }
-}
 
-@keyframes NavMelting {
-  100% {
-    transform: scaleY(1);
+  .klimon-hero {
+    .hero-left {
+      flex: 0 1 25vw;
+      min-width: 25vw;
+    }
+    .hero-right {
+      flex: 0 1 75vw;
+    }
   }
-}
 
-@keyframes navFadeIn {
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes NavMeltingReverse {
-  100% {
-    transform: scaleY(0);
-  }
-}
-
-@keyframes navFadeInReverse {
-  100% {
-    transform: translateY(50px);
-    opacity: 0;
+  .page-h1 {
+    font: 400 2.66vw/4.06vw $font-lemon;
+    -webkit-text-stroke-width: 0.16vw;
+    letter-spacing: 0.39vw;
   }
 }
