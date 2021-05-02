@@ -378,7 +378,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-instagram { position: relative; top: -10px; margin-bottom: -10px; z-index: 10; }
 
-.home-instagram .instagram-wrapper .gallery-title .page-h1 { font-size: 47px; letter-spacing: 6.5px; }
+@media (min-width: 1920px) { .home-instagram .instagram-wrapper .gallery-title .page-h1 { font-size: 47px; letter-spacing: 6.5px; } }
 
 .home-instagram .instagram-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background: #fff; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; position: relative; }
 
@@ -728,16 +728,23 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .products-hero .hero-right .products-hero-bg img { width: 141%; } }
 
+@media (max-width: 960px) { .home-parallax-bg.products-parallax-bg { top: -5vw; z-index: 10; margin-bottom: -5vw; height: 55vw; } }
+
 .flavor-slider .instagram-wrapper .instagram-gallery { padding: 60px 0 20px; -webkit-box-flex: 0; -ms-flex: 0 1 960px; flex: 0 1 960px; max-width: 960px; }
 
 .flavor-slider .instagram-wrapper .instagram-gallery .swiper-container .swiper-slide { margin-right: 60px; width: 223px; height: 261px; }
 
 .flavor-slider .instagram-wrapper .instagram-gallery .swiper-container { width: 100%; }
 
-@media (max-width: 960px) { .flavor-slider .page-h1 { font: 400 5vw/7vw "lemon_milkbold"; }
-  .flavor-slider .instagram-wrapper { padding: 8vw 10vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+@media (max-width: 960px) { .flavor-slider.products-top-slider { background: #fff; }
+  .flavor-slider.products-top-slider .instagram-wrapper { padding: 5vw 0 5vw 3vw; width: 90%; left: 10%; top: -20vw; margin-bottom: -20vw; }
+  .flavor-slider.products-top-slider .instagram-wrapper .instagram-gallery { position: relative; max-width: 66% !important; }
+  .flavor-slider.products-top-slider .instagram-wrapper .instagram-gallery .swiper-btn-next { width: 7vw; height: 7vw; right: 7vw; }
+  .flavor-slider.products-top-slider .instagram-wrapper .instagram-gallery .swiper-container { height: 27vw; width: 100%; margin-left: 4vw; }
+  .flavor-slider.products-top-slider .instagram-wrapper .instagram-gallery .swiper-container .swiper-slide { width: 22.5vw; height: 27vw; margin-right: 4vw; }
+  .flavor-slider .page-h1 { font: 400 5vw/7vw "lemon_milkbold"; }
+  .flavor-slider .instagram-wrapper { padding: 8vw 10vw; }
   .flavor-slider .instagram-wrapper .gallery-title { padding: 0 !important; }
-  .flavor-slider .instagram-wrapper .page-h1 { font-size: 7vw; margin-bottom: 7vw; }
   .flavor-slider .instagram-wrapper .instagram-gallery { padding: 0 !important; max-width: 100% !important; -webkit-box-flex: 0; -ms-flex: 0 1 100%; flex: 0 1 100%; }
   .flavor-slider .instagram-wrapper .instagram-gallery { position: relative; }
   .flavor-slider .instagram-wrapper .instagram-gallery .swiper-container { height: 40vw; width: 90%; }
@@ -882,7 +889,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .products-hero .hero-left { position: relative; z-index: 50; }
 
-.products-hero .hero-left .page-h1 { font-size: 50px; letter-spacing: 2px; }
+@media (min-width: 1920px) { .products-hero .hero-left .page-h1 { font-size: 50px; letter-spacing: 2px; } }
 
 .products-hero ul li.current-menu-item a { position: relative; }
 

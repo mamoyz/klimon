@@ -66,6 +66,16 @@
 		}
 	}
 }
+.home-parallax-bg {
+	&.products-parallax-bg {
+		@include down-sm {
+			top: -5vw;
+			z-index: 10;
+			margin-bottom: -5vw;
+			height: 55vw;
+		}
+	}
+}
 .flavor-slider {
 	.instagram-wrapper .instagram-gallery {
 		padding: 60px 0 20px;
@@ -83,19 +93,49 @@
 	@include down-sm {
 		// top: -18vw;
 		// margin-bottom: -18vw;
+		&.products-top-slider {
+			background: #fff;
+
+			.instagram-wrapper {
+				padding: 5vw 0 5vw 3vw;
+				width: 90%;
+				left: 10%;
+				top: -20vw;
+				margin-bottom: -20vw;
+				.instagram-gallery {
+					position: relative;
+					max-width: 66% !important;
+					.swiper-btn-next {
+						width: 7vw;
+						height: 7vw;
+						right: 7vw;
+					}
+					.swiper-container {
+						height: 27vw;
+						width: 100%;
+						margin-left: 4vw;
+						.swiper-slide {
+							width: 22.5vw;
+							height: 27vw;
+							margin-right: 4vw;
+						}
+					}
+				}
+			}
+		}
 		.page-h1 {
 			font: 400 5vw/7vw $font-lemon;
 		}
 		.instagram-wrapper {
 			padding: 8vw 10vw;
-			flex-direction: column;
+			// flex-direction: column;
 			.gallery-title {
 				padding: 0 !important;
 			}
-			.page-h1 {
-				font-size: 7vw;
-				margin-bottom: 7vw;
-			}
+			// .page-h1 {
+			// 	font-size: 7vw;
+			// 	margin-bottom: 7vw;
+			// }
 			.instagram-gallery {
 				padding: 0 !important;
 				max-width: 100% !important;

@@ -3,8 +3,10 @@
 		position: relative;
 		z-index: 50;
 		.page-h1 {
-			font-size: 50px;
-			letter-spacing: 2px;
+			@include fourk() {
+				font-size: 50px;
+				letter-spacing: 2px;
+			}
 		}
 	}
 	ul {
