@@ -201,7 +201,7 @@ header nav.open > ul { opacity: 1; -webkit-transform: translate(0, 0); transform
 
 .page-h1 { font: 400 51px/78px "lemon_milkbold"; -webkit-text-stroke-width: 3px; color: transparent; text-transform: uppercase; -webkit-text-stroke-color: black; letter-spacing: 7.5px; }
 
-@media (max-width: 960px) { .page-h1 { font: 400 7vw/9vw "lemon_milkbold"; -webkit-text-stroke-width: 1px; letter-spacing: 1.2vw !important; } }
+@media (max-width: 960px) { .page-h1 { font: 400 7vw/9vw "lemon_milkbold"; -webkit-text-stroke-width: 1px; letter-spacing: 0.5vw !important; } }
 
 @media (min-width: 961px) and (max-width: 1919px) { header .menu-toggle { width: 5.17vw; height: 6.45vw; }
   header .header-banner { width: 19.84vw; font: 400 2.45vw/2.86vw "third_rail"; }
@@ -341,7 +341,8 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-hero .hero-right .slideshow-dots span.active { background: url("../assets/img/slider-dot-active@2x.png") no-repeat; background-size: cover !important; }
 
-@media (max-width: 960px) { .home-hero .hero-right .slideshow-dots span { width: 3vw; height: 3vw; margin: 0 1.5vw; } }
+@media (max-width: 960px) { .home-hero .hero-right .slideshow-dots span { background-size: contain !important; width: 4vw; height: 5vw; margin: 0 1vw; }
+  .home-hero .hero-right .slideshow-dots span.active { background-size: contain !important; } }
 
 .home-hero .hero-right .slideshow-item { z-index: 5; height: 100%; width: 100%; overflow: hidden; position: absolute; -webkit-transform-origin: left; transform-origin: left; width: 0; }
 
@@ -549,7 +550,9 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .about-hero .hero-left { padding-left: 0; text-align: center; width: 100%; -webkit-box-flex: 1; -ms-flex: auto; flex: auto; padding: 31vw 0 12vw; } }
 
-.about-hero .hero-left .about-page-h1 { font-size: 50px; letter-spacing: 2px; margin-top: 180px; }
+@media (min-width: 1920px) { .about-hero .hero-left .about-page-h1 { font-size: 50px; letter-spacing: 2px; margin-top: 180px; } }
+
+@media (max-width: 960px) { .about-hero .hero-left .about-page-h1 { margin-top: 0; } }
 
 .about-hero .hero-left .klimon-decor { position: absolute; width: 706px; height: 292px; left: -430px; bottom: -130px; }
 
@@ -632,11 +635,11 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-content.about-flavors .home-content-desc { position: absolute; margin: 0; width: 55%; right: 0; padding-top: 100px; padding-right: 50px; }
 
-@media (max-width: 960px) { .home-content.about-flavors .home-content-desc { position: relative; -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; margin-left: 0; left: 0; width: 100%; -ms-flex-item-align: end; align-self: flex-end; background: -webkit-gradient(linear, left bottom, left top, color-stop(65%, white), to(transparent)); background: linear-gradient(to top, white 65%, transparent 100%); padding: 16vw 6vw 8vw 10vw; top: -35vw; margin-bottom: -27vw; } }
+@media (max-width: 960px) { .home-content.about-flavors .home-content-desc { position: relative; -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; margin-left: 0; left: 0; width: 100%; -ms-flex-item-align: end; align-self: flex-end; padding: 5vw 6vw 8vw 10vw; top: -24vw; background: #fff; margin-bottom: -27vw; max-width: 80%; } }
 
 .home-content.about-flavors .home-content-desc h1 { position: relative; top: -55px; margin-bottom: -20px; }
 
-@media (max-width: 960px) { .home-content.about-flavors .home-content-desc h1 { margin-bottom: 0; position: static; } }
+@media (max-width: 960px) { .home-content.about-flavors .home-content-desc h1 { margin-bottom: 0; position: static; max-width: 70%; } }
 
 .home-content.about-flavors .home-content-desc p { max-width: 850px; margin-left: 30px; }
 
@@ -1024,6 +1027,8 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 .contact-header .product-header-container { position: relative; padding: 0; top: -40px; }
 
 .contact-header .product-header-container.about-page { top: 0; }
+
+@media (max-width: 960px) { .contact-header .product-header-container.about-page { top: -8vw; } }
 
 @media (max-width: 960px) { .contact-header .product-header-container { width: 91%; top: -8vw; } }
 

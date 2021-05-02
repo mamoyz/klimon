@@ -53,6 +53,9 @@
 		top: -40px;
 		&.about-page {
 			top: 0;
+			@include down-sm {
+				top: -8vw;
+			}
 		}
 		@include down-sm {
 			width: 91%;
