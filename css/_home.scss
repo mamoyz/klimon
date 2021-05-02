@@ -138,11 +138,9 @@
 	top: -10px;
 	margin-bottom: -10px;
 	z-index: 10;
-	&:not(.flavor-slider) {
-		.instagram-wrapper .gallery-title .page-h1 {
-			font-size: 47px;
-			letter-spacing: 6.5px;
-		}
+	.instagram-wrapper .gallery-title .page-h1 {
+		font-size: 47px;
+		letter-spacing: 6.5px;
 	}
 	.instagram-wrapper {
 		display: flex;

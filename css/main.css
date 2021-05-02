@@ -373,7 +373,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-instagram { position: relative; top: -10px; margin-bottom: -10px; z-index: 10; }
 
-.home-instagram:not(.flavor-slider) .instagram-wrapper .gallery-title .page-h1 { font-size: 47px; letter-spacing: 6.5px; }
+.home-instagram .instagram-wrapper .gallery-title .page-h1 { font-size: 47px; letter-spacing: 6.5px; }
 
 .home-instagram .instagram-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background: #fff; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; position: relative; }
 
@@ -573,7 +573,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about { padding-top: 31vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #f2f3f4; padding-bottom: 0; } }
 
-.home-content.about .page-h1 { position: absolute; top: 65px; left: 95px; }
+.home-content.about .page-h1 { position: absolute; top: 65px; left: 95px; letter-spacing: 2px; }
 
 @media (max-width: 960px) { .home-content.about .page-h1 { top: 8vw; left: 10vw; } }
 
@@ -688,7 +688,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .about-bottom .klimon-decor { width: 15.21vw; height: 27.29vw; bottom: 5.21vw; }
   .about-bottom .about-bottom-content { font: 400 0.86vw/1.56vw "lemon_regular"; max-width: 53.13vw; } }
 
-.products-hero .hero-left { -webkit-box-orient: vertical !important; -webkit-box-direction: normal !important; -ms-flex-direction: column !important; flex-direction: column !important; -webkit-box-pack: center !important; -ms-flex-pack: center !important; justify-content: center !important; -webkit-box-align: start !important; -ms-flex-align: start !important; align-items: flex-start !important; padding-top: 104px !important; padding-left: 100px; }
+.products-hero .hero-left { -webkit-box-orient: vertical !important; -webkit-box-direction: normal !important; -ms-flex-direction: column !important; flex-direction: column !important; -webkit-box-pack: center !important; -ms-flex-pack: center !important; justify-content: center !important; -webkit-box-align: start !important; -ms-flex-align: start !important; align-items: flex-start !important; padding-top: 115px !important; padding-left: 100px; }
 
 @media (max-width: 960px) { .products-hero .hero-left { padding-left: 0; text-align: center; width: 100%; -webkit-box-flex: 1; -ms-flex: auto; flex: auto; padding: 31vw 0 3vw !important; }
   .products-hero .hero-left h1 { max-width: 100%; text-align: center; margin: 0 auto; } }
@@ -703,7 +703,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .products-hero .hero-left ul li:last-child { padding-right: 30vw !important; } }
 
-.products-hero .hero-left ul li a { font: 400 24px/32px "lemon_regular"; text-decoration: none; color: #000; text-transform: uppercase; }
+.products-hero .hero-left ul li a { font: 400 19px/30px "lemon_regular"; text-decoration: none; color: #000; text-transform: uppercase; }
 
 @media (max-width: 960px) { .products-hero .hero-left ul li a { font: 400 2.8vw/8vw "lemon_regular"; } }
 
@@ -711,11 +711,11 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .products-hero .hero-right .products-hero-bg img { width: 141%; } }
 
-.flavor-slider .instagram-wrapper .instagram-gallery { padding: 60px 0 20px; -webkit-box-flex: 0; -ms-flex: 0 1 940px; flex: 0 1 940px; max-width: 940px; }
+.flavor-slider .instagram-wrapper .instagram-gallery { padding: 60px 0 20px; -webkit-box-flex: 0; -ms-flex: 0 1 960px; flex: 0 1 960px; max-width: 960px; }
 
 .flavor-slider .instagram-wrapper .instagram-gallery .swiper-container .swiper-slide { margin-right: 60px; width: 223px; height: 261px; }
 
-.flavor-slider .instagram-wrapper .instagram-gallery .swiper-container { width: 845px; }
+.flavor-slider .instagram-wrapper .instagram-gallery .swiper-container { width: 100%; }
 
 @media (max-width: 960px) { .flavor-slider .page-h1 { font: 400 5vw/7vw "lemon_milkbold"; }
   .flavor-slider .instagram-wrapper { padding: 8vw 10vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
@@ -764,13 +764,13 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .product-flavors .flavors-list .flavors-list-item:nth-child(odd) { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
 
-.product-flavors .flavors-list .flavors-list-item:nth-child(odd) .item-content { right: -60px; background: #fff; }
+.product-flavors .flavors-list .flavors-list-item:nth-child(odd) .item-content { right: -80px; background: #fff; }
 
 .product-flavors .flavors-list .flavors-list-item:nth-child(odd) .item-content a { border-bottom: 2px solid #000; color: #000; }
 
 .product-flavors .flavors-list .flavors-list-item:nth-child(even) { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
 
-.product-flavors .flavors-list .flavors-list-item:nth-child(even) .item-content { left: -60px; background: #fff; }
+.product-flavors .flavors-list .flavors-list-item:nth-child(even) .item-content { left: -80px; background: #fff; }
 
 @media (min-width: 961px) { .product-flavors .flavors-list .flavors-list-item:nth-child(even) .item-content { background: #000; color: #fff; } }
 
@@ -787,15 +787,15 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .product-flavors .flavors-list .flavors-list-item .item-content:hover { -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05); box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05); }
 
-.product-flavors .flavors-list .flavors-list-item .item-content h3 { font: 400 68px/70px "third_rail"; margin: 0; text-transform: uppercase; }
+.product-flavors .flavors-list .flavors-list-item .item-content h3 { font: 400 50px/70px "third_rail"; margin: 0; text-transform: uppercase; }
 
 @media (max-width: 960px) { .product-flavors .flavors-list .flavors-list-item .item-content h3 { font: 400 7.5vw/9vw "third_rail"; margin-bottom: 1vw; } }
 
-.product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 20px/36px "lemon_regular"; letter-spacing: 0.5px; margin: 20px 0 0 0; }
+.product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 17px/32px "lemon_regular"; letter-spacing: 0.5px; margin: 0; }
 
 @media (max-width: 960px) { .product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 3.2vw/5vw "lemon_regular"; } }
 
-.product-flavors .flavors-list .flavors-list-item .item-content a { margin-top: 87px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; padding-bottom: 5px; font: 400 22px/24px "lemon_milkbold"; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+.product-flavors .flavors-list .flavors-list-item .item-content a { margin-top: 80px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; padding-bottom: 5px; font: 400 17px/24px "lemon_milkbold"; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; }
 
 @media (max-width: 960px) { .product-flavors .flavors-list .flavors-list-item .item-content a { margin-top: 12vw; font: 400 3.5vw/5vw "lemon_milkbold"; border-bottom: 1px solid #000; } }
 
@@ -865,7 +865,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .products-hero .hero-left { position: relative; z-index: 50; }
 
-@media (min-width: 1920px) { .products-hero .hero-left .page-h1 { font-size: 70px; } }
+.products-hero .hero-left .page-h1 { font-size: 50px; letter-spacing: 2px; }
 
 .products-hero ul li.current-menu-item a { position: relative; }
 
@@ -1015,7 +1015,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .contact-header .klimon-decor.right { top: 0; right: 0; bottom: unset; position: absolute; width: 292px; height: 524px; z-index: 5; }
 
-.contact-header .klimon-decor.right img { width: 100%; display: block; }
+.contact-header .klimon-decor.right img { width: 100%; display: block; opacity: 1; }
 
 .home-content.contact { padding-top: 120px; padding-bottom: 130px; background: -webkit-gradient(linear, left top, right top, color-stop(68%, #f2f3f4), color-stop(0, white)); background: linear-gradient(90deg, #f2f3f4 68%, white 0); display: block; }
 
