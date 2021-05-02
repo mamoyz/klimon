@@ -32,6 +32,27 @@
 				height: 130vw;
 			}
 		}
+		.slideshow-dots {
+			position: absolute;
+			bottom: 25px;
+			z-index: 500;
+			left: 0;
+			right: 0;
+			text-align: center;
+			span {
+				margin: 0 5px;
+				cursor: pointer;
+				height: 41px;
+				width: 37px;
+				display: inline-block;
+				background: url("../assets/img/slider-dot@2x.png") no-repeat;
+				background-size: cover !important;
+				&.active {
+					background: url("../assets/img/slider-dot-active@2x.png") no-repeat;
+					background-size: cover !important;
+				}
+			}
+		}
 		.slideshow-item {
 			z-index: 5;
 			height: 100%;
