@@ -35,6 +35,43 @@
 	.hero-slideshow-controls {
 		display: none;
 	}
+	.hero-right {
+		.next-product-link {
+			position: absolute;
+			right: 60px;
+			bottom: 70px;
+			opacity: 0;
+			transition: 0.5s opacity 1.5s;
+			a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				color: #000;
+				padding: 0px 10px 10px 10px;
+				border-bottom: 4px solid #000;
+				img {
+					width: 44px;
+					height: 25px;
+					margin-left: 5px;
+					transition: all 0.5s;
+					right: 0;
+					position: relative;
+				}
+				span {
+					font: 400 30px/30px $font-rail;
+					letter-spacing: 1px;
+				}
+				&:hover {
+					img {
+						right: -15px;
+					}
+				}
+			}
+			&.init {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .product-header {
@@ -67,7 +104,7 @@
 	.product-header-container {
 		width: 970px;
 		background: #fff;
-		padding: 80px 130px;
+		padding: 90px 100px;
 		@include down-sm {
 			width: 91%;
 		}
@@ -78,12 +115,13 @@
 			font: 400 123px/80px $font-rail;
 			text-transform: lowercase;
 			margin: 0;
-			letter-spacing: 1px;
+			letter-spacing: 3.5px;
 		}
 		h3 {
 			font: 400 18.5px/30px $font-regular;
 			margin: 30px 0 0 0;
-			letter-spacing: 1.5px;
+			letter-spacing: 0.5px;
+			max-width: 80%;
 		}
 	}
 }
@@ -111,6 +149,7 @@
 	> h2 {
 		text-align: center;
 		margin-top: 80px;
+		letter-spacing: 2px;
 		@include down-sm {
 			margin-top: 12vw;
 		}
@@ -164,6 +203,7 @@
 			.page-h1 {
 				margin-top: 55px;
 				opacity: 0;
+				letter-spacing: 2px;
 				@include down-sm {
 					margin-top: 35vw;
 				}
@@ -173,9 +213,9 @@
 				}
 			}
 			p {
-				font: 400 18.5px/30px $font-regular;
+				font: 400 17.5px/28px $font-regular;
 				margin: 20px 0;
-				letter-spacing: 0.8px;
+				letter-spacing: 1px;
 				text-transform: uppercase;
 				@include down-sm {
 					font: 400 2.8vw/5vw $font-regular;
@@ -238,7 +278,7 @@
 		position: absolute;
 		left: -240px;
 		width: 700px;
-		top: -161px;
+		top: -390px;
 		img {
 			width: 100%;
 		}
