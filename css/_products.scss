@@ -151,18 +151,25 @@
 				// flex: 0 1 68vw;
 				position: relative;
 				.swiper-container {
-					height: 40vw;
-					width: 90%;
+					height: 28vw;
+					width: 100%;
 					.swiper-slide {
-						width: 32.5vw;
-						height: 40vw;
+						width: 23.3vw;
+						height: 28vw;
 						margin-right: 4vw;
 					}
 				}
 				.swiper-btn-next {
-					width: 15vw;
-					height: 15vw;
-					right: -7vw;
+					width: 2.8vw;
+					height: 4.5vw;
+					right: -5vw;
+					top: 50%;
+				}
+				.swiper-btn-prev {
+					width: 2.8vw;
+					height: 4.5vw;
+					left: -5vw;
+					top: 50%;
 				}
 			}
 		}
