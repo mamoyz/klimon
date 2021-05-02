@@ -6,7 +6,7 @@ footer {
 	@include down-sm {
 		padding: 11vw 9vw 8vw;
 		letter-spacing: 0;
-		font: 400 3.8vw/6vw $font-lemon;
+		font: 400 2.8vw/5vw $font-lemon;
 	}
 	a {
 		text-transform: uppercase;
@@ -29,7 +29,7 @@ footer {
 				font: 400 18.6px/24px $font-lemon;
 				text-transform: uppercase;
 				@include down-sm {
-					font: 400 4.5vw/7vw $font-lemon;
+					font: 400 4vw/7vw $font-lemon;
 				}
 			}
 			&.contact {
@@ -38,7 +38,7 @@ footer {
 				@include down-sm {
 					margin-right: 0;
 					flex: 0 1 100%;
-					margin-bottom: 10vw;
+					margin-bottom: 4vw;
 				}
 
 				.social {
@@ -49,7 +49,7 @@ footer {
 					.h3 {
 						margin-right: 20px;
 						@include down-sm {
-							margin-right: 10vw;
+							margin-right: 3vw;
 						}
 					}
 					@include down-sm {
@@ -67,7 +67,7 @@ footer {
 					img {
 						height: 28px;
 						@include down-sm {
-							height: 12.5vw;
+							height: 7vw;
 						}
 					}
 				}
@@ -80,12 +80,13 @@ footer {
 			&.footer-menu {
 				flex: 0 1 230px;
 				@include down-sm {
-					margin-right: 18vw;
+					margin-right: 0;
+					flex: 0 1 50%;
 				}
 				li {
 					margin-bottom: 13px;
 					@include down-sm {
-						margin-bottom: 5vw;
+						margin-bottom: 0;
 						line-height: 6.5vw;
 						a {
 							font: 400 3.8vw/6vw $font-lemon;
@@ -105,7 +106,7 @@ footer {
 					li {
 						@include down-sm {
 							line-height: 6.5vw;
-							margin-bottom: 3vw;
+							margin-bottom: 0;
 						}
 						a {
 							letter-spacing: 2px;

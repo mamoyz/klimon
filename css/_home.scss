@@ -17,7 +17,7 @@
 			// max-height: 960px;
 			height: 775px;
 			@include down-sm {
-				height: 130vw;
+				height: 110vw;
 				max-height: 100%;
 			}
 			.slideshow-container {
@@ -29,7 +29,7 @@
 		}
 		&.slideshow-homepage {
 			@include down-sm() {
-				height: 130vw;
+				height: 110vw;
 			}
 		}
 		.slideshow-dots {
@@ -39,6 +39,9 @@
 			left: 0;
 			right: 0;
 			text-align: center;
+			@include down-sm {
+				bottom: 5vw;
+			}
 			span {
 				margin: 0 5px;
 				cursor: pointer;
@@ -50,6 +53,11 @@
 				&.active {
 					background: url("../assets/img/slider-dot-active@2x.png") no-repeat;
 					background-size: cover !important;
+				}
+				@include down-sm {
+					width: 3vw;
+					height: 3vw;
+					margin: 0 1.5vw;
 				}
 			}
 		}
@@ -224,7 +232,7 @@
 	&:not(.flavor-slider) {
 		@include down-sm {
 			top: 0;
-			margin-bottom: -10vw;
+			margin-bottom: -19vw;
 		}
 		.instagram-wrapper {
 			@include down-sm {
@@ -237,7 +245,7 @@
 				@include down-sm {
 					padding-top: 7vw;
 					.page-h1 {
-						font: 400 8vw/9.5vw $font-lemon;
+						font: 400 6vw/7.5vw $font-lemon;
 					}
 					.more {
 						display: inline-flex;
@@ -480,24 +488,42 @@
 		position: relative;
 		top: -60px;
 		left: 100px;
+		@include down-sm {
+			position: relative;
+			top: -5vw;
+			left: 8vw;
+			margin-top: 3vw;
+		}
 	}
 	.home-ad-item {
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 35px;
+		@include down-sm {
+			margin-bottom: 3vw;
+		}
 		&:nth-child(1) {
 			flex: 0 1 100%;
 		}
 		&:nth-child(2) {
 			flex: 0 1 calc(33.33% - 25px);
+			@include down-sm {
+				flex: 0 1 calc(33.33% - 2vw);
+			}
 		}
 
 		&:nth-child(3) {
 			flex: 0 1 calc(33.33% - 25px);
+			@include down-sm {
+				flex: 0 1 calc(33.33% - 2vw);
+			}
 		}
 
 		&:nth-child(4) {
 			flex: 0 1 calc(33.33% - 25px);
+			@include down-sm {
+				flex: 0 1 calc(33.33% - 2vw);
+			}
 		}
 		&:nth-child(5) {
 			flex: 0 1 100%;

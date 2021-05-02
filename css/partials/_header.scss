@@ -306,7 +306,7 @@ header {
 	@include down-sm {
 		font: 400 7vw/9vw $font-lemon;
 		-webkit-text-stroke-width: 1px;
-		letter-spacing: 1.2vw;
+		letter-spacing: 1.2vw !important;
 	}
 }
 
