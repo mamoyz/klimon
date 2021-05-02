@@ -105,7 +105,7 @@ header .header-banner { background: #000; width: 381px; color: #fff; font: 400 4
 
 @media (max-width: 960px) { header .header-banner { width: 17vw; font: 400 3.8vw/3.8vw "third_rail"; } }
 
-header nav { -webkit-transition: -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; transition: -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; transition: transform 0.5s, 0s box-shadow 0.45s; transition: transform 0.5s, 0s box-shadow 0.45s, -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; position: fixed; top: 0; bottom: 0; height: 100vh; left: 0; background: #fff; width: 480px; padding: 40px; -webkit-transform: translate(0, -101%); transform: translate(0, -101%); overflow-y: scroll; overflow-x: hidden; /* Track */ /* Handle */ /* Handle on hover */ }
+header nav { -webkit-transition: -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; transition: -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; transition: transform 0.5s, 0s box-shadow 0.45s; transition: transform 0.5s, 0s box-shadow 0.45s, -webkit-transform 0.5s, 0s -webkit-box-shadow 0.45s; position: fixed; top: 0; bottom: 0; height: 100vh; left: 0; background: #fff; width: 480px; padding: 40px; -webkit-transform: translate(0, -101%); transform: translate(0, -101%); overflow-y: scroll; overflow-x: hidden !important; /* Track */ /* Handle */ /* Handle on hover */ }
 
 header nav::-webkit-scrollbar { width: 6px; }
 
@@ -535,7 +535,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .about-hero .hero-left { padding-left: 0; text-align: center; width: 100%; -webkit-box-flex: 1; -ms-flex: auto; flex: auto; padding: 31vw 0 12vw; } }
 
-@media (min-width: 1920px) { .about-hero .hero-left .about-page-h1 { font-size: 70px; } }
+.about-hero .hero-left .about-page-h1 { font-size: 50px; letter-spacing: 2px; margin-top: 180px; }
 
 .about-hero .hero-left .klimon-decor { position: absolute; width: 706px; height: 292px; left: -430px; bottom: -130px; }
 
@@ -569,7 +569,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .sec-about-klimon .about-klimon-content p strong { font-family: "lemon_milkbold"; }
 
-.home-content.about { overflow: visible; background: -webkit-gradient(linear, left top, right top, color-stop(68%, #f2f3f4), color-stop(0, white)); background: linear-gradient(90deg, #f2f3f4 68%, white 0); }
+.home-content.about { overflow: visible; background: -webkit-gradient(linear, left top, right top, color-stop(68%, #f2f3f4), color-stop(0, white)); background: linear-gradient(90deg, #f2f3f4 68%, white 0); padding-top: 225px; }
 
 @media (max-width: 960px) { .home-content.about { padding-top: 31vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #f2f3f4; padding-bottom: 0; } }
 
@@ -593,7 +593,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about .home-content-desc h1 { margin-bottom: 0; } }
 
-.home-content.about .no-dairy { margin-top: 40px; }
+.home-content.about .no-dairy { margin-top: 70px; }
 
 @media (max-width: 960px) { .home-content.about .no-dairy { display: none; } }
 
@@ -601,7 +601,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about-flavors { padding-top: 37vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-bottom: 0; } }
 
-.home-content.about-flavors .page-h1 { position: absolute; top: 140px; left: 95px; }
+.home-content.about-flavors .page-h1 { position: absolute; top: 200px; letter-spacing: 4px; left: 95px; }
 
 @media (max-width: 960px) { .home-content.about-flavors .page-h1 { top: 19vw; left: 10vw; } }
 
@@ -611,12 +611,12 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about-flavors .klimon-decor { display: none; } }
 
-.home-content.about-flavors .home-content-img { -webkit-box-flex: 0; -ms-flex: 0 1 66%; flex: 0 1 66%; }
+.home-content.about-flavors .home-content-img { -webkit-box-flex: 0; -ms-flex: 0 1 52%; flex: 0 1 52%; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-img { -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; height: 72vw; }
   .home-content.about-flavors .home-content-img img { width: auto; height: 100%; } }
 
-.home-content.about-flavors .home-content-desc { position: absolute; margin: 0; width: 55%; right: 0; padding-top: 0px; padding-right: 50px; }
+.home-content.about-flavors .home-content-desc { position: absolute; margin: 0; width: 55%; right: 0; padding-top: 100px; padding-right: 50px; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc { position: relative; -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; margin-left: 0; left: 0; width: 100%; -ms-flex-item-align: end; align-self: flex-end; background: -webkit-gradient(linear, left bottom, left top, color-stop(65%, white), to(transparent)); background: linear-gradient(to top, white 65%, transparent 100%); padding: 16vw 6vw 8vw 10vw; top: -35vw; margin-bottom: -27vw; } }
 
@@ -624,17 +624,17 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc h1 { margin-bottom: 0; position: static; } }
 
-.home-content.about-flavors .home-content-desc p { max-width: 850px; margin-left: 450px; }
+.home-content.about-flavors .home-content-desc p { max-width: 850px; margin-left: 30px; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc p { margin-left: 0; } }
 
-.home-content.about-flavors .home-content-desc .btn-view-more { border: 3px solid #000; text-align: center; padding: 25px 155px; display: inline-block; margin: 48px 0 0 450px; font: 400 26px/18px "lemon_regular"; text-transform: uppercase; text-decoration: none; color: #000; }
+.home-content.about-flavors .home-content-desc .btn-view-more { border: 3px solid #000; text-align: center; padding: 25px 155px; display: inline-block; margin: 30px 0 0 180px; font: 400 26px/18px "lemon_regular"; text-transform: uppercase; text-decoration: none; color: #000; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc .btn-view-more { margin: 4vw 0 0 0; border: 0.4vw solid #000; padding: 3.5vw 15vw; font: 400 3.5vw/3vw "lemon_regular"; } }
 
 .home-content.about-flavors .no-dairy { margin-top: 40px; }
 
-.about-klimon-logo { text-align: center; position: relative; top: -330px; margin-bottom: -330px; z-index: 16; }
+.about-klimon-logo { text-align: center; position: relative; top: -280px; margin-bottom: -280px; z-index: 16; }
 
 @media (max-width: 960px) { .about-klimon-logo { margin-bottom: 0; position: absolute; top: auto; left: 0; right: 0; -webkit-transform: translate(23vw, 28vw); transform: translate(23vw, 28vw); } }
 
@@ -996,6 +996,8 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 .contact-header .klimon-decor.left img { width: 100%; }
 
 .contact-header .product-header-container { position: relative; padding: 0; top: -40px; }
+
+.contact-header .product-header-container.about-page { top: 0; }
 
 @media (max-width: 960px) { .contact-header .product-header-container { width: 91%; top: -8vw; } }
 

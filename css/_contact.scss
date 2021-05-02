@@ -1,332 +1,335 @@
 .contact-hero {
-  .hero-left {
-    h1 {
-      max-width: 80%;
-      text-align: left;
-      @include down-sm {
-        max-width: 100%;
-        text-align: center;
-        margin: 0 auto;
-      }
-    }
-  }
+	.hero-left {
+		h1 {
+			max-width: 80%;
+			text-align: left;
+			@include down-sm {
+				max-width: 100%;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+	}
 }
 .contact-header {
-  position: relative;
+	position: relative;
 
-  top: 0;
-  margin-bottom: -40px;
-  @include down-sm {
-    background: #fff;
-    margin-bottom: 0;
-  }
-  &:before {
-    content: " ";
-    background: linear-gradient(90deg, #f2f3f4 50%, white 0);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: calc(100% - 40px);
-    @include down-sm {
-      display: none;
-    }
-  }
-  .klimon-decor {
-    @include down-sm {
-      display: none;
-    }
-    &.left {
-      position: absolute;
-      width: 706px;
-      height: 292px;
-      left: -430px;
-      top: -210px;
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .product-header-container {
-    position: relative;
-    padding: 0;
-    top: -40px;
-    @include down-sm {
-      width: 91%;
-      top: -8vw;
-    }
-    > div {
-      padding: 80px 100px 125px 100px;
-      width: 1030px;
-      @include down-sm {
-        width: 100%;
-        padding: 6vw 6vw 1vw 9vw;
-      }
-      h1 {
-        font: 400 102px/98px $font-rail;
-        letter-spacing: 2px;
-        @include down-sm {
-          font: 400 9.5vw/10vw $font-rail;
-          letter-spacing: 0.3vw;
-        }
-      }
-      p {
-        margin-top: 40px;
-        font: 400 16.5px/30px $font-regular;
-        text-transform: uppercase;
-        margin-bottom: 0;
-        @include down-sm {
-          margin-top: 5vw;
-          font: 400 2.5vw/4vw "lemon_regular";
-        }
-      }
-    }
-  }
-  .klimon-decor {
-    &.right {
-      top: 0;
-      right: 0;
-      bottom: unset;
-      position: absolute;
-      width: 292px;
-      height: 524px;
-      z-index: 5;
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
-  }
+	top: 0;
+	margin-bottom: -40px;
+	@include down-sm {
+		background: #fff;
+		margin-bottom: 0;
+	}
+	&:before {
+		content: " ";
+		background: linear-gradient(90deg, #f2f3f4 50%, white 0);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: calc(100% - 40px);
+		@include down-sm {
+			display: none;
+		}
+	}
+	.klimon-decor {
+		@include down-sm {
+			display: none;
+		}
+		&.left {
+			position: absolute;
+			width: 706px;
+			height: 292px;
+			left: -430px;
+			top: -210px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.product-header-container {
+		position: relative;
+		padding: 0;
+		top: -40px;
+		&.about-page {
+			top: 0;
+		}
+		@include down-sm {
+			width: 91%;
+			top: -8vw;
+		}
+		> div {
+			padding: 80px 100px 125px 100px;
+			width: 1030px;
+			@include down-sm {
+				width: 100%;
+				padding: 6vw 6vw 1vw 9vw;
+			}
+			h1 {
+				font: 400 102px/98px $font-rail;
+				letter-spacing: 2px;
+				@include down-sm {
+					font: 400 9.5vw/10vw $font-rail;
+					letter-spacing: 0.3vw;
+				}
+			}
+			p {
+				margin-top: 40px;
+				font: 400 16.5px/30px $font-regular;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				@include down-sm {
+					margin-top: 5vw;
+					font: 400 2.5vw/4vw "lemon_regular";
+				}
+			}
+		}
+	}
+	.klimon-decor {
+		&.right {
+			top: 0;
+			right: 0;
+			bottom: unset;
+			position: absolute;
+			width: 292px;
+			height: 524px;
+			z-index: 5;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
 }
 .home-content {
-  &.contact {
-    padding-top: 120px;
-    padding-bottom: 130px;
-    background: linear-gradient(90deg, #f2f3f4 68%, white 0);
-    display: block;
-    @include down-sm {
-      padding-top: 10vw;
-      padding-bottom: 10vw;
-    }
-    .logo {
-      width: 290px;
-      margin: 0 auto 120px;
-      display: block;
-      opacity: 0;
-      transform: translate(0, 50px);
-      @include down-sm {
-        width: 30vw;
-        margin: 0 auto;
-      }
-      &.init {
-        opacity: 1;
-        transform: translate(0, 0);
-        transition: all 0.5s;
-      }
-    }
-  }
+	&.contact {
+		padding-top: 120px;
+		padding-bottom: 130px;
+		background: linear-gradient(90deg, #f2f3f4 68%, white 0);
+		display: block;
+		@include down-sm {
+			padding-top: 10vw;
+			padding-bottom: 10vw;
+		}
+		.logo {
+			width: 290px;
+			margin: 0 auto 120px;
+			display: block;
+			opacity: 0;
+			transform: translate(0, 50px);
+			@include down-sm {
+				width: 30vw;
+				margin: 0 auto;
+			}
+			&.init {
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: all 0.5s;
+			}
+		}
+	}
 }
 
 .contact-form {
-  position: relative;
-  padding: 0;
-  background: transparent;
-  @include down-sm {
-    padding: 13vw 11vw 0;
-  }
-  .form-group {
-    margin-bottom: 61px;
-    > label {
-      font: 400 28px/30px $font-lemon;
-      text-transform: uppercase;
-      color: #000;
-      display: block;
-      margin-bottom: 25px;
-      span {
-      }
-    }
-    .kinjabang-input {
-      border: 6px solid #000;
-      border-radius: 8px;
-      width: 100%;
-      padding: 34px 25px 23px 25px;
-      font: 400 28px/28px $font-lemon;
-      text-transform: uppercase;
-      -webkit-appearance: none;
-      @include down-sm {
-        min-height: 14vw;
-      }
-    }
-    .kinjabang-select {
-      position: relative;
-      background: #fff;
-      &:after {
-        content: " ";
-        background: url("../assets/img/select-arrow.svg") no-repeat;
-        position: absolute;
-        top: calc(50% - 10px);
-        right: 30px;
-        width: 30px;
-        height: 20px;
-        background-size: contain;
-        z-index: 0;
-        @include down-sm {
-          top: calc(50% - 1.04vw);
-          right: 3.13vw;
-          width: 3.13vw;
-          height: 2.08vw;
-        }
-      }
-      select {
-        position: relative;
-        z-index: 2;
-        background: transparent;
-        @include down-sm {
-          min-height: 14vw;
-        }
-      }
-    }
-    input[type="submit"] {
-      border: 6px solid #000;
-      border-radius: 8px;
-      width: 100%;
-      padding: 34px 25px 23px 25px;
-      font: 400 28px/28px $font-lemon;
-      text-transform: uppercase;
-      background: #fff;
-      outline: 0;
-      -webkit-appearance: none;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-        color: #fff;
-        background: #000;
-      }
-    }
-    textarea {
-      height: 230px;
-      @include down-sm {
-        min-height: 40vh !important;
-      }
-    }
+	position: relative;
+	padding: 0;
+	background: transparent;
+	@include down-sm {
+		padding: 13vw 11vw 0;
+	}
+	.form-group {
+		margin-bottom: 61px;
+		> label {
+			font: 400 28px/30px $font-lemon;
+			text-transform: uppercase;
+			color: #000;
+			display: block;
+			margin-bottom: 25px;
+			span {
+			}
+		}
+		.kinjabang-input {
+			border: 6px solid #000;
+			border-radius: 8px;
+			width: 100%;
+			padding: 34px 25px 23px 25px;
+			font: 400 28px/28px $font-lemon;
+			text-transform: uppercase;
+			-webkit-appearance: none;
+			@include down-sm {
+				min-height: 14vw;
+			}
+		}
+		.kinjabang-select {
+			position: relative;
+			background: #fff;
+			&:after {
+				content: " ";
+				background: url("../assets/img/select-arrow.svg") no-repeat;
+				position: absolute;
+				top: calc(50% - 10px);
+				right: 30px;
+				width: 30px;
+				height: 20px;
+				background-size: contain;
+				z-index: 0;
+				@include down-sm {
+					top: calc(50% - 1.04vw);
+					right: 3.13vw;
+					width: 3.13vw;
+					height: 2.08vw;
+				}
+			}
+			select {
+				position: relative;
+				z-index: 2;
+				background: transparent;
+				@include down-sm {
+					min-height: 14vw;
+				}
+			}
+		}
+		input[type="submit"] {
+			border: 6px solid #000;
+			border-radius: 8px;
+			width: 100%;
+			padding: 34px 25px 23px 25px;
+			font: 400 28px/28px $font-lemon;
+			text-transform: uppercase;
+			background: #fff;
+			outline: 0;
+			-webkit-appearance: none;
+			cursor: pointer;
+			transition: all 0.3s;
+			&:hover {
+				color: #fff;
+				background: #000;
+			}
+		}
+		textarea {
+			height: 230px;
+			@include down-sm {
+				min-height: 40vh !important;
+			}
+		}
 
-    @include down-sm {
-      margin-bottom: 7.94vw;
-      > label {
-        font: 400 3.65vw/3.91vw $font-lemon;
-        margin-bottom: 3.26vw;
-        span {
-        }
-      }
-      .kinjabang-input {
-        border: 0.78vw solid #000;
-        border-radius: 1.04vw;
-        padding: 4.43vw 3.26vw 2.99vw 3.26vw;
-        font: 400 3.65vw/6vw $font-lemon;
-      }
-      input[type="submit"] {
-        border: 0.78vw solid #000;
-        border-radius: 1.04vw;
-        padding: 4.43vw 3.26vw 2.99vw 3.26vw;
-        font: 400 3.65vw/3.65vw $font-lemon;
-      }
-      textarea {
-        height: 29.95vw;
-      }
-    }
-  }
+		@include down-sm {
+			margin-bottom: 7.94vw;
+			> label {
+				font: 400 3.65vw/3.91vw $font-lemon;
+				margin-bottom: 3.26vw;
+				span {
+				}
+			}
+			.kinjabang-input {
+				border: 0.78vw solid #000;
+				border-radius: 1.04vw;
+				padding: 4.43vw 3.26vw 2.99vw 3.26vw;
+				font: 400 3.65vw/6vw $font-lemon;
+			}
+			input[type="submit"] {
+				border: 0.78vw solid #000;
+				border-radius: 1.04vw;
+				padding: 4.43vw 3.26vw 2.99vw 3.26vw;
+				font: 400 3.65vw/3.65vw $font-lemon;
+			}
+			textarea {
+				height: 29.95vw;
+			}
+		}
+	}
 }
 
 @include desk {
-  .flavor-heading {
-    .hex {
-      width: 52.08vw;
-      left: -42.19vw;
-    }
-    h1 {
-      font: 400 3.23vw/3.65vw $font-lemon;
-      margin-bottom: 4.17vw;
-      margin-top: 1.56vw;
-    }
-  }
+	.flavor-heading {
+		.hex {
+			width: 52.08vw;
+			left: -42.19vw;
+		}
+		h1 {
+			font: 400 3.23vw/3.65vw $font-lemon;
+			margin-bottom: 4.17vw;
+			margin-top: 1.56vw;
+		}
+	}
 
-  .contact-header {
-    margin-bottom: -2.08vw;
-    &:before {
-      height: calc(100% - 2.08vw);
-    }
-    .klimon-decor {
-      &.left {
-        width: 36.77vw;
-        height: 15.21vw;
-        left: -22.4vw;
-        top: -10.94vw;
-      }
-    }
-    .product-header-container {
-      top: -2.08vw;
-      > div {
-        padding: 4.17vw 5.21vw 6.51vw 5.21vw;
-        width: 53.65vw;
-        h1 {
-          font: 400 5.31vw/5.1vw $font-rail;
-          letter-spacing: 0.1vw;
-        }
-        p {
-          margin-top: 2.08vw;
-          font: 400 0.86vw/1.56vw $font-regular;
-        }
-      }
-    }
-    .klimon-decor {
-      &.right {
-        width: 15.21vw;
-        height: 27.29vw;
-      }
-    }
-  }
-  .home-content {
-    &.contact {
-      padding-top: 6.25vw;
-      padding-bottom: 6.77vw;
-      .logo {
-        width: 15.1vw;
-        margin: 0 auto 6.25vw;
-        transform: translate(0, 2.6vw);
-      }
-    }
-  }
+	.contact-header {
+		margin-bottom: -2.08vw;
+		&:before {
+			height: calc(100% - 2.08vw);
+		}
+		.klimon-decor {
+			&.left {
+				width: 36.77vw;
+				height: 15.21vw;
+				left: -22.4vw;
+				top: -10.94vw;
+			}
+		}
+		.product-header-container {
+			top: -2.08vw;
+			> div {
+				padding: 4.17vw 5.21vw 6.51vw 5.21vw;
+				width: 53.65vw;
+				h1 {
+					font: 400 5.31vw/5.1vw $font-rail;
+					letter-spacing: 0.1vw;
+				}
+				p {
+					margin-top: 2.08vw;
+					font: 400 0.86vw/1.56vw $font-regular;
+				}
+			}
+		}
+		.klimon-decor {
+			&.right {
+				width: 15.21vw;
+				height: 27.29vw;
+			}
+		}
+	}
+	.home-content {
+		&.contact {
+			padding-top: 6.25vw;
+			padding-bottom: 6.77vw;
+			.logo {
+				width: 15.1vw;
+				margin: 0 auto 6.25vw;
+				transform: translate(0, 2.6vw);
+			}
+		}
+	}
 
-  .contact-form {
-    .form-group {
-      margin-bottom: 3.18vw;
-      > label {
-        font: 400 1.46vw/1.56vw $font-lemon;
-        margin-bottom: 1.3vw;
-      }
-      .kinjabang-input {
-        border: 0.31vw solid #000;
-        border-radius: 0.42vw;
-        padding: 1.77vw 1.3vw 1.2vw 1.3vw;
-        font: 400 1.46vw/1.46vw $font-lemon;
-      }
-      .kinjabang-select {
-        &:after {
-          top: calc(50% - 0.52vw);
-          right: 1.56vw;
-          width: 1.56vw;
-          height: 1.04vw;
-        }
-      }
-      input[type="submit"] {
-        border: 0.31vw solid #000;
-        border-radius: 0.42vw;
-        padding: 1.77vw 1.3vw 1.2vw 1.3vw;
-        font: 400 1.46vw/1.46vw $font-lemon;
-      }
-      textarea {
-        height: 11.98vw;
-      }
-    }
-  }
+	.contact-form {
+		.form-group {
+			margin-bottom: 3.18vw;
+			> label {
+				font: 400 1.46vw/1.56vw $font-lemon;
+				margin-bottom: 1.3vw;
+			}
+			.kinjabang-input {
+				border: 0.31vw solid #000;
+				border-radius: 0.42vw;
+				padding: 1.77vw 1.3vw 1.2vw 1.3vw;
+				font: 400 1.46vw/1.46vw $font-lemon;
+			}
+			.kinjabang-select {
+				&:after {
+					top: calc(50% - 0.52vw);
+					right: 1.56vw;
+					width: 1.56vw;
+					height: 1.04vw;
+				}
+			}
+			input[type="submit"] {
+				border: 0.31vw solid #000;
+				border-radius: 0.42vw;
+				padding: 1.77vw 1.3vw 1.2vw 1.3vw;
+				font: 400 1.46vw/1.46vw $font-lemon;
+			}
+			textarea {
+				height: 11.98vw;
+			}
+		}
+	}
 }
