@@ -449,3 +449,272 @@
 		}
 	}
 }
+@media (min-width: 961px) and (max-width: 1919px) {
+	.products-hero {
+		.hero-left {
+			padding-top: 5.99vw !important;
+			padding-left: 5.21vw;
+			@include down-sm {
+				h1 {
+				}
+			}
+			ul {
+				margin: 1.56vw 0 0 0;
+				li {
+					margin-bottom: 2.08vw;
+					@include down-sm {
+					}
+					&:last-child {
+						@include down-sm {
+						}
+					}
+					a {
+						font: 400 0.99vw/1.56vw $font-regular;
+						@include down-sm {
+						}
+					}
+				}
+				@include down-sm {
+				}
+			}
+		}
+		.hero-right {
+			.products-hero-bg {
+				img {
+					@include down-sm {
+					}
+				}
+			}
+		}
+	}
+	.home-parallax-bg {
+		&.products-parallax-bg {
+			@include down-sm {
+			}
+		}
+	}
+	.flavor-slider {
+		.instagram-wrapper .instagram-gallery {
+			padding: 3.13vw 0 1.04vw;
+			flex: 0 1 50vw;
+			max-width: 50vw;
+			.swiper-container .swiper-slide {
+				margin-right: 3.13vw;
+				width: 11.61vw;
+				height: 13.59vw;
+			}
+			.swiper-container {
+			}
+		}
+		@include down-sm {
+			&.products-top-slider {
+				.instagram-wrapper {
+					.instagram-gallery {
+						.swiper-btn-next {
+						}
+						.swiper-container {
+							.swiper-slide {
+							}
+						}
+					}
+				}
+			}
+			.page-h1 {
+			}
+			.instagram-wrapper {
+				.gallery-title {
+				}
+				// .page-h1 {
+				// }
+				.instagram-gallery {
+				}
+				// .gallery-title {
+				// }
+				.instagram-gallery {
+					.swiper-container {
+						.swiper-slide {
+						}
+					}
+					.swiper-btn-next {
+					}
+					.swiper-btn-prev {
+					}
+				}
+			}
+		}
+	}
+	.product-flavors {
+		padding-top: 2.6vw;
+		border-top: 3.91vw solid #fff;
+		@include down-sm {
+		}
+		.flavors-list-top {
+			.logo {
+				margin-left: 5.47vw;
+				width: 15.1vw;
+				@include down-sm {
+				}
+				img {
+				}
+			}
+		}
+		.flavors-list {
+			margin-top: 5.21vw;
+			padding-bottom: 8.85vw;
+			@include down-sm {
+			}
+			.flavors-list-item {
+				margin-bottom: 8.85vw;
+				@include down-sm {
+					.klimon-decor {
+					}
+				}
+				.klimon-decor {
+					&.white {
+						left: -11.98vw;
+						width: 36.46vw;
+						bottom: -4.01vw;
+						img {
+						}
+					}
+				}
+				&:last-child {
+				}
+				&:first-child {
+					.klimon-decor {
+						&.black {
+							right: -13.18vw;
+							width: 36.77vw;
+							height: 15.21vw;
+							top: -15.63vw;
+							img {
+							}
+						}
+					}
+				}
+				&:nth-child(4) {
+					.klimon-decor {
+						&:not(.white) {
+							right: -1.93vw;
+							height: 36.77vw;
+							width: 15.21vw;
+							top: -24.48vw;
+							img {
+							}
+						}
+					}
+				}
+				&:nth-child(odd) {
+					.item-content {
+						right: -4.17vw;
+						a {
+							border-bottom: 0.1vw solid #000;
+						}
+					}
+				}
+				&:nth-child(even) {
+					.item-content {
+						left: -4.17vw;
+
+						@include up-sm {
+						}
+						a {
+							border-bottom: 0.1vw solid #000;
+							@include up-sm {
+								border-bottom: 0.1vw solid #fff;
+								img {
+								}
+							}
+
+							svg {
+								path,
+								rect {
+								}
+							}
+						}
+					}
+				}
+				.item-content {
+					transform: translate(-5.21vw, 0) scale(1.1);
+					width: 28.91vw;
+					padding: 3.39vw 3.13vw;
+					top: -2.6vw;
+					@include down-sm {
+						box-shadow: 1px -0.26vw 2.6vw rgba(0, 0, 0, 0.1);
+					}
+					&:hover {
+						box-shadow: 1px 1px 2.6vw 1px rgba(0, 0, 0, 0.05);
+					}
+					h3 {
+						font: 400 2.6vw/3.65vw $font-rail;
+						@include down-sm {
+						}
+					}
+					p {
+						font: 400 0.89vw/1.67vw $font-regular;
+						letter-spacing: 1px;
+						@include down-sm {
+						}
+					}
+					a {
+						margin-top: 4.17vw;
+						padding-bottom: 0.26vw;
+						font: 400 0.89vw/1.25vw $font-lemon;
+						letter-spacing: 0.1vw;
+						@include down-sm {
+							border-bottom: 1px solid #000;
+						}
+						img {
+							width: 1.46vw;
+							height: 0.99vw;
+							@include down-sm {
+							}
+						}
+						span {
+							margin-right: 3.91vw;
+							@include down-sm {
+							}
+						}
+						&:hover {
+							span {
+								margin-right: 5.21vw;
+							}
+						}
+					}
+				}
+				.item-img {
+					width: 61.67vw;
+					@include down-sm {
+					}
+					.bg {
+					}
+
+					> div {
+						img {
+						}
+					}
+				}
+				&.init {
+					.item-content {
+					}
+					.item-img {
+						> div {
+							img {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.products-no-dairy {
+		padding: 6.77vw 0;
+		@include down-sm {
+		}
+		h2 {
+			font: 400 14.79vw/15.36vw $font-lemon;
+			@include down-sm {
+			}
+		}
+	}
+}

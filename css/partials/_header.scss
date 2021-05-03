@@ -309,3 +309,198 @@ header {
 		letter-spacing: 0.5vw !important;
 	}
 }
+
+@media (min-width: 961px) and (max-width: 1919px) {
+	header {
+		&:before {
+		}
+		@include down-sm() {
+		}
+		@include fourk() {
+		}
+
+		.menu-toggle {
+			width: 5.16vw;
+			height: 6.46vw;
+			@include down-sm() {
+			}
+			svg {
+				#MENU {
+				}
+				#close {
+				}
+				path {
+				}
+				#menu_lines {
+					path {
+					}
+				}
+			}
+			&.open {
+				svg {
+					#MENU {
+					}
+					#close {
+					}
+					#menu_lines {
+						path {
+							&:nth-child(1) {
+								transform: rotate(45deg) translate(-0.16vw, 0.63vw);
+							}
+							&:nth-child(2) {
+							}
+							&:nth-child(3) {
+								transform: rotate(-45deg) translate(0.16vw, -0.42vw);
+							}
+						}
+					}
+				}
+			}
+		}
+		.logo-mobile {
+			img {
+			}
+		}
+		.header-banner {
+			width: 19.84vw;
+			font: 400 2.45vw/2.86vw $font-rail;
+			@include down-sm() {
+			}
+		}
+		nav {
+			width: 25vw;
+			padding: 2.08vw;
+			&::-webkit-scrollbar {
+				width: 0.31vw;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+			}
+			@include down-sm {
+			}
+			@include fourk() {
+			}
+			&:before {
+			}
+			.nav-top {
+				margin-bottom: 10.68vw;
+				@include down-sm {
+				}
+				.social {
+					.h3 {
+						font: 400 0.81vw/1.25vw $font-lemon;
+						@include down-sm {
+						}
+					}
+					a {
+						margin-left: 1.04vw;
+						@include down-sm {
+						}
+					}
+					img {
+						height: 2.08vw;
+						@include down-sm {
+						}
+					}
+				}
+				.menu-close {
+					flex: 0 1 7.81vw;
+					img {
+					}
+				}
+			}
+			ul {
+				&.secondary-menu {
+					margin-top: 2.08vw;
+					li {
+						a {
+							font: 400 0.94vw/1.67vw $font-lemon;
+							letter-spacing: 1px;
+							@include down-sm {
+							}
+						}
+					}
+				}
+				li {
+					&:last-child {
+					}
+					a {
+						font: 400 1.25vw/2.08vw $font-lemon;
+
+						&:hover {
+						}
+						@include down-sm {
+						}
+					}
+				}
+			}
+			> ul {
+				transform: translate(0, 2.6vw);
+				> li {
+					margin-bottom: 2.08vw;
+					@include down-sm {
+					}
+					ul {
+						margin-top: 1.56vw;
+						@include down-sm {
+						}
+						li {
+							margin-bottom: 1.56vw;
+							@include down-sm {
+							}
+							a {
+								font: 400 1.25vw/1.46vw $font-lemon;
+								@include down-sm {
+								}
+								@include down-xs {
+								}
+							}
+						}
+					}
+				}
+			}
+			&.open {
+				box-shadow: 0vw 1px 1px 100vw rgba(0, 0, 0, 0.5);
+				@include down-sm {
+				}
+				&:before {
+				}
+				> ul {
+				}
+			}
+		}
+	}
+	.klimon-hero {
+		@include down-sm {
+		}
+		.hero-left {
+			flex: 0 1 25vw;
+			min-width: 25vw;
+			@include down-sm {
+			}
+		}
+		.hero-right {
+			flex: 0 1 75vw;
+			@include down-sm {
+			}
+		}
+	}
+
+	.page-h1 {
+		font: 400 2.66vw/4.06vw $font-lemon;
+		-webkit-text-stroke-width: 0.16vw;
+		letter-spacing: 0.39vw;
+		@include down-sm {
+			-webkit-text-stroke-width: 1px;
+		}
+	}
+}

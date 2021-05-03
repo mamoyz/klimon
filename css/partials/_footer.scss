@@ -166,3 +166,114 @@ footer {
 		}
 	}
 }
+
+@media (min-width: 961px) and (max-width: 1919px) {
+	footer {
+		padding: 4.43vw 0 3.39vw;
+		font: 400 0.68vw/1.72vw $font-lemon;
+		@include down-sm {
+		}
+		a {
+			&:hover {
+			}
+		}
+		.footer-row {
+			@include down-sm {
+			}
+			.col {
+				.h3 {
+					font: 400 0.97vw/1.25vw $font-lemon;
+					@include down-sm {
+					}
+				}
+				&.contact {
+					flex: 0 1 36.46vw;
+					margin-right: 3.13vw;
+					@include down-sm {
+					}
+
+					.social {
+						margin-bottom: 4.95vw;
+						.h3 {
+							margin-right: 1.04vw;
+							@include down-sm {
+							}
+						}
+						@include down-sm {
+						}
+						a {
+							margin-right: 1.3vw;
+							margin-left: 0.26vw;
+							@include down-sm {
+							}
+						}
+						img {
+							height: 1.46vw;
+							@include down-sm {
+							}
+						}
+					}
+					p {
+						max-width: 19.79vw;
+						font-size: 0.68vw;
+					}
+				}
+				&.footer-menu {
+					flex: 0 1 11.98vw;
+					@include down-sm {
+					}
+					li {
+						margin-bottom: 0.68vw;
+						@include down-sm {
+							a {
+							}
+						}
+					}
+				}
+				&.products-menu {
+					@include down-sm {
+					}
+					ul {
+						margin-top: 0.52vw;
+						@include down-sm {
+						}
+						li {
+							@include down-sm {
+							}
+							a {
+								letter-spacing: 0.1vw;
+								@include down-sm {
+								}
+							}
+						}
+					}
+				}
+				&.last {
+					@include down-sm {
+					}
+					span {
+						padding: 1.3vw 1.04vw 1.04vw;
+						font-size: 0.94vw;
+						margin-bottom: 0.52vw;
+						@include down-sm {
+						}
+					}
+				}
+				ul {
+					li {
+					}
+				}
+			}
+		}
+		.footer-copyright {
+			@include down-sm {
+			}
+		}
+		.copyright-menu {
+			a {
+				&:first-child {
+				}
+			}
+		}
+	}
+}

@@ -243,3 +243,150 @@
 		}
 	}
 }
+
+@media (min-width: 961px) and (max-width: 1919px) {
+	.contact-hero {
+		.hero-left {
+			h1 {
+				@include down-sm {
+				}
+			}
+		}
+	}
+	.contact-header {
+		margin-bottom: -2.08vw;
+		@include down-sm {
+		}
+		&:before {
+			height: calc(100% - 2.08vw);
+			@include down-sm {
+			}
+		}
+		.klimon-decor {
+			@include down-sm {
+			}
+			&.left {
+				width: 36.77vw;
+				height: 15.21vw;
+				left: -22.4vw;
+				top: -10.94vw;
+				img {
+				}
+			}
+		}
+		.product-header-container {
+			top: -2.08vw;
+			&.about-page {
+				@include down-sm {
+				}
+			}
+			@include down-sm {
+			}
+			> div {
+				padding: 4.17vw 5.21vw 6.51vw 5.21vw;
+				width: 53.65vw;
+				@include down-sm {
+				}
+				h1 {
+					font: 400 5.31vw/5.1vw $font-rail;
+					letter-spacing: 0.1vw;
+					@include down-sm {
+					}
+				}
+				p {
+					margin-top: 2.08vw;
+					font: 400 0.86vw/1.56vw $font-regular;
+					@include down-sm {
+					}
+				}
+			}
+		}
+		.klimon-decor {
+			&.right {
+				width: 15.21vw;
+				height: 27.29vw;
+				img {
+				}
+			}
+		}
+	}
+	.home-content {
+		&.contact {
+			padding-top: 6.25vw;
+			padding-bottom: 6.77vw;
+			@include down-sm {
+			}
+			.logo {
+				width: 15.1vw;
+				margin: 0 auto 6.25vw;
+				transform: translate(0, 2.6vw);
+				@include down-sm {
+				}
+				&.init {
+				}
+			}
+		}
+	}
+
+	.contact-form {
+		@include down-sm {
+		}
+		.form-group {
+			margin-bottom: 3.18vw;
+			> label {
+				font: 400 1.46vw/1.56vw $font-lemon;
+				margin-bottom: 1.3vw;
+				span {
+				}
+			}
+			.kinjabang-input {
+				border: 0.31vw solid #000;
+				border-radius: 0.42vw;
+				padding: 1.77vw 1.3vw 1.2vw 1.3vw;
+				font: 400 1.46vw/1.46vw $font-lemon;
+				@include down-sm {
+				}
+			}
+			.kinjabang-select {
+				&:after {
+					top: calc(50% - 0.52vw);
+					right: 1.56vw;
+					width: 1.56vw;
+					height: 1.04vw;
+					@include down-sm {
+					}
+				}
+				select {
+					@include down-sm {
+					}
+				}
+			}
+			input[type="submit"] {
+				border: 0.31vw solid #000;
+				border-radius: 0.42vw;
+				padding: 1.77vw 1.3vw 1.2vw 1.3vw;
+				font: 400 1.46vw/1.46vw $font-lemon;
+				&:hover {
+				}
+			}
+			textarea {
+				height: 11.98vw;
+				@include down-sm {
+				}
+			}
+
+			@include down-sm {
+				> label {
+					span {
+					}
+				}
+				.kinjabang-input {
+				}
+				input[type="submit"] {
+				}
+				textarea {
+				}
+			}
+		}
+	}
+}
