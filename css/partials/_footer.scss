@@ -154,6 +154,7 @@ footer {
 		align-items: flex-start;
 		margin-top: 0;
 		@include down-sm {
+			flex-direction: column;
 			margin-top: 10vw;
 		}
 	}

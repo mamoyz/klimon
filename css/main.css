@@ -302,7 +302,7 @@ footer .footer-row .col ul { list-style: none; margin: 0; padding: 0; }
 
 footer .footer-copyright { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; margin-top: 0; }
 
-@media (max-width: 960px) { footer .footer-copyright { margin-top: 10vw; } }
+@media (max-width: 960px) { footer .footer-copyright { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-top: 10vw; } }
 
 footer .copyright-menu { margin-top: 10vw; }
 
