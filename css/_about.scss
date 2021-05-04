@@ -111,8 +111,30 @@
 		@include down-sm {
 			padding-top: 31vw;
 			flex-direction: column;
-			background: #f2f3f4;
+			background: #fff;
 			padding-bottom: 0;
+			position: relative;
+			&:before {
+				content: " ";
+				background: #f2f3f4;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 47vw;
+			}
+			.klimon-decor.mobile-only {
+				top: 55vw;
+				right: -8vw;
+				left: unset;
+				bottom: unset;
+				width: 25vw;
+				height: 40vw;
+				display: block;
+				img {
+					transform: none !important;
+				}
+			}
 		}
 		.page-h1 {
 			position: absolute;
@@ -120,7 +142,7 @@
 			left: 95px;
 			letter-spacing: 2px;
 			@include down-sm {
-				top: 8vw;
+				top: 10vw;
 				left: 10vw;
 			}
 		}
@@ -137,8 +159,10 @@
 			flex: 0 1 884px;
 			@include down-sm {
 				flex: 0 1 auto;
-				max-width: 67vw;
-				max-height: 67vw;
+				max-width: 85vw;
+				max-height: 73vw;
+				position: relative;
+				left: -17vw;
 			}
 		}
 		.home-content-desc {
@@ -312,7 +336,7 @@
 	top: -50px;
 	z-index: 5;
 	margin-bottom: -50px;
-	background-size: 100%;
+	background-size: cover;
 	background-attachment: scroll;
 	@include down-sm {
 		height: 65vw;
@@ -362,11 +386,9 @@
 			@include down-sm {
 			}
 			.about-page-h1 {
-				@include fourk() {
-					font-size: 2.6vw;
-					letter-spacing: 0.1vw;
-					margin-top: 9.38vw;
-				}
+				font-size: 2.6vw;
+				letter-spacing: 0.1vw;
+				margin-top: 9.38vw;
 				@include down-sm {
 				}
 			}

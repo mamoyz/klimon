@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="css/main.min.css?v=18" />
+		<link rel="stylesheet" href="css/main.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 		<title>Klimon | About</title>
@@ -99,7 +99,7 @@
 			</div>
 			<div class="hero-right">
 				<div class="page-hero-bg slide-in auto">
-					<img class="mobile-only" src="assets/img/about/hero.jpg" alt="" />
+					<img class="mobile-only" src="assets/img/about/hero-mobile.jpg" alt="" />
 					<img class="hidden-mobile" src="assets/img/about/hero.jpg" alt="" />
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 			<div class="klimon-decor about-header-decor about left">
 				<img src="assets/img/decor-black-inverse.png" alt="" />
 			</div>
-			<div class="product-header-container about-page slide-in">
+			<div class="product-header-container about-page slide-in auto-mobile">
 				<div>
 					<h1>ABOUT KLIMON</h1>
 					<p>
@@ -123,6 +123,9 @@
 		</section>
 
 		<section class="home-content about yz-animate">
+			<div class="mobile-only decor-white klimon-decor about">
+				<img src="assets/img/decor-black-2.png" alt="" />
+			</div>
 			<h2 class="page-h1">DAIRY FREE + ALMOND BASED</h2>
 
 			<div class="home-content-img">
@@ -139,7 +142,8 @@
 				</h1>
 				<p>EVERYONE LOVES ICE CREAM, BUT THIS INDULGENCE IS BECOMING INCREASINGLY COMPLICATED WITH HEALTH CONCERNS, ETHICAL QUESTIONS, AND SUSTAINABILITY ISSUES. THE BIGGEST STRIKE AGAINST ALTERNATIVE DAIRY PRODUCTS IS THAT THEY JUST DON’T TASTE OR FEEL LIKE THE REAL THING! WITHOUT MILK OR CREAM, HOW DO YOU GET THE SAME TASTE AND TEXTURE WE’VE ALL GROWN UP WITH AND GROWN TO LOVE? ENTER KLIMON. OUR PROPRIETARY BLEND OF ALMOND MILK, COCONUT OIL, PROTEINS, AND STABILIZERS BRING YOU THE CREAMY TEXTURE AND DELICIOUS TASTE OF REAL ICE CREAM….WITHOUT THE DAIRY.</p>
 				<div class="no-dairy">
-					<h2>NO DAIRY. NO DIFFERENCE.</h2>
+					<h2 class="hidden-mobile">NO DAIRY. NO DIFFERENCE.</h2>
+					<h2 class="mobile-only">NO DAIRY.</h2>
 				</div>
 			</div>
 		</section>
@@ -148,7 +152,8 @@
 				<img src="assets/img/logo-black.png" alt="" />
 			</div>
 		</section>
-		<section class="parallax-bg about-parallax-bg" style="background-image: url('assets/img/about-parallax.jpg')"></section>
+		<section class="parallax-bg about-parallax-bg hidden-mobile" style="background-image: url('assets/img/about-parallax.jpg')"></section>
+		<section class="parallax-bg about-parallax-bg mobile-only" style="background-image: url('assets/img/about-parallax-mobile.jpg')"></section>
 		<section class="home-content about-flavors yz-animate">
 			<div class="decor-black klimon-decor home-content-decor down">
 				<img src="assets/img/decor-black.png" alt="" />
@@ -245,6 +250,6 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="js/swipe.js"></script>
-		<script src="js/main.js?v=18"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

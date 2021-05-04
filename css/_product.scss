@@ -159,7 +159,7 @@
 		@include down-sm {
 			width: 100%;
 			height: 20%;
-			top: 55.5%;
+			top: 59.5%;
 			bottom: auto;
 		}
 	}
@@ -175,7 +175,7 @@
 			img {
 				width: 100%;
 				display: block;
-				opacity: 0.1;
+				opacity: 1;
 			}
 		}
 	}
@@ -187,6 +187,7 @@
 			margin-top: 12vw;
 			text-align: left;
 			padding-left: 9vw;
+			max-width: 88%;
 		}
 		&:before {
 			background: #f2f3f4;
@@ -240,7 +241,7 @@
 				opacity: 0;
 				letter-spacing: 2px;
 				@include down-sm {
-					margin-top: 35vw;
+					margin-top: 27vw;
 				}
 				&.init {
 					opacity: 1;
@@ -341,10 +342,8 @@
 	.products-hero {
 		.hero-left {
 			.page-h1 {
-				@include fourk() {
-					font-size: 2.6vw;
-					letter-spacing: 0.1vw;
-				}
+				font-size: 2.6vw;
+				letter-spacing: 0.1vw;
 			}
 		}
 		ul {

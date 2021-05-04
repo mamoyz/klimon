@@ -231,17 +231,17 @@ header {
 			> li {
 				margin-bottom: 40px;
 				@include down-sm {
-					margin-bottom: 4vw;
+					margin-bottom: 15vw;
 				}
 				ul {
 					margin-top: 30px;
 					@include down-sm {
-						margin-top: 3vw;
+						margin-top: 6vw;
 					}
 					li {
 						margin-bottom: 30px;
 						@include down-sm {
-							margin-bottom: 3vw;
+							margin-bottom: 6vw;
 						}
 						a {
 							font: 400 24px/28px $font-lemon;
@@ -322,40 +322,6 @@ header {
 		.menu-toggle {
 			width: 5.16vw;
 			height: 6.46vw;
-			@include down-sm() {
-			}
-			svg {
-				#MENU {
-				}
-				#close {
-				}
-				path {
-				}
-				#menu_lines {
-					path {
-					}
-				}
-			}
-			&.open {
-				svg {
-					#MENU {
-					}
-					#close {
-					}
-					#menu_lines {
-						path {
-							&:nth-child(1) {
-								transform: rotate(45deg) translate(-0.16vw, 0.63vw);
-							}
-							&:nth-child(2) {
-							}
-							&:nth-child(3) {
-								transform: rotate(-45deg) translate(0.16vw, -0.42vw);
-							}
-						}
-					}
-				}
-			}
 		}
 		.logo-mobile {
 			img {

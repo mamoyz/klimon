@@ -16,6 +16,9 @@ $(function () {
 
 	$(window).on("load", function () {
 		$(".slide-in.auto").addClass("show");
+		if ($(window).innerWidth() < 961) {
+			$(".slide-in.auto-mobile").addClass("show");
+		}
 		$(".yz-animate.auto").addClass("init");
 
 		setTimeout(() => {
@@ -49,7 +52,7 @@ $(function () {
 			let parallaxTop = $(this).offset().top;
 			if (parallaxTop < offset) {
 				$(this).css({
-					"background-position": "0 " + (parallaxTop - offset) * 0.6 + "px",
+					"background-position-y": (parallaxTop - offset) * 0.6 + "px",
 				});
 			}
 		});
@@ -76,20 +79,27 @@ $(function () {
 			}
 		});
 		if ($(".home-content .home-content-desc h2").length > 0) {
-			if ($(".home-content .home-content-desc h2").offset().top < offset) {
-				let asasd = offset - $(".home-content .home-content-desc h2").offset().top;
-				$(".home-content .home-content-desc h2").css({
-					transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
-				});
-			}
+			$.each($(".home-content .home-content-desc h2"), function () {
+				if ($(this).offset().top < offset) {
+					let asasd = offset - $(this).offset().top;
+					$(this).css({
+						transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
+					});
+				}
+			});
 		}
 		if ($(".products-no-dairy h2").length > 0) {
-			if ($(".products-no-dairy h2").offset().top < offset - 300) {
-				let asasd = offset - $(".products-no-dairy h2").offset().top;
-				$(".products-no-dairy h2").css({
-					transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
-				});
-			}
+			$.each($(".products-no-dairy h2"), function () {
+				let trigger = $(window).innerWidth() > 960 ? 300 : 0;
+				if ($(this).offset().top < offset - trigger) {
+					console.log(trigger);
+
+					let asasd = offset - $(this).offset().top;
+					$(this).css({
+						transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
+					});
+				}
+			});
 		}
 		$.each($(".yz-animate:not(.auto)"), function () {
 			if ($(window).scrollTop() + $(window).innerHeight() * animationTriggerPoint * 0.01 > $(this).offset().top) {
