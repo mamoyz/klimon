@@ -15,7 +15,7 @@
 			overflow: visible;
 			// height: 100vh;
 			// max-height: 960px;
-			height: 785px;
+			height: 825px;
 			@include down-sm {
 				height: 115vw;
 				max-height: 100%;
@@ -34,7 +34,7 @@
 		}
 		.slideshow-dots {
 			position: absolute;
-			bottom: 25px;
+			bottom: 75px;
 			z-index: 500;
 			left: 0;
 			right: 0;
@@ -148,8 +148,8 @@
 }
 .home-instagram {
 	position: relative;
-	top: -10px;
-	margin-bottom: -10px;
+	top: -50px;
+	margin-bottom: -50px;
 	z-index: 10;
 	.instagram-wrapper .gallery-title .page-h1 {
 		@include fourk() {
@@ -453,7 +453,7 @@
 			font: 400 284px/295px $font-lemon;
 			text-transform: uppercase;
 			position: absolute;
-			top: 0;
+			top: 130px;
 			left: 0;
 			width: 200vw;
 			transition: all 1000ms ease;
