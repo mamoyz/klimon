@@ -1,30 +1,30 @@
 @keyframes heroZoomOut {
-  0% {
-    min-width: 0;
-  }
-  10% {
-    min-width: 100%;
-  }
-  100% {
-    min-width: 100%;
-    transform: scale(1);
-  }
+	0% {
+		min-width: 0;
+	}
+	10% {
+		min-width: 100%;
+	}
+	100% {
+		min-width: 100%;
+		transform: scale(1);
+	}
 }
 .slide-in {
-  overflow: hidden;
-  position: relative;
-  &:before {
-    content: " ";
-    width: 100%;
-    right: 0;
-    transition: width 1s cubic-bezier(0.77, 0, 0.175, 1);
-    position: absolute;
-    height: 100%;
-    top: 0;
-  }
-  &.show {
-    &:before {
-      width: 0;
-    }
-  }
+	overflow: hidden;
+	position: relative;
+	&:before {
+		content: " ";
+		width: 100%;
+		right: 0;
+		transition: width 1s cubic-bezier(0.77, 0, 0.175, 1);
+		position: absolute;
+		height: 100%;
+		top: 0;
+	}
+	&.show {
+		&:before {
+			width: 0;
+		}
+	}
 }

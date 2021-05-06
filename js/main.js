@@ -11,17 +11,36 @@ $(function () {
 	let autoSlide;
 	let animationTriggerPoint = 70;
 	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
-		animationTriggerPoint = 50;
+		animationTriggerPoint = 80;
 	}
 
 	$(window).on("load", function () {
-		$(".slide-in.auto").addClass("show");
-		if ($(window).innerWidth() < 961) {
-			$(".slide-in.auto-mobile").addClass("show");
-		}
-		$(".yz-animate.auto").addClass("init");
+		console.error(`
+		
+		
 
-		setTimeout(() => {
+			█▄▀ █░░ █ █▀▄▀█ █▀█ █▄░█
+			█░█ █▄▄ █ █░▀░█ █▄█ █░▀█		
+		
+		
+
+		`);
+
+		setTimeout(function () {
+			$(window).scrollTop(0);
+			$("#preloader").addClass("loaded");
+		}, 10);
+		setTimeout(function () {
+			$("#preloader").slideUp(1000);
+		}, 4000);
+		setTimeout(function () {
+			$(".slide-in.auto").addClass("show");
+			if ($(window).innerWidth() < 961) {
+				$(".slide-in.auto-mobile").addClass("show");
+			}
+			$(".yz-animate.auto").addClass("init");
+		}, 5000);
+		setTimeout(function () {
 			let slides = $(".home-hero .hero-right .slideshow-item").length;
 			let dots = "";
 			for (let i = 0; i < slides; i++) {
@@ -51,9 +70,15 @@ $(function () {
 		$.each($(".parallax-bg.parallax"), function () {
 			let parallaxTop = $(this).offset().top;
 			if (parallaxTop < offset) {
-				$(this).css({
-					"background-position-y": (parallaxTop - offset) * 0.6 + "px",
-				});
+				if ($(window).innerWidth() < 961) {
+					$(this).css({
+						"background-position": "-25vw " + (parallaxTop - offset) * 0.15 + "px",
+					});
+				} else {
+					$(this).css({
+						"background-position": "-25vw " + (parallaxTop - offset) * 0.15 + "px",
+					});
+				}
 			}
 		});
 		$.each($(".home-content .home-content-decor"), function () {

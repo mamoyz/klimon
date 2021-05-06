@@ -52,7 +52,8 @@
 		padding: 0;
 		top: -40px;
 		&.about-page {
-			top: 0;
+			top: -160px;
+			margin-bottom: -160px;
 			@include down-sm {
 				top: -8vw;
 			}
@@ -277,6 +278,7 @@
 		.product-header-container {
 			top: -2.08vw;
 			&.about-page {
+				top: -8.33vw;
 				@include down-sm {
 				}
 			}

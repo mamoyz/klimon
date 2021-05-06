@@ -82,7 +82,9 @@
 				top: 0;
 				left: 0;
 				@include down-sm() {
-					min-width: auto;
+					position: relative;
+					width: 100vw;
+					height: 115vw;
 				}
 			}
 			&.active {
@@ -318,7 +320,7 @@
 	z-index: 5;
 	margin-bottom: -125px;
 	@include down-sm {
-		background-position: center !important;
+		// background-position: center;
 		height: 66vw;
 		top: 0;
 		margin-bottom: 0;

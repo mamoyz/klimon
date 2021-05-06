@@ -70,7 +70,7 @@
 	&.products-parallax-bg {
 		@include down-sm {
 			top: -5vw;
-			z-index: 10;
+			z-index: 9;
 			margin-bottom: -5vw;
 			height: 55vw;
 		}

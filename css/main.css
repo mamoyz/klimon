@@ -39,9 +39,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 .container-fluid { width: 100%; max-width: 1920px; margin: 0 auto; }
 
-.parallax-bg { background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: top; }
-
-@media (max-width: 960px) { .parallax-bg { background-attachment: local; } }
+.parallax-bg { background-repeat: no-repeat; background-size: 150%; }
 
 .klimon-decor { -webkit-transition: all 1s ease; transition: all 1s ease; }
 
@@ -67,7 +65,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 .slide-in.show:before { width: 0; }
 
-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; position: fixed !important; top: 0; left: 0; z-index: 9999999999; }
+header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; position: fixed !important; top: 0; left: 0; z-index: 99999; }
 
 header:before { background: #f2f3f4; }
 
@@ -354,7 +352,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-hero .hero-right .slideshow-item img { position: absolute; width: auto; height: auto; top: 0; left: 0; }
 
-@media (max-width: 960px) { .home-hero .hero-right .slideshow-item img { min-width: auto; } }
+@media (max-width: 960px) { .home-hero .hero-right .slideshow-item img { position: relative; width: 100vw; height: 115vw; } }
 
 .home-hero .hero-right .slideshow-item.active { -webkit-transform: scale(1.1); transform: scale(1.1); -webkit-animation: 5s heroZoomOut forwards ease-out; animation: 5s heroZoomOut forwards ease-out; }
 
@@ -432,7 +430,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-parallax-bg { height: 582px; position: relative; top: -125px; z-index: 5; margin-bottom: -125px; }
 
-@media (max-width: 960px) { .home-parallax-bg { background-position: center !important; height: 66vw; top: 0; margin-bottom: 0; } }
+@media (max-width: 960px) { .home-parallax-bg { height: 66vw; top: 0; margin-bottom: 0; } }
 
 .home-content { padding-top: 195px; padding-bottom: 190px; background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f2f3f4), color-stop(0, white)); background: linear-gradient(90deg, #f2f3f4 50%, white 0); display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; overflow: hidden; }
 
@@ -581,6 +579,10 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .about-hero .hero-right .page-hero-bg.show img { -webkit-transition: all 4s; transition: all 4s; -webkit-transform: scale(1); transform: scale(1); }
 
+.contact-header.about-header { margin-bottom: -160px; }
+
+.contact-header.about-header:before { height: calc(100% - 160px); }
+
 .about-header-decor { position: absolute; width: 730px; height: 303px; left: -430px; top: -210px; }
 
 .filter img { opacity: 0.1; }
@@ -604,7 +606,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 .home-content.about { overflow: visible; background: -webkit-gradient(linear, left top, right top, color-stop(68%, #f2f3f4), color-stop(0, white)); background: linear-gradient(90deg, #f2f3f4 68%, white 0); padding-top: 355px; padding-bottom: 290px; }
 
 @media (max-width: 960px) { .home-content.about { padding-top: 31vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #fff; padding-bottom: 0; position: relative; }
-  .home-content.about:before { content: " "; background: #f2f3f4; position: absolute; top: 0; left: 0; width: 100%; height: 47vw; }
+  .home-content.about:before { content: " "; background: #f2f3f4; position: absolute; top: 0; left: 0; width: 100%; height: 41vw; }
   .home-content.about .klimon-decor.mobile-only { top: 55vw; right: -8vw; left: unset; bottom: unset; width: 25vw; height: 40vw; display: block; }
   .home-content.about .klimon-decor.mobile-only img { -webkit-transform: none !important; transform: none !important; } }
 
@@ -634,7 +636,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-content.about-flavors { padding-top: 330px; overflow: visible; background: #fff; padding-bottom: 210px; position: relative; }
 
-@media (max-width: 960px) { .home-content.about-flavors { padding-top: 37vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-bottom: 0; background: #fff; }
+@media (max-width: 960px) { .home-content.about-flavors { padding-top: 37vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-bottom: 15vw; background: #fff; }
   .home-content.about-flavors:before { content: " "; background: #f2f3f4; position: absolute; top: 0; left: 0; right: 0; height: 38vw; } }
 
 .home-content.about-flavors .page-h1 { position: absolute; top: 130px; letter-spacing: 4px; left: 95px; }
@@ -660,7 +662,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc h1 { margin-bottom: 0; position: static; max-width: 70%; } }
 
-.home-content.about-flavors .home-content-desc p { max-width: 850px; margin-left: 30px; }
+.home-content.about-flavors .home-content-desc p { max-width: 850px; margin-left: 0; }
 
 @media (max-width: 960px) { .home-content.about-flavors .home-content-desc p { margin-left: 0; } }
 
@@ -682,9 +684,9 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .about-klimon-logo div img { margin: 6vw 8vw; width: 24vw; } }
 
-.about-parallax-bg { height: 582px; position: relative; top: -50px; z-index: 5; margin-bottom: -50px; background-size: cover; background-attachment: scroll; }
+.about-parallax-bg { height: 582px; position: relative; top: -50px; z-index: 5; margin-bottom: -50px; }
 
-@media (max-width: 960px) { .about-parallax-bg { height: 65vw; position: relative; top: -22vw; background-size: cover; margin-bottom: -22vw; } }
+@media (max-width: 960px) { .about-parallax-bg { height: 65vw; position: relative; top: -22vw; margin-bottom: -22vw; } }
 
 .about-bottom { background: #fff; padding-top: 1px; padding-bottom: 165px; position: relative; }
 
@@ -701,6 +703,8 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 @media (min-width: 961px) and (max-width: 1919px) { .about-hero .hero-left { padding-left: 5.21vw; }
   .about-hero .hero-left .about-page-h1 { font-size: 2.6vw; letter-spacing: 0.1vw; margin-top: 9.38vw; }
   .about-hero .hero-left .klimon-decor { width: 36.77vw; height: 15.21vw; left: -22.4vw; bottom: -6.77vw; }
+  .contact-header.about-header { margin-bottom: -8.33vw; }
+  .contact-header.about-header:before { height: calc(100% - 8.33vw); }
   .about-header-decor { width: 38.02vw; height: 15.78vw; left: -22.4vw; top: -10.94vw; }
   .sec-about-klimon .about-klimon-content .about-wrapper-inner { padding-left: 5.21vw; margin-left: 25vw; padding-top: 4.17vw; padding-bottom: 5.73vw; }
   .sec-about-klimon .about-klimon-content .content-wrapper { max-width: 42.71vw; }
@@ -717,7 +721,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .home-content.about-flavors .klimon-decor { width: 36.77vw; height: 15.21vw; left: -22.4vw; top: -2.6vw; }
   .home-content.about-flavors .home-content-desc { padding-top: 5.21vw; padding-right: 2.6vw; }
   .home-content.about-flavors .home-content-desc h1 { top: -2.86vw; margin-bottom: -1.04vw; }
-  .home-content.about-flavors .home-content-desc p { max-width: 44.27vw; margin-left: 1.56vw; }
+  .home-content.about-flavors .home-content-desc p { max-width: 44.27vw; }
   .home-content.about-flavors .home-content-desc .btn-view-more { border: 0.16vw solid #000; padding: 1.3vw 8.07vw; margin: 1.56vw 0 0 9.38vw; font: 400 1.35vw/0.94vw "lemon_regular"; }
   .home-content.about-flavors .no-dairy { margin-top: 2.08vw; }
   .about-klimon-logo { top: -14.58vw; margin-bottom: -14.58vw; }
@@ -750,7 +754,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) { .products-hero .hero-right .products-hero-bg img { width: 141%; } }
 
-@media (max-width: 960px) { .home-parallax-bg.products-parallax-bg { top: -5vw; z-index: 10; margin-bottom: -5vw; height: 55vw; } }
+@media (max-width: 960px) { .home-parallax-bg.products-parallax-bg { top: -5vw; z-index: 9; margin-bottom: -5vw; height: 55vw; } }
 
 .flavor-slider .instagram-wrapper .instagram-gallery { padding: 60px 0 20px; -webkit-box-flex: 0; -ms-flex: 0 1 960px; flex: 0 1 960px; max-width: 960px; }
 
@@ -1082,7 +1086,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .contact-header .product-header-container { position: relative; padding: 0; top: -40px; }
 
-.contact-header .product-header-container.about-page { top: 0; }
+.contact-header .product-header-container.about-page { top: -160px; margin-bottom: -160px; }
 
 @media (max-width: 960px) { .contact-header .product-header-container.about-page { top: -8vw; } }
 
@@ -1154,6 +1158,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .contact-header:before { height: calc(100% - 2.08vw); }
   .contact-header .klimon-decor.left { width: 43.54vw; height: 18.85vw; left: -26.56vw; top: -6.77vw; }
   .contact-header .product-header-container { top: -2.08vw; }
+  .contact-header .product-header-container.about-page { top: -8.33vw; }
   .contact-header .product-header-container > div { padding: 4.17vw 5.21vw 6.51vw 5.21vw; width: 53.65vw; }
   .contact-header .product-header-container > div h1 { font: 400 5.31vw/5.1vw "third_rail"; letter-spacing: 0.1vw; }
   .contact-header .product-header-container > div p { margin-top: 2.08vw; font: 400 0.86vw/1.56vw "lemon_regular"; }
