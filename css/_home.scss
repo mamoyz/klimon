@@ -584,7 +584,8 @@
 
 			&.home-hero-slideshow {
 				// max-height: 50vw;
-				height: 40.88vw;
+				height: 42.97vw;
+
 				@include down-sm {
 				}
 				.slideshow-container {
@@ -595,7 +596,8 @@
 				}
 			}
 			.slideshow-dots {
-				bottom: 1.3vw;
+				bottom: 3.91vw;
+
 				@include down-sm {
 				}
 				span {
@@ -654,9 +656,10 @@
 		}
 	}
 	.home-instagram {
-		top: -0.52vw;
-		margin-bottom: -0.52vw;
+		top: -2.6vw;
+		margin-bottom: -2.6vw;
 		.instagram-wrapper .gallery-title .page-h1 {
+			top: 6.77vw;
 			font-size: 2.45vw;
 			letter-spacing: 0.34vw;
 		}

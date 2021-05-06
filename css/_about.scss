@@ -467,11 +467,12 @@
 
 	.home-content {
 		&.about {
-			padding-top: 11.72vw;
+			padding-top: 18.49vw;
+			padding-bottom: 15.1vw;
 			@include down-sm {
 			}
 			.page-h1 {
-				top: 3.39vw;
+				top: 8.59vw;
 				left: 4.95vw;
 				letter-spacing: 0.1vw;
 				@include down-sm {

@@ -320,6 +320,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   footer .footer-row .col.contact p { max-width: 19.79vw; font-size: 0.68vw; }
   footer .footer-row .col.footer-menu { -webkit-box-flex: 0; -ms-flex: 0 1 11.98vw; flex: 0 1 11.98vw; }
   footer .footer-row .col.footer-menu li { margin-bottom: 0.68vw; }
+  footer .footer-row .col.footer-menu li a { font: 400 0.73vw/1.25vw "lemon_milkbold"; }
   footer .footer-row .col.products-menu ul { margin-top: 0.52vw; }
   footer .footer-row .col.products-menu ul li a { letter-spacing: 0.1vw; }
   footer .footer-row .col.last span { padding: 1.3vw 1.04vw 1.04vw; font-size: 0.94vw; margin-bottom: 0.52vw; } }
@@ -526,14 +527,14 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 @media (min-width: 961px) and (max-width: 1919px) { .home-hero .hero-left { padding-top: 7.55vw; }
   .home-hero .hero-left img { width: 19.79vw; }
   .home-hero .hero-right { height: 41.15vw; }
-  .home-hero .hero-right.home-hero-slideshow { height: 40.88vw; }
-  .home-hero .hero-right .slideshow-dots { bottom: 1.3vw; }
+  .home-hero .hero-right.home-hero-slideshow { height: 42.97vw; }
+  .home-hero .hero-right .slideshow-dots { bottom: 3.91vw; }
   .home-hero .hero-right .slideshow-dots span { margin: 0 0.26vw; height: 2.14vw; width: 1.93vw; }
   .home-hero .hero-right .hero-slideshow-controls { left: -4.53vw; bottom: 4.17vw; }
   .home-hero .hero-right .hero-slideshow-controls button img { width: 4.53vw; height: 4.53vw; }
   .home-hero .hero-right .hero-slideshow-controls button:first-child { margin-right: -0.21vw; }
-  .home-instagram { top: -0.52vw; margin-bottom: -0.52vw; }
-  .home-instagram .instagram-wrapper .gallery-title .page-h1 { font-size: 2.45vw; letter-spacing: 0.34vw; }
+  .home-instagram { top: -2.6vw; margin-bottom: -2.6vw; }
+  .home-instagram .instagram-wrapper .gallery-title .page-h1 { top: 6.77vw; font-size: 2.45vw; letter-spacing: 0.34vw; }
   .home-instagram .instagram-wrapper .gallery-title { padding-top: 2.08vw; padding-left: 3.65vw; }
   .home-instagram .instagram-wrapper .gallery-title img { width: 18.23vw; }
   .home-instagram .instagram-wrapper .instagram-gallery { -webkit-box-flex: 0; -ms-flex: 0 1 49.48vw; flex: 0 1 49.48vw; max-width: 49.48vw; padding: 1.61vw 0 1.82vw; }
@@ -705,8 +706,8 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .sec-about-klimon .about-klimon-content .content-wrapper { max-width: 42.71vw; }
   .sec-about-klimon .about-klimon-content h2 { font: 400 4.48vw/5.57vw "third_rail"; }
   .sec-about-klimon .about-klimon-content p { font: 400 0.86vw/1.56vw "lemon_regular"; letter-spacing: 1px; margin: 1.82vw 0 0; }
-  .home-content.about { padding-top: 11.72vw; }
-  .home-content.about .page-h1 { top: 3.39vw; left: 4.95vw; letter-spacing: 0.1vw; }
+  .home-content.about { padding-top: 18.49vw; padding-bottom: 15.1vw; }
+  .home-content.about .page-h1 { top: 8.59vw; left: 4.95vw; letter-spacing: 0.1vw; }
   .home-content.about .home-content-img { -webkit-box-flex: 0; -ms-flex: 0 1 46.04vw; flex: 0 1 46.04vw; }
   .home-content.about .home-content-desc { -webkit-box-flex: 0; -ms-flex: 0 1 43.23vw; flex: 0 1 43.23vw; margin-left: -5.73vw; padding-top: 0.89vw; }
   .home-content.about .home-content-desc h1 { margin-bottom: 1.82vw; }
@@ -914,7 +915,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .product-flavors .flavors-list .flavors-list-item .item-content a span { margin-right: 3.91vw; }
   .product-flavors .flavors-list .flavors-list-item .item-content a:hover span { margin-right: 5.21vw; }
   .product-flavors .flavors-list .flavors-list-item .item-img { width: 61.67vw; }
-  .products-no-dairy { padding: 6.77vw 0; }
+  .products-no-dairy { padding: 6.77vw 0 4.17vw; }
   .products-no-dairy h2 { font: 400 14.79vw/15.36vw "lemon_milkbold"; } }
 
 .products-hero .hero-left { position: relative; z-index: 50; }
@@ -1151,7 +1152,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (min-width: 961px) and (max-width: 1919px) { .contact-header { margin-bottom: -2.08vw; }
   .contact-header:before { height: calc(100% - 2.08vw); }
-  .contact-header .klimon-decor.left { width: 36.77vw; height: 15.21vw; left: -22.4vw; top: -10.94vw; }
+  .contact-header .klimon-decor.left { width: 43.54vw; height: 18.85vw; left: -26.56vw; top: -6.77vw; }
   .contact-header .product-header-container { top: -2.08vw; }
   .contact-header .product-header-container > div { padding: 4.17vw 5.21vw 6.51vw 5.21vw; width: 53.65vw; }
   .contact-header .product-header-container > div h1 { font: 400 5.31vw/5.1vw "third_rail"; letter-spacing: 0.1vw; }

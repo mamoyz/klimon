@@ -228,6 +228,9 @@ footer {
 					}
 					li {
 						margin-bottom: 0.68vw;
+						a {
+							font: 400 0.73vw/1.25vw $font-lemon;
+						}
 						@include down-sm {
 							a {
 							}
