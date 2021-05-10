@@ -48,6 +48,8 @@ max-height:70vw;
 			}
 			#preloader svg #bottom-text {
 				opacity: 0;
+transform:scale(0.8);
+transform-origin:top;
 			}
 			#preloader svg #ALMOND_BASED {
 				opacity: 0;
@@ -72,7 +74,7 @@ max-height:70vw;
 			}
 			#preloader.loaded svg #bottom-text {
 				opacity: 1;
-				transition: 1s all 2s;
+				transition: 1s opacity 2s;
 			}
 			#preloader.loaded svg #ALMOND_BASED {
 				opacity: 1;
@@ -491,8 +493,8 @@ max-height:70vw;
 				<img src="assets/img/logo-black.png" alt="" />
 			</div>
 		</section> -->
-		<section class="parallax-bg about-parallax-bg hidden-mobile" style="background-image: url('assets/img/about-parallax.jpg')"></section>
-		<section class="parallax-bg parallax about-parallax-bg mobile-only" style="background-image: url('assets/img/about-parallax-mobile.jpg')"></section>
+		<section class="parallax-bg parallax about-parallax-bg hidden-mobile" data-scale="100" style="background-image: url('assets/img/about-parallax.jpg')"></section>
+		<section class="parallax-bg parallax about-parallax-bg mobile-only" data-scale="100" style="background-image: url('assets/img/about-parallax-mobile.jpg')"></section>
 		<section class="home-content about-flavors yz-animate">
 			<div class="decor-black klimon-decor home-content-decor down">
 				<img src="assets/img/decor-black.png" alt="" />
@@ -522,7 +524,13 @@ max-height:70vw;
 				</p>
 			</div>
 		</section>
-
+<section class="about-no-dairy-mobile mobile-only">
+	<div class="container">
+				<div class="no-dairy">
+					<h2 class="mobile-only">NO DAIRY. NO DAIRY.</h2>
+				</div>
+	</div>
+</section>
 		<footer>
 			<div class="container">
 				<div class="footer-row">

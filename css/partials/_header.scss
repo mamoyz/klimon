@@ -8,6 +8,11 @@ header {
 	&:before {
 		background: #f2f3f4;
 	}
+	&.show {
+		&:before {
+			transition-delay: 0.2s !important;
+		}
+	}
 	@include down-sm() {
 		justify-content: space-between;
 		width: 100%;
@@ -138,7 +143,7 @@ header {
 			height: 100%;
 			right: 0;
 			bottom: 0;
-			background-size: auto 90%;
+			background-size: auto 80%;
 			background-position: right bottom;
 			opacity: 0;
 			transition: 0.5s all 0.5s;
@@ -208,7 +213,7 @@ header {
 					margin-bottom: 0;
 				}
 				a {
-					font: 400 24px/40px $font-lemon;
+					font: 400 34px/50px $font-lemon;
 
 					text-decoration: none;
 					color: #000;
@@ -217,7 +222,7 @@ header {
 						color: #feae56;
 					}
 					@include down-sm {
-						font: 400 5vw/7vw $font-lemon;
+						font: 400 6vw/7.5vw $font-lemon;
 					}
 				}
 			}
@@ -273,6 +278,7 @@ header {
 }
 .klimon-hero {
 	display: flex;
+	overflow: hidden;
 	justify-content: flex-start;
 	@include down-sm {
 		flex-direction: column;
@@ -357,7 +363,7 @@ header {
 			&:before {
 			}
 			.nav-top {
-				margin-bottom: 10.68vw;
+				margin-bottom: 6vw;
 				@include down-sm {
 				}
 				.social {
@@ -389,6 +395,7 @@ header {
 					li {
 						a {
 							font: 400 0.94vw/1.67vw $font-lemon;
+
 							letter-spacing: 1px;
 							@include down-sm {
 							}
@@ -399,7 +406,7 @@ header {
 					&:last-child {
 					}
 					a {
-						font: 400 1.25vw/2.08vw $font-lemon;
+						font: 400 1.77vw/2.6vw $font-lemon;
 
 						&:hover {
 						}

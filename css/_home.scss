@@ -140,7 +140,7 @@
 .hero-left {
 	* {
 		opacity: 0;
-		transition: 1s all 1s;
+		transition: 1s all 0s;
 	}
 	&.init {
 		* {
@@ -165,7 +165,11 @@
 		background: #fff;
 		align-items: flex-start;
 		position: relative;
-
+		&.show {
+			&:before {
+				transition-delay: 1.4s !important;
+			}
+		}
 		&:before {
 			background: #fff;
 			z-index: 20;
@@ -461,6 +465,7 @@
 			transition: all 1000ms ease;
 			white-space: nowrap;
 			@include down-sm {
+				top: 0;
 				font: 400 27vw/36vw $font-lemon;
 			}
 		}
@@ -820,6 +825,7 @@
 			}
 			h2 {
 				font: 400 14.79vw/15.36vw $font-lemon;
+				top: 6.77vw;
 				@include down-sm {
 				}
 			}

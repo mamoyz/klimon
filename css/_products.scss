@@ -53,6 +53,17 @@
 				overflow: scroll;
 				width: 100%;
 				padding: 0 4vw;
+				&::-webkit-scrollbar-track {
+					background: transparent !important;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: transparent !important;
+				}
+				&::-webkit-scrollbar {
+					width: 0;
+					height: 0;
+				}
 			}
 		}
 	}

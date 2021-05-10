@@ -69,6 +69,8 @@ max-height:70vw;
 			}
 			#preloader svg #bottom-text {
 				opacity: 0;
+transform:scale(0.8);
+transform-origin:top;
 			}
 			#preloader svg #ALMOND_BASED {
 				opacity: 0;
@@ -93,7 +95,7 @@ max-height:70vw;
 			}
 			#preloader.loaded svg #bottom-text {
 				opacity: 1;
-				transition: 1s all 2s;
+				transition: 1s opacity 2s;
 			}
 			#preloader.loaded svg #ALMOND_BASED {
 				opacity: 1;
@@ -526,7 +528,7 @@ max-height:70vw;
 				</div>
 			</div>
 		</section>
-		<section class="parallax-bg parallax home-parallax-bg" style="background-image: url('assets/img/home-parallax.jpg')"></section>
+		<section class="parallax-bg parallax home-parallax-bg" data-scale="130" style="background-image: url('assets/img/home-parallax.jpg')"></section>
 		<section class="home-content yz-animate">
 			<div class="decor-black klimon-decor home-content-decor">
 				<img src="assets/img/decor-black.png" alt="" />
