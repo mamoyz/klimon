@@ -69,13 +69,12 @@
 		.slideshow-item {
 			z-index: 5;
 			height: 100%;
-			width: 100%;
 			overflow: hidden;
 			position: absolute;
 			transform-origin: left;
 			width: 0;
-
 			img {
+				transform: scale(1.1);
 				position: absolute;
 				width: auto;
 				height: auto;
@@ -88,8 +87,11 @@
 				}
 			}
 			&.active {
-				transform: scale(1.1);
-				animation: 5s heroZoomOut forwards ease-out;
+				animation: 0.8s heroZoomOut forwards ease-out;
+				img {
+					transform: scale(1);
+					transition: 5s transform 0s;
+				}
 			}
 			&.show {
 				z-index: 10;
@@ -150,9 +152,22 @@
 }
 .home-instagram {
 	position: relative;
-	top: -50px;
 	margin-bottom: -50px;
+	top: 0;
 	z-index: 10;
+	top: -50px;
+	&.init {
+		// transition: 1s all 2.4s;
+	}
+	&.show {
+		&:before {
+			transition-delay: 1.4s !important;
+		}
+	}
+	&:before {
+		background: #f2f3f4;
+		z-index: 20;
+	}
 	.instagram-wrapper .gallery-title .page-h1 {
 		@include fourk() {
 			font-size: 47px;
@@ -165,15 +180,7 @@
 		background: #fff;
 		align-items: flex-start;
 		position: relative;
-		&.show {
-			&:before {
-				transition-delay: 1.4s !important;
-			}
-		}
-		&:before {
-			background: #fff;
-			z-index: 20;
-		}
+
 		.gallery-title {
 			flex: auto;
 			padding-top: 40px;
@@ -323,6 +330,9 @@
 	top: -125px;
 	z-index: 5;
 	margin-bottom: -125px;
+	&:before {
+		background: #f2f3f4;
+	}
 	@include down-sm {
 		// background-position: center;
 		height: 66vw;
@@ -621,6 +631,8 @@
 			}
 			.slideshow-item {
 				img {
+					width: 75vw;
+
 					@include down-sm() {
 					}
 				}

@@ -28,7 +28,7 @@ $(function () {
 
 		let preloaderVisited = localStorage.getItem("preloaderVisited");
 		let slideshowDelay, introDelay, preloaderDuration;
-		if (preloaderVisited) {
+		if (preloaderVisited && window.location.pathname != "/") {
 			introDelay = 100;
 			slideshowDelay = 1200;
 			setTimeout(function () {
@@ -37,9 +37,9 @@ $(function () {
 				$("#preloader").fadeOut(0);
 			}, 0);
 		} else {
-			introDelay = 4000;
+			introDelay = 3000;
 			preloaderDuration = 3000;
-			slideshowDelay = 5100;
+			slideshowDelay = 4000;
 			setTimeout(function () {
 				$(window).scrollTop(0);
 				$(window).scrollTop(0);
@@ -72,7 +72,7 @@ $(function () {
 			$(".home-hero .hero-right .slideshow-item").eq(0).addClass("active show");
 			autoSlide = setInterval(() => {
 				slideShowNext();
-			}, slideshowDelay + 4200);
+			}, 5200);
 		}, slideshowDelay);
 	});
 	$(window).scroll(function (e) {

@@ -7,10 +7,11 @@ header {
 	z-index: 99999;
 	&:before {
 		background: #f2f3f4;
+		z-index: 1000;
 	}
 	&.show {
 		&:before {
-			transition-delay: 0.2s !important;
+			transition-delay: 1s !important;
 		}
 	}
 	@include down-sm() {
