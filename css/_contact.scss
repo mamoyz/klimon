@@ -1,8 +1,9 @@
 .contact-hero {
 	.hero-left {
 		h1 {
-			max-width: 80%;
-			text-align: left;
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
 			@include down-sm {
 				max-width: 100%;
 				text-align: center;

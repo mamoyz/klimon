@@ -16,7 +16,7 @@
 			@include fourk() {
 				font-size: 50px;
 				letter-spacing: 2px;
-				margin-top: 180px;
+				margin-top: 0;
 			}
 			@include down-sm {
 				margin-top: 0;
@@ -118,9 +118,9 @@
 		padding-top: 355px;
 		padding-bottom: 290px;
 		@include down-sm {
-			padding-top: 31vw;
+			padding-top: 73vw;
 			flex-direction: column;
-			background: #fff;
+			background: #f2f3f4;
 			padding-bottom: 0;
 			position: relative;
 			// &:before {
@@ -151,7 +151,7 @@
 			left: 95px;
 			letter-spacing: 2px;
 			@include down-sm {
-				top: 10vw;
+				top: 50vw;
 				left: 10vw;
 			}
 		}
@@ -431,7 +431,7 @@
 			.about-page-h1 {
 				font-size: 2.6vw;
 				letter-spacing: 0.1vw;
-				margin-top: 9.38vw;
+				margin-top: 0;
 				@include down-sm {
 				}
 			}

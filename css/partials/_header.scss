@@ -25,9 +25,12 @@ header {
 
 	.menu-toggle {
 		width: 99px;
-		height: 124px;
+		height: 99px;
 		background: #fff;
 		z-index: 50;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		@extend .button-reset;
 		@include down-sm() {
 			width: 17vw;
@@ -36,7 +39,7 @@ header {
 		}
 		svg {
 			display: block;
-			width: 100%;
+			width: 90%;
 			height: auto;
 			#MENU {
 				transition: 0.3s all 0.3s;
@@ -327,7 +330,7 @@ header {
 
 		.menu-toggle {
 			width: 5.16vw;
-			height: 6.46vw;
+			height: 5.16vw;
 		}
 		.logo-mobile {
 			img {

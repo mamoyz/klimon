@@ -1,9 +1,9 @@
 .home-hero {
 	.hero-left {
-		padding-top: 145px;
+		padding-top: 100px;
 
 		img {
-			width: 380px;
+			width: 300px;
 			height: auto;
 		}
 	}
@@ -17,6 +17,7 @@
 			// max-height: 960px;
 			height: 825px;
 			@include down-sm {
+				margin-top: 18vw;
 				height: 115vw;
 				max-height: 100%;
 			}
@@ -305,9 +306,9 @@
 					}
 					.swiper-slide {
 						@include down-sm {
-							height: 58vw;
-							width: 58vw;
-							margin-right: 4vw;
+							height: 30vw;
+							width: 28vw;
+							margin-right: 2vw;
 						}
 					}
 				}
@@ -343,7 +344,7 @@
 
 .home-content {
 	padding-top: 195px;
-	padding-bottom: 190px;
+	padding-bottom: 250px;
 	background: linear-gradient(90deg, #f2f3f4 50%, white 0);
 	display: flex;
 	position: relative;
@@ -422,6 +423,10 @@
 				top: 0;
 				left: 0;
 				transform: scale(1.1);
+				@include down-sm {
+					left: unset;
+					right: 0;
+				}
 			}
 		}
 	}
@@ -590,10 +595,10 @@
 @media (min-width: 961px) and (max-width: 1919px) {
 	.home-hero {
 		.hero-left {
-			padding-top: 7.55vw;
+			padding-top: 5.2vw;
 
 			img {
-				width: 19.79vw;
+				width: 15.63vw;
 			}
 		}
 		.hero-right {
@@ -775,8 +780,7 @@
 
 	.home-content {
 		padding-top: 10.16vw;
-		padding-bottom: 9.9vw;
-
+		padding-bottom: 13.02vw;
 		@include down-sm {
 		}
 		.decor-black {
