@@ -160,15 +160,7 @@
 	&.init {
 		// transition: 1s all 2.4s;
 	}
-	&.show {
-		&:before {
-			transition-delay: 1.4s !important;
-		}
-	}
-	&:before {
-		background: #f2f3f4;
-		z-index: 20;
-	}
+
 	.instagram-wrapper .gallery-title .page-h1 {
 		@include fourk() {
 			font-size: 47px;
@@ -178,10 +170,16 @@
 	.instagram-wrapper {
 		display: flex;
 		justify-content: space-between;
-		background: #fff;
 		align-items: flex-start;
 		position: relative;
+		background: transparent;
+		background: #fff;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 
+		&.init {
+			transition: 2s all 1.5s ease;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
 		.gallery-title {
 			flex: auto;
 			padding-top: 40px;

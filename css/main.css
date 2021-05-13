@@ -388,13 +388,11 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-instagram { position: relative; margin-bottom: -50px; top: 0; z-index: 10; top: -50px; }
 
-.home-instagram.show:before { -webkit-transition-delay: 1.4s !important; transition-delay: 1.4s !important; }
-
-.home-instagram:before { background: #f2f3f4; z-index: 20; }
-
 @media (min-width: 1920px) { .home-instagram .instagram-wrapper .gallery-title .page-h1 { font-size: 47px; letter-spacing: 6.5px; } }
 
-.home-instagram .instagram-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background: #fff; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; position: relative; }
+.home-instagram .instagram-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; position: relative; background: transparent; background: #fff; -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+
+.home-instagram .instagram-wrapper.init { -webkit-transition: 2s all 1.5s ease; transition: 2s all 1.5s ease; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
 .home-instagram .instagram-wrapper .gallery-title { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; padding-top: 40px; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; text-align: left; padding-left: 70px; }
 
@@ -596,7 +594,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .contact-header.about-header:before { height: calc(100% - 160px); }
 
-.about-header-decor { position: absolute; width: 730px; height: 303px; left: -430px; top: -210px; }
+.about-header-decor { top: -330px !important; }
 
 .filter img { opacity: 0.1; }
 
@@ -725,7 +723,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .about-hero .hero-left .klimon-decor { width: 36.77vw; height: 15.21vw; left: -22.4vw; bottom: -6.77vw; }
   .contact-header.about-header { margin-bottom: -8.33vw; }
   .contact-header.about-header:before { height: calc(100% - 8.33vw); }
-  .about-header-decor { width: 38.02vw; height: 15.78vw; left: -22.4vw; top: -10.94vw; }
+  .about-header-decor { top: -17.18vw !important; }
   .sec-about-klimon .about-klimon-content .about-wrapper-inner { padding-left: 5.21vw; margin-left: 25vw; padding-top: 4.17vw; padding-bottom: 5.73vw; }
   .sec-about-klimon .about-klimon-content .content-wrapper { max-width: 42.71vw; }
   .sec-about-klimon .about-klimon-content h2 { font: 400 4.48vw/5.57vw "third_rail"; }
@@ -1089,9 +1087,11 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .product-bottom-slider .logo { width: 15.1vw; margin: 12.5vw auto 6.77vw; -webkit-transform: translate(0, 2.6vw); transform: translate(0, 2.6vw); }
   .product-bottom-slider .product-decor { left: -12.5vw; width: 36.46vw; top: -20.31vw; } }
 
-.contact-hero .hero-left h1 { max-width: 100%; width: 100%; text-align: center; }
+.contact-hero .hero-left h1 { max-width: 100%; width: 100%; text-align: left; }
 
 @media (max-width: 960px) { .contact-hero .hero-left h1 { max-width: 100%; text-align: center; margin: 0 auto; } }
+
+.contact-hero .hero-left.about-hero-left h1 { text-align: center; }
 
 .contact-header { position: relative; top: 0; margin-bottom: -40px; }
 

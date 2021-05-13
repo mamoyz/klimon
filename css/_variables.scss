@@ -4,61 +4,57 @@ $font-regular: "lemon_regular";
 $font-rail: "third_rail";
 $font-acumin: "acumin-pro";
 @mixin down-sm {
-  @media (max-width: 960px) {
-    @content;
-  }
+	@media (max-width: 960px) and (orientation: portrait) {
+		@content;
+	}
 }
-@mixin down-xs {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
+
 @mixin up-sm {
-  @media (min-width: 961px) {
-    @content;
-  }
+	@media (min-width: 961px) {
+		@content;
+	}
 }
 
 @mixin up-xl {
-  @media (min-width: 1600px) {
-    @content;
-  }
+	@media (min-width: 1600px) {
+		@content;
+	}
 }
 
 @mixin desk {
-  @media (min-width: 961px) and (max-width: 1919px) {
-    @content;
-  }
+	@media (min-width: 961px) and (max-width: 1919px) {
+		@content;
+	}
 }
 
 @mixin fourk {
-  @media (min-width: 1920px) {
-    @content;
-  }
+	@media (min-width: 1920px) {
+		@content;
+	}
 }
 
 .flex-center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
 }
 .button-reset {
-  -webkit-appearance: none;
-  border: none;
-  outline: 0;
-  padding: 0;
-  cursor: pointer;
+	-webkit-appearance: none;
+	border: none;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
 }
 
 .mobile-only {
-  @include up-sm() {
-    display: none !important;
-  }
+	@include up-sm() {
+		display: none !important;
+	}
 }
 
 .hidden-mobile {
-  @include down-sm() {
-    display: none !important;
-  }
+	@include down-sm() {
+		display: none !important;
+	}
 }

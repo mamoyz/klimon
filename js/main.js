@@ -10,6 +10,14 @@ $(function () {
 	});
 	let autoSlide;
 	let animationTriggerPoint = 70;
+	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
+	if (typeof tresholdX === "undefined" || tresholdX === null) tresholdX = 30; //px
+	if (typeof tresholdY === "undefined" || tresholdY === null) tresholdY = 30; //px
+	var startX, startY;
+	var endX, endY;
+
+	var time;
+	var totalTime = 0;
 	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
 		animationTriggerPoint = 80;
 	}
@@ -161,7 +169,54 @@ $(function () {
 			}
 		});
 	});
+	// $(".home-hero .hero-right.home-hero-slideshow .slideshow-container").onSwipe(function (e, autoSlide) {
+	// 	if (e.right == true) {
+	// 	}
+	// 	if (e.left == true) {
+	// 		console.log(this, e);
 
+	// 		// console.log(slideShowNext());
+	// 		// clearInterval(autoSlide);
+	// 		// autoSlide = setInterval(() => {
+	// 		// 	slideShowNext();
+	// 		// }, 5200);
+	// 	}
+	// });
+	$(".home-hero .hero-right.home-hero-slideshow .slideshow-container").on("touchstart", function (e) {
+		//Let's get our touch coordinates
+		startX = e.touches[0].clientX;
+		startY = e.touches[0].clientY;
+
+		time = setInterval(function () {
+			//Let's see how long the swipe lasts.
+			totalTime += 10;
+		}, 10);
+	});
+
+	$(".home-hero .hero-right.home-hero-slideshow .slideshow-container").on("touchend", function (e) {
+		endX = e.changedTouches[0].clientX; //This is where touchend coordinates are stored.
+		endY = e.changedTouches[0].clientY;
+
+		clearInterval(time); //Let's stop calculating time and free up resources.
+
+		if (totalTime >= timeTreshold) {
+			let activeSlideIndex = $(".home-hero .hero-right .slideshow-dots span.active").index();
+			if (startX > endX && startX - endX >= tresholdX) {
+				//swipe left
+				if (activeSlideIndex != $(".home-hero .hero-right .slideshow-dots span").length - 1)
+					$(".home-hero .hero-right .slideshow-dots span")
+						.eq(activeSlideIndex + 1)
+						.click();
+			} else if (startX < endX && endX - startX >= tresholdX) {
+				//swipe right
+				if (activeSlideIndex != 0)
+					$(".home-hero .hero-right .slideshow-dots span")
+						.eq(activeSlideIndex - 1)
+						.click();
+			}
+		}
+		totalTime = 0;
+	});
 	$(".home-hero .hero-right .hero-slideshow-controls button").click(function (e) {
 		e.preventDefault();
 		if ($(this).hasClass("next")) {

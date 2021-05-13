@@ -3,11 +3,16 @@
 		h1 {
 			max-width: 100%;
 			width: 100%;
-			text-align: center;
+			text-align: left;
 			@include down-sm {
 				max-width: 100%;
 				text-align: center;
 				margin: 0 auto;
+			}
+		}
+		&.about-hero-left {
+			h1 {
+				text-align: center;
 			}
 		}
 	}
@@ -48,6 +53,7 @@
 			}
 		}
 	}
+
 	.product-header-container {
 		position: relative;
 		padding: 0;
@@ -276,6 +282,7 @@
 				}
 			}
 		}
+
 		.product-header-container {
 			top: -2.08vw;
 			&.about-page {

@@ -460,7 +460,7 @@ transform-origin:top;
 				<img src="assets/img/home-logo.png" alt="" />
 			</div>
 			<div class="hero-right hero-slideshow home-hero-slideshow slideshow-homepage">
-				<div class="slideshow-container">
+				<div class="slideshow-container" v-touch:swipe="swipeHandler">
 					<div class="slideshow-item">
 						<img class="hidden-mobile" src="assets/img/home/Homepage_Slideshow_CaramelBrulee.jpg" alt="" />
 						<img class="mobile-only" src="assets/img/home/Mobile_homepage_Slideshow_SunriseBang.jpg" alt="" />
@@ -495,7 +495,7 @@ transform-origin:top;
 		</section>
 		<section class="home-instagram slide-in auto yz-animate ">
 			<div class="container ">
-				<div class="instagram-wrapper">
+				<div class="instagram-wrapper yz-animate auto">
 					<div class="gallery-title">
 						<h2 class="page-h1">GALLERY</h2>
 						<!-- <a class="more mobile-only" href="#">
@@ -528,7 +528,8 @@ transform-origin:top;
 				</div>
 			</div>
 		</section>
-		<section class="parallax-bg parallax home-parallax-bg slide-in" data-scale="130" style="background-image: url('assets/img/home-parallax.jpg')"></section>
+		<section class="parallax-bg parallax home-parallax-bg slide-in hidden-mobile" data-scale="130" style="background-image: url('assets/img/home-parallax.jpg')"></section>
+		<section class="parallax-bg parallax home-parallax-bg slide-in mobile-only" data-scale="130" style="background-image: url('assets/img/home-parallax-mobile.jpg')"></section>
 		<section class="home-content yz-animate">
 			<div class="decor-black klimon-decor home-content-decor">
 				<img src="assets/img/decor-black.png" alt="" />
@@ -641,9 +642,7 @@ transform-origin:top;
 			</div>
 		</footer>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="js/swipe.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
