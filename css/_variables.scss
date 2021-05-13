@@ -8,7 +8,11 @@ $font-acumin: "acumin-pro";
 		@content;
 	}
 }
-
+@mixin down-xs {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
 @mixin up-sm {
 	@media (min-width: 961px) {
 		@content;
@@ -46,9 +50,8 @@ $font-acumin: "acumin-pro";
 	padding: 0;
 	cursor: pointer;
 }
-
 .mobile-only {
-	@include up-sm() {
+	@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
 		display: none !important;
 	}
 }

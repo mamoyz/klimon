@@ -256,9 +256,9 @@ header {
 							@include down-sm {
 								font: 400 3vw/5.5vw $font-lemon;
 							}
-							@include down-xs {
-								font: 400 4vw/5.5vw $font-lemon;
-							}
+							// @include down-xs {
+							// 	font: 400 4vw/5.5vw $font-lemon;
+							// }
 						}
 					}
 				}
@@ -319,7 +319,7 @@ header {
 	}
 }
 
-@media (min-width: 961px) and (max-width: 1919px) {
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
 	header {
 		&:before {
 		}
@@ -437,8 +437,8 @@ header {
 								font: 400 1.25vw/1.46vw $font-lemon;
 								@include down-sm {
 								}
-								@include down-xs {
-								}
+								// @include down-xs {
+								// }
 							}
 						}
 					}
@@ -477,6 +477,33 @@ header {
 		letter-spacing: 0.39vw;
 		@include down-sm {
 			-webkit-text-stroke-width: 1px;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 960px) {
+	header {
+		nav {
+			.nav-top {
+				margin-bottom: 3vw;
+			}
+			ul {
+			}
+			> ul {
+				transform: translate(0, 2.6vw);
+				> li {
+					margin-bottom: 1.4vw;
+					@include down-sm {
+					}
+					ul {
+						margin-top: 1vw;
+
+						li {
+							margin-bottom: 1vw;
+						}
+					}
+				}
+			}
 		}
 	}
 }

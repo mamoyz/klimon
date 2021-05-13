@@ -590,7 +590,7 @@
 		}
 	}
 }
-@media (min-width: 961px) and (max-width: 1919px) {
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
 	.home-hero {
 		.hero-left {
 			padding-top: 5.2vw;

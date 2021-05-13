@@ -338,7 +338,7 @@
 		}
 	}
 }
-@media (min-width: 961px) and (max-width: 1919px) {
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
 	.products-hero {
 		.hero-left {
 			.page-h1 {
