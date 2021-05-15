@@ -94,6 +94,15 @@ $(function () {
 				});
 			}
 		}
+		if ($(".home-content .home-content-img").length > 0) {
+			if ($(window).innerWidth() > 960) {
+				if (wTop < $(".home-content .home-content-img").offset().top + $(".home-content .home-content-img").innerHeight()) {
+					$(".home-content .home-content-img").css({
+						transform: "translate(0," + parseInt((wTop / $(".home-content .home-content-img").innerHeight()) * 150) + "px)",
+					});
+				}
+			}
+		}
 		$.each($(".slide-in"), function () {
 			let thisTop = $(this).offset().top;
 			if (thisTop < offset) {

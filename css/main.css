@@ -3,7 +3,7 @@
 
 .button-reset, header .menu-toggle, .home-hero .hero-right .hero-slideshow-controls button { -webkit-appearance: none; border: none; outline: 0; padding: 0; cursor: pointer; }
 
-@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) { .mobile-only { display: none !important; } }
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px), (min-width: 1920px) { .mobile-only { display: none !important; } }
 
 @media (max-width: 960px) and (orientation: portrait) { .hidden-mobile { display: none !important; } }
 
@@ -19,7 +19,7 @@
 
 .button-reset, header .menu-toggle, .home-hero .hero-right .hero-slideshow-controls button { -webkit-appearance: none; border: none; outline: 0; padding: 0; cursor: pointer; }
 
-@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) { .mobile-only { display: none !important; } }
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px), (min-width: 1920px) { .mobile-only { display: none !important; } }
 
 @media (max-width: 960px) and (orientation: portrait) { .hidden-mobile { display: none !important; } }
 
