@@ -94,11 +94,12 @@ $(function () {
 				});
 			}
 		}
-		if ($(".home-content .home-content-img").length > 0) {
+		if ($(".home-content.about .home-content-img").length > 0) {
 			if ($(window).innerWidth() > 960) {
-				if (wTop < $(".home-content .home-content-img").offset().top + $(".home-content .home-content-img").innerHeight()) {
-					$(".home-content .home-content-img").css({
-						transform: "translate(0," + parseInt((wTop / $(".home-content .home-content-img").innerHeight()) * 150) + "px)",
+				if (wTop + wHeight * 0.7 > $(".home-content.about .home-content-img").offset().top && wTop < $(".home-content.about .home-content-img").offset().top + $(".home-content.about .home-content-img").innerHeight()) {
+					$(".home-content.about .home-content-img > div img").css({
+						// transform: "translate(0," + parseInt((wTop / $(".home-content.about .home-content-img").innerHeight()) * 150) + "px)",
+						top: parseFloat((wTop / $(".home-content.about .home-content-img").innerHeight()) * -5) + "vw",
 					});
 				}
 			}

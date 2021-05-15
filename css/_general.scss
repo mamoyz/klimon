@@ -49,7 +49,15 @@ h6 {
 		max-width: 70vw;
 	}
 }
-
+.swiper-btn-next,
+.swiper-btn-prev {
+	@include down-sm {
+		display: none !important;
+	}
+}
+.swiper-button-disabled {
+	display: none !important;
+}
 .container-fluid {
 	width: 100%;
 	max-width: 1920px;

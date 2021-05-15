@@ -91,6 +91,7 @@
 	.instagram-wrapper .instagram-gallery {
 		padding: 60px 0 20px;
 		flex: 0 1 960px;
+		position: relative;
 		max-width: 960px;
 		.swiper-container .swiper-slide {
 			margin-right: 60px;
@@ -458,6 +459,11 @@
 		@include down-sm {
 			font: 400 27vw/36vw $font-lemon;
 		}
+	}
+}
+.swiper-btn-prev {
+	img {
+		transform: rotate(180deg);
 	}
 }
 @media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {

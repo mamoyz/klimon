@@ -230,12 +230,19 @@
 					}
 				}
 			}
+			.swiper-btn-prev {
+				right: unset;
+				left: -80px;
+				filter: brightness(0.8);
+			}
+			.swiper-btn-next {
+				right: 15px;
+			}
 			.swiper-btn-next,
 			.swiper-btn-prev {
 				position: absolute;
 				width: 60px;
 				height: 60px;
-				right: 15px;
 				top: 50%;
 				z-index: 10;
 				transform: translate(0, -50%);
@@ -499,7 +506,7 @@
 				width: 100%;
 				img {
 					transform: scale(1);
-					transition: all 4s;
+					transition: transform 4s;
 				}
 			}
 		}
@@ -715,11 +722,17 @@
 						}
 					}
 				}
+				.swiper-btn-prev {
+					left: -4.16vw;
+				}
+				.swiper-btn-next {
+					right: 0.78vw;
+				}
+
 				.swiper-btn-next,
 				.swiper-btn-prev {
 					width: 3.13vw;
 					height: 3.13vw;
-					right: 0.78vw;
 
 					img {
 					}
