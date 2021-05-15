@@ -1,5 +1,17 @@
 <?php
 
+// Register Navigation Menus
+function custom_navigation_menus() {
+
+	$locations = array(
+		'nav-menu' => __( 'Primary Nav Menu', 'klimon' ),
+		'flavors-menu' => __( 'Flavors Menu', 'klimon' ),
+	);
+	register_nav_menus( $locations );
+
+}
+add_action( 'init', 'custom_navigation_menus' );
+
 // Register Custom Post Type
 function flavors_post_type() {
 
