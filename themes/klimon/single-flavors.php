@@ -50,8 +50,8 @@ next_post_link( '%link', $nextTemplate); ?>
 			</div>
 		</section>
 		<section class="product-info">
-			<div class="product-info-bg hidden-mobile" style="background-image: url('assets/img/products/product-bg.jpg')"></div>
-			<div class="product-info-bg mobile-only" style="background-image: url('assets/img/products/product-bg-mobile.jpg')"></div>
+			<div class="product-info-bg hidden-mobile" style="background-image: url('<?php the_field('flavor_background_image'); ?>')"></div>
+			<div class="product-info-bg mobile-only" style="background-image: url('<?php the_field('flavor_background_image_mobile'); ?>')"></div>
 			<h2 class="page-h1 slide-in">NUTRITION FACTS + INGREDIENTS</h2>
 			<div class="klimon-decor product-decor white mobile-only">
 				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-white.png" alt="" />
