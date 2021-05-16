@@ -1,5 +1,4 @@
 <?php 
-/* Template Name: About */
 get_header(); ?>
 
 	<section class="products-hero about-hero klimon-hero contact-hero">
