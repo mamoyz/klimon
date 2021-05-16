@@ -57,26 +57,24 @@ get_header(); ?>
 				<img src="assets/img/logo-black.png" alt="" />
 			</div>
 		</section> -->
-		<?php
-		 print_r(get_field("about_parallax"));
-		?>
-		<section class="parallax-bg parallax about-parallax-bg hidden-mobile" data-scale="100" style="background-image: url('assets/img/about-parallax.jpg')"></section>
-		<section class="parallax-bg parallax about-parallax-bg mobile-only" data-scale="100" style="background-image: url('assets/img/about-parallax-mobile.jpg')"></section>
+		
+		<section class="parallax-bg parallax about-parallax-bg hidden-mobile" data-scale="100" style="background-image: url('<?php echo get_field('about_parallax')['home_parallax_image']; ?>')"></section>
+		<section class="parallax-bg parallax about-parallax-bg mobile-only" data-scale="100" style="background-image: url('<?php echo get_field('about_parallax')['home_parallax_image_mobile']; ?>')"></section>
 		<section class="home-content about-flavors yz-animate">
 			<div class="decor-black klimon-decor home-content-decor down">
 				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black.png" alt="" />
 			</div>
 			<h2 class="page-h1">Flavors</h2>
 			<div class="home-content-img">
-				<img class="bg" src="assets/img/about-flavors.jpg" alt="" />
+				<img class="bg" src="<?php the_field('about_sec3_background_image'); ?>" alt="" />
 				<div>
-					<img src="assets/img/about-flavors.jpg" alt="" />
+					<img src="<?php the_field('about_sec3_background_image'); ?>" alt="" />
 				</div>
 			</div>
 			<div class="home-content-desc">
-				<h1>AVAILABLE IN 5 FLAVORS</h1>
-				<p>THOUGH KLIMON IS COMPLETELY DAIRY-FREE, OUR UNIQUE BLEND ALLOWS US TO HAVE NO LIMITATIONS IN OUR FLAVOR OFFERINGS. FROM A CREAMY ORANGE DELIGHT TO A RICH, CLASSIC MORNING COFFEE BREW AND EVERYTHING IN BETWEEN, WE’RE LAUNCHING WITH 5 IRRESISTIBLE FLAVORS TO CHOOSE FROM. ONCE YOU GO DOWN THIS DAIRY-FREE PATH, THERE IS NO TURNING BACK!</p>
-				<a href="#" class="btn-view-more">View More</a>
+				<h1><?php the_field('about_sec3_heading'); ?></h1>
+				<?php the_field('about_sec3_description_text'); ?>
+				<a href="<?php the_field('about_sec3_cta_url'); ?>" class="btn-view-more"><?php the_field('about_sec3_cta_title'); ?></a>
 			</div>
 		</section>
 		<!-- <section class="about-bottom hidden-mobile">
