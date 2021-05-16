@@ -9,9 +9,11 @@ get_header(); ?>
 			</div>
 			<div class="hero-right">
 				<div class="page-hero-bg slide-in auto">
-					<?php $contact_hero = get_field('contact_hero'); print_r($contact_hero); ?>
-					<img class="mobile-only" src="assets/img/contact/contact-hero-mobile.jpg" alt="" />
-					<img class="hidden-mobile" src="assets/img/contact/contact-hero.jpg" alt="" />
+					<?php $contact_hero = get_field('contact_hero');  ?>
+					<img class="mobile-only" src="<?php
+					 echo $contact_hero['about_hero_image_mobile'] ;
+					?>" alt="" />
+					<img class="hidden-mobile" src="<?php echo $contact_hero['about_hero_image']; ?>" alt="" />
 				</div>
 			</div>
 		</section>
@@ -22,14 +24,14 @@ get_header(); ?>
 			<div class="product-header-container slide-in">
 				<div>
 					<h1>
-						WE’D LOVE TO
-						<br />
-						HEAR FROM YOU!
+						<?php
+						 echo $contact_hero['about_heading'];
+						?>
 					</h1>
 					<p>
-						Lorem ipsum dolor sit amet,
-						<br />
-						consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						<?php
+						 echo $contact_hero['about_description_text'];
+						?>
 					</p>
 				</div>
 			</div>
@@ -44,7 +46,10 @@ get_header(); ?>
 			</div>
 			<div class="contact-form">
 				<div class="container">
-					<form action="/contact/#wpcf7-f160-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+					<?php
+					 echo do_shortcode('[contact-form-7 id="'.get_field('contact_form').'" title="Klimon Contact Form"]');
+					?>
+					<!-- <form action="/contact/#wpcf7-f160-o1" method="post" class="wpcf7-form" novalidate="novalidate">
 						<div class="form-group">
 							<label>
 								First NAME
@@ -159,7 +164,7 @@ get_header(); ?>
 							<span class="ajax-loader"></span>
 						</div>
 						<div class="wpcf7-response-output wpcf7-display-none"></div>
-					</form>
+					</form> -->
 				</div>
 			</div>
 		</section>
