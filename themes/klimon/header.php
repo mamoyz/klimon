@@ -410,7 +410,7 @@ transform-origin:top;
 				</svg>
 			</button>
 			<div class="mobile-only logo-mobile">
-				<img src="assets/img/logo-black.png" alt="" />
+				<img src="<?php the_field('main_logo','options'); ?>" alt="" />
 			</div>
 
 			<span class="header-banner">DAIRY FREE</span>
@@ -418,10 +418,10 @@ transform-origin:top;
 				<div class="nav-top">
 					<div class="social">
 						<span class="h3">FOLLOW US</span>
-						<a href="#">
+						<a href="<?php the_field('instagram_url','options'); ?>">
 							<img src="<?php echo get_template_directory_uri();?>/assets/img/ig-icon.png" alt="" />
 						</a>
-						<a href="#">
+						<a href="<?php the_field('facebook_url','options'); ?>">
 							<img src="<?php echo get_template_directory_uri();?>/assets/img/fb-icon.png" alt="" />
 						</a>
 					</div>

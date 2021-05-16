@@ -30,8 +30,7 @@ get_header(); ?>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php
-								$flavors_carousel = get_field('flavors_carousel');
-								print_r($flavors_carousel);
+								$flavors_carousel = get_field('flavors_carousel','options');
 								 foreach ($flavors_carousel as $item) {
 									?>
 								<div class="swiper-slide">
@@ -92,7 +91,7 @@ get_header(); ?>
 		<section class="parallax-bg parallax home-parallax-bg products-parallax-bg mobile-only" style="background-image: url('<?php echo $flavors_parallax_image['home_parallax_image_mobile']; ?>')"></section>
 		<section class="product-flavors">
 			<div class="flavors-list-top">
-				<img class="logo" src="<?php echo get_template_directory_uri();?>/assets/img/logo-black.png" alt="" />
+				<img class="logo" src="<?php echo get_template_directory_uri();?>/<?php the_field('main_logo','options'); ?>" alt="" />
 			</div>
 			<div class="flavors-list">
 				<?php

@@ -4,54 +4,30 @@
 					<div class="col contact">
 						<div class="social">
 							<span class="h3">FOLLOW US</span>
-							<a href="#">
-								<img src="assets/img/ig-icon.png" alt="" />
+							<a href="<?php the_field('instagram_url','options'); ?>">
+								<img src="<?php echo get_template_directory_uri();?>/assets/img/ig-icon.png" alt="" />
 							</a>
-							<a href="#">
-								<img src="assets/img/fb-icon.png" alt="" />
+							<a href="<?php the_field('facebook_url','options'); ?>">
+								<img src="<?php echo get_template_directory_uri();?>/assets/img/fb-icon.png" alt="" />
 							</a>
 						</div>
-						<p class="hidden-mobile">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Aincididunt ut</p>
+						<p class="hidden-mobile"><?php the_field('footer_text','options'); ?></p>
 					</div>
 					<div class="col footer-menu">
-						<ul>
-							<li>
-								<a class="h3" href="index.html">HOME</a>
-							</li>
-							<li>
-								<a class="h3" href="about.html">ABOUT</a>
-							</li>
-							<li>
-								<a class="h3" href="contact.html">CONTACT</a>
-							</li>
-						</ul>
+					                <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' , 'container'=> false) ); ?>
+
 					</div>
 					<div class="col products-menu">
 						<h3 class="h3">PRODUCTS</h3>
-						<ul>
-							<li>
-								<a href="#">- CARAMEL BRûLéE</a>
-							</li>
-							<li>
-								<a href="#">- CHERRY BOMB</a>
-							</li>
-							<li>
-								<a href="#">- MINT CONDITION</a>
-							</li>
-							<li>
-								<a href="#">- MORNING BREW</a>
-							</li>
-							<li>
-								<a href="#">- SUNRISE BANG</a>
-							</li>
-						</ul>
+					                <?php wp_nav_menu( array( 'theme_location' => 'flavors-menu' , 'container'=> false) ); ?>
+
 					</div>
 				</div>
 
 				<div class="footer-copyright">
-					<p class="mobile-only">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Aincididunt ut</p>
+					<p class="mobile-only"><?php the_field('footer_text','options'); ?></p>
 					<p>
-						Copyright 2020 Klimon LLC. All Rights Reserved.
+						<?php the_field('copyright_text','options'); ?>
 						<a href="#">Terms & Conditions</a>
 						<br />
 					</p>

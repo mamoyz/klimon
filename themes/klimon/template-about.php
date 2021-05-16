@@ -14,7 +14,7 @@ get_header(); ?>
 		</section>
 		<section class="product-header contact-header about-header">
 			<div class="klimon-decor about-header-decor about left">
-				<img src="assets/img/decor-black-inverse.png" alt="" />
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black-inverse.png" alt="" />
 			</div>
 			<div class="product-header-container about-page slide-in auto auto-mobile">
 				<div>
@@ -54,7 +54,7 @@ get_header(); ?>
 		</section>
 		<!-- <section class="about-klimon-logo mobile-only">
 			<div>
-				<img src="assets/img/logo-black.png" alt="" />
+				<img src="<?php the_field('main_logo','options'); ?>" alt="" />
 			</div>
 		</section> -->
 		

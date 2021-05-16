@@ -69,9 +69,9 @@ next_post_link( '%link', $nextTemplate); ?>
 			</div>
 		</section>
 		<section class="home-instagram flavor-slider product-bottom-slider">
-			<img class="logo yz-animate" src="assets/img/logo-black.png" alt="" />
+			<img class="logo yz-animate" src="<?php the_field('main_logo','options'); ?>" alt="" />
 			<div class="klimon-decor product-decor white">
-				<img src="assets/img/decor-black-inverse.png" alt="" />
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black-inverse.png" alt="" />
 			</div>
 			<div class="container">
 				<div class="instagram-wrapper yz-animate auto">
@@ -81,31 +81,31 @@ next_post_link( '%link', $nextTemplate); ?>
 					<div class="instagram-gallery">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
+							<?php
+								$flavors_carousel = get_field('flavors_carousel','options');
+								
+								 foreach ($flavors_carousel as $item) {
+									?>
 								<div class="swiper-slide">
-									<a href="#"><img src="assets/img/products/f1.png" alt="" /></a>
+									<a href="<?php echo the_permalink($item['carousel_product'][0]); ?>"><img src="<?php echo $item['carousel_product_image']; ?>" alt="" /></a>
 								</div>
-								<div class="swiper-slide">
-									<a href="#"><img src="assets/img/products/f2.png" alt="" /></a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#"><img src="assets/img/products/f3.png" alt="" /></a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#"><img src="assets/img/products/f4.png" alt="" /></a>
-								</div>
+									<?php
+								 } 
+								?>
+
 							</div>
 						</div>
 						<div class="swiper-btn-next hidden-mobile">
-							<img src="assets/img/swiper-next.svg" alt="" />
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
 						</div>
 						<div class="swiper-btn-next mobile-only">
-							<img src="assets/img/products/arrow-right-black.png" alt="" />
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/products/arrow-right-black.png" alt="" />
 						</div>
 						<div class="swiper-btn-prev mobile-only">
-							<img src="assets/img/products/arrow-left-black.png" alt="" />
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/products/arrow-left-black.png" alt="" />
 						</div>
 							<div class="swiper-btn-prev">
-							<img class="hidden-mobile" src="assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
 						</div>
 						<!-- <div class="swiper-btn-prev mobile-only">
               <img src="assets/img/arrow-left.svg" alt="" />
