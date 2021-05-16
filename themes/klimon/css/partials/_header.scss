@@ -1,0 +1,509 @@
+header {
+	display: flex;
+	justify-content: flex-start;
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	&:before {
+		background: #f2f3f4;
+		z-index: 1000;
+	}
+	&.show {
+		&:before {
+			transition-delay: 1s !important;
+		}
+	}
+	@include down-sm() {
+		justify-content: space-between;
+		width: 100%;
+		background: #fff;
+	}
+	@include fourk() {
+		left: auto;
+	}
+
+	.menu-toggle {
+		width: 99px;
+		height: 99px;
+		background: #fff;
+		z-index: 50;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@extend .button-reset;
+		@include down-sm() {
+			width: 17vw;
+			height: 19vw;
+			background: #fff;
+		}
+		svg {
+			display: block;
+			width: 90%;
+			height: auto;
+			#MENU {
+				transition: 0.3s all 0.3s;
+			}
+			#close {
+				transition: 0.3s all 0.3s;
+				opacity: 0;
+			}
+			path {
+				transition: all 0.3s;
+			}
+			#menu_lines {
+				path {
+					transform-origin: center;
+				}
+			}
+		}
+		&.open {
+			svg {
+				#MENU {
+					opacity: 0;
+				}
+				#close {
+					opacity: 1;
+				}
+				#menu_lines {
+					path {
+						&:nth-child(1) {
+							transform: rotate(45deg) translate(-3px, 12px);
+						}
+						&:nth-child(2) {
+							opacity: 0;
+						}
+						&:nth-child(3) {
+							transform: rotate(-45deg) translate(3px, -8px);
+						}
+					}
+				}
+			}
+		}
+	}
+	.logo-mobile {
+		display: flex;
+		align-items: center;
+		width: 17vw;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.header-banner {
+		background: #000;
+		width: 381px;
+		color: #fff;
+		font: 400 47px/55px $font-rail;
+		text-transform: uppercase;
+		@extend .flex-center;
+		@include down-sm() {
+			width: 17vw;
+			font: 400 3.8vw/3.8vw "third_rail";
+		}
+	}
+	nav {
+		transition: transform 0.5s, 0s box-shadow 0.45s;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		height: 100vh;
+		left: 0;
+		background: #fff;
+		width: 480px;
+		padding: 40px;
+		transform: translate(0, -101%);
+		overflow: hidden;
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: #fff;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: #ddd;
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: #ccc;
+		}
+		@include down-sm {
+			width: 100%;
+			padding: 8vw;
+		}
+		@include fourk() {
+			left: auto;
+		}
+		&:before {
+			content: " ";
+			background: url("../../assets/img/menu-decor.png") no-repeat;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			right: 0;
+			bottom: 0;
+			background-size: auto 80%;
+			background-position: right bottom;
+			opacity: 0;
+			transition: 0.5s all 0.5s;
+		}
+		.nav-top {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin-bottom: 205px;
+			position: relative;
+			z-index: 10;
+			@include down-sm {
+				margin-bottom: 15vw;
+			}
+			.social {
+				display: flex;
+				align-items: center;
+				.h3 {
+					font: 400 15.6px/24px $font-lemon;
+					text-transform: uppercase;
+					@include down-sm {
+						font: 400 3.2vw/3.6vw $font-lemon;
+					}
+				}
+				a {
+					display: inline-block;
+					margin-left: 20px;
+					@include down-sm {
+						margin-left: 3vw;
+					}
+				}
+				img {
+					height: 40px;
+					@include down-sm {
+						height: 7.5vw;
+					}
+				}
+			}
+			.menu-close {
+				cursor: pointer;
+
+				flex: 0 1 150px;
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			&.secondary-menu {
+				margin-top: 40px;
+				li {
+					a {
+						font: 400 18px/32px $font-lemon;
+						letter-spacing: 1px;
+						@include down-sm {
+							font: 400 3.5vw/5vw $font-lemon;
+						}
+					}
+				}
+			}
+			li {
+				&:last-child {
+					margin-bottom: 0;
+				}
+				a {
+					font: 400 34px/50px $font-lemon;
+
+					text-decoration: none;
+					color: #000;
+					text-transform: uppercase;
+					&:hover {
+						color: #feae56;
+					}
+					@include down-sm {
+						font: 400 6vw/7.5vw $font-lemon;
+					}
+				}
+			}
+		}
+		> ul {
+			opacity: 0;
+			transition: 0.5s all 0.5s;
+
+			transform: translate(0, 50px);
+			> li {
+				margin-bottom: 40px;
+				@include down-sm {
+					margin-bottom: 15vw;
+				}
+				ul {
+					margin-top: 30px;
+					@include down-sm {
+						margin-top: 6vw;
+					}
+					li {
+						margin-bottom: 30px;
+						@include down-sm {
+							margin-bottom: 6vw;
+						}
+						a {
+							font: 400 24px/28px $font-lemon;
+							@include down-sm {
+								font: 400 3vw/5.5vw $font-lemon;
+							}
+							// @include down-xs {
+							// 	font: 400 4vw/5.5vw $font-lemon;
+							// }
+						}
+					}
+				}
+			}
+		}
+		&.open {
+			transform: translate(0, 0);
+			box-shadow: 0vw 0px 0px 100vw rgba(0, 0, 0, 0.5);
+			@include down-sm {
+				box-shadow: none;
+			}
+			&:before {
+				opacity: 1;
+			}
+			> ul {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
+		}
+	}
+}
+.klimon-hero {
+	display: flex;
+	overflow: hidden;
+	justify-content: flex-start;
+	@include down-sm {
+		flex-direction: column;
+	}
+	.hero-left {
+		flex: 0 1 480px;
+		min-width: 480px;
+		@extend .flex-center;
+		@include down-sm {
+			flex: auto;
+			min-width: auto;
+		}
+	}
+	.hero-right {
+		flex: 0 1 1440px;
+		overflow: hidden;
+		@include down-sm {
+			flex: auto;
+		}
+	}
+}
+
+.page-h1 {
+	font: 400 51px/78px $font-lemon;
+	-webkit-text-stroke-width: 3px;
+	color: transparent;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: black;
+	letter-spacing: 7.5px;
+	@include down-sm {
+		font: 400 7vw/9vw $font-lemon;
+		-webkit-text-stroke-width: 1px;
+		letter-spacing: 0.5vw !important;
+	}
+}
+
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
+	header {
+		&:before {
+		}
+		@include down-sm() {
+		}
+		@include fourk() {
+		}
+
+		.menu-toggle {
+			width: 5.16vw;
+			height: 5.16vw;
+		}
+		.logo-mobile {
+			img {
+			}
+		}
+		.header-banner {
+			width: 19.84vw;
+			font: 400 2.45vw/2.86vw $font-rail;
+			@include down-sm() {
+			}
+		}
+		nav {
+			width: 25vw;
+			padding: 2.08vw;
+			&::-webkit-scrollbar {
+				width: 0.31vw;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+			}
+			@include down-sm {
+			}
+			@include fourk() {
+			}
+			&:before {
+			}
+			.nav-top {
+				margin-bottom: 6vw;
+				@include down-sm {
+				}
+				.social {
+					.h3 {
+						font: 400 0.81vw/1.25vw $font-lemon;
+						@include down-sm {
+						}
+					}
+					a {
+						margin-left: 1.04vw;
+						@include down-sm {
+						}
+					}
+					img {
+						height: 2.08vw;
+						@include down-sm {
+						}
+					}
+				}
+				.menu-close {
+					flex: 0 1 7.81vw;
+					img {
+					}
+				}
+			}
+			ul {
+				&.secondary-menu {
+					margin-top: 2.08vw;
+					li {
+						a {
+							font: 400 0.94vw/1.67vw $font-lemon;
+
+							letter-spacing: 1px;
+							@include down-sm {
+							}
+						}
+					}
+				}
+				li {
+					&:last-child {
+					}
+					a {
+						font: 400 1.77vw/2.6vw $font-lemon;
+
+						&:hover {
+						}
+						@include down-sm {
+						}
+					}
+				}
+			}
+			> ul {
+				transform: translate(0, 2.6vw);
+				> li {
+					margin-bottom: 2.08vw;
+					@include down-sm {
+					}
+					ul {
+						margin-top: 1.56vw;
+						@include down-sm {
+						}
+						li {
+							margin-bottom: 1.56vw;
+							@include down-sm {
+							}
+							a {
+								font: 400 1.25vw/1.46vw $font-lemon;
+								@include down-sm {
+								}
+								// @include down-xs {
+								// }
+							}
+						}
+					}
+				}
+			}
+			&.open {
+				box-shadow: 0vw 1px 1px 100vw rgba(0, 0, 0, 0.5);
+				@include down-sm {
+				}
+				&:before {
+				}
+				> ul {
+				}
+			}
+		}
+	}
+	.klimon-hero {
+		@include down-sm {
+		}
+		.hero-left {
+			flex: 0 1 25vw;
+			min-width: 25vw;
+			@include down-sm {
+			}
+		}
+		.hero-right {
+			flex: 0 1 75vw;
+			@include down-sm {
+			}
+		}
+	}
+
+	.page-h1 {
+		font: 400 2.66vw/4.06vw $font-lemon;
+		-webkit-text-stroke-width: 0.16vw;
+		letter-spacing: 0.39vw;
+		@include down-sm {
+			-webkit-text-stroke-width: 1px;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 960px) {
+	header {
+		nav {
+			.nav-top {
+				margin-bottom: 3vw;
+			}
+			ul {
+			}
+			> ul {
+				transform: translate(0, 2.6vw);
+				> li {
+					margin-bottom: 1.4vw;
+					@include down-sm {
+					}
+					ul {
+						margin-top: 1vw;
+
+						li {
+							margin-bottom: 1vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}

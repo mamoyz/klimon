@@ -1,0 +1,21 @@
+<svg id="right_arrow" data-name="right arrow" xmlns="http://www.w3.org/2000/svg" width="131.01" height="131.016" viewBox="0 0 87.34 87.344">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 7.292px;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_10_copy" data-name="Rectangle 10 copy" class="cls-1" d="M1777,618h87.33v87.333H1777V618h0Z" transform="translate(-1777 -618)"/>
+  <path id="Shape_568_copy" data-name="Shape 568 copy" class="cls-2" d="M1812.19,679l18-18-17-17" transform="translate(-1777 -618)"/>
+</svg>

@@ -1,11 +1,36 @@
 <?php
 
+function my_init() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', false);
+    }
+}
+add_action('init', 'my_init');
+
+
+function mandomo_scripts()
+{
+    /* ----------- Stylesheets --------------- */
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.min.css');
+    wp_enqueue_style('swiper-style','https://unpkg.com/swiper/swiper-bundle.min.css');
+
+    /* ----------- Stylesheets --------------- */
+
+    /* ----------- Javascripts --------------- */
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, false);
+    wp_enqueue_script('main-js', get_theme_file_uri('js/main.js'), array(), mt_rand(0, 9999999), true);
+    /* ----------- Javascripts --------------- */
+}
+add_action('wp_enqueue_scripts', 'mandomo_scripts');		
 // Register Navigation Menus
 function custom_navigation_menus() {
 
 	$locations = array(
 		'nav-menu' => __( 'Primary Nav Menu', 'klimon' ),
 		'flavors-menu' => __( 'Flavors Menu', 'klimon' ),
+		'footer-menu' => __( 'Footer Menu', 'klimon' ),
 	);
 	register_nav_menus( $locations );
 
