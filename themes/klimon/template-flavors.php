@@ -43,11 +43,11 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="swiper-btn-next">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
-							<!-- <img class="mobile-only" src="assets/img/swiper-next.svg" alt="" /> -->
+							<img  src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
+							<!-- <img class="mobile-only" src="assets/img/swiper-next.png" alt="" /> -->
 						</div>
 						<div class="swiper-btn-prev">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 					</div>
 				</div>
@@ -75,10 +75,10 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="swiper-btn-next">
-							<img src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 						<div class="swiper-btn-prev">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ get_header(); ?>
 		<section class="parallax-bg parallax home-parallax-bg products-parallax-bg mobile-only" style="background-image: url('<?php echo $flavors_parallax_image['home_parallax_image_mobile']; ?>')"></section>
 		<section class="product-flavors">
 			<div class="flavors-list-top">
-				<img class="logo" src="<?php echo get_template_directory_uri();?>/<?php the_field('main_logo','options'); ?>" alt="" />
+				<img class="logo" src="<?php the_field('main_logo','options'); ?>" alt="" />
 			</div>
 			<div class="flavors-list">
 				<?php

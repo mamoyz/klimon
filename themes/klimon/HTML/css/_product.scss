@@ -46,7 +46,7 @@
 			transition: 0.5s opacity 1.5s;
 			@include down-sm {
 				right: 2vw;
-				bottom: 3vw;
+				top: 12vw;
 			}
 			a {
 				display: flex;

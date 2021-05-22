@@ -3,6 +3,10 @@
 		position: relative;
 		z-index: 50;
 		.page-h1 {
+			a {
+				color: transparent;
+				text-decoration: none;
+			}
 			@include fourk() {
 				font-size: 50px;
 				letter-spacing: 2px;
@@ -38,15 +42,31 @@
 		display: none;
 	}
 	.hero-right {
+	}
+}
+
+.product-header {
+	position: relative;
+	top: -40px;
+	margin-bottom: -40px;
+	padding-left: 480px;
+	z-index: 30;
+	@include down-sm {
+		padding-left: 0;
+	}
+	&.single-product-header {
 		.next-product-link {
 			position: absolute;
 			right: 60px;
-			bottom: 70px;
+			top: 70px;
 			opacity: 0;
 			transition: 0.5s opacity 1.5s;
 			@include down-sm {
-				right: 2vw;
-				bottom: 3vw;
+				left: 0;
+				right: 0;
+				top: -15vw;
+				width: 38vw;
+				margin: auto;
 			}
 			a {
 				display: flex;
@@ -66,15 +86,15 @@
 					transition: all 0.5s;
 					right: 0;
 					@include down-sm {
-						width: 2.2vw;
-						height: 1.25vw;
+						width: 4.4vw;
+						height: 2.5vw;
 					}
 				}
 				span {
 					font: 400 30px/30px $font-rail;
 					letter-spacing: 1px;
 					@include down-sm {
-						font: 400 3vw/3vw $font-rail;
+						font: 400 5vw/5vw $font-rail;
 						letter-spacing: 0;
 					}
 				}
@@ -88,19 +108,11 @@
 				opacity: 1;
 			}
 		}
-	}
-}
-
-.product-header {
-	position: relative;
-	top: -40px;
-	margin-bottom: -40px;
-	padding-left: 480px;
-	z-index: 30;
-	@include down-sm {
-		padding-left: 0;
-	}
-	&.single-product-header {
+		.product-header-container {
+			&:before {
+				transition-delay: 1s;
+			}
+		}
 		@include down-sm {
 			top: -8vw;
 			margin-bottom: -8vw;
@@ -131,8 +143,8 @@
 			background: #fff;
 		}
 		h1 {
-			font: 400 123px/80px $font-rail;
-			text-transform: lowercase;
+			font: 400 90px/80px $font-rail;
+			text-transform: uppercase;
 			margin: 0;
 			letter-spacing: 3.5px;
 		}
@@ -159,7 +171,7 @@
 		@include down-sm {
 			width: 100%;
 			height: 20%;
-			top: 59.5%;
+			top: 52%;
 			bottom: auto;
 		}
 	}
@@ -241,7 +253,7 @@
 				opacity: 0;
 				letter-spacing: 2px;
 				@include down-sm {
-					margin-top: 27vw;
+					margin-top: 50vw;
 				}
 				&.init {
 					opacity: 1;
@@ -295,7 +307,7 @@
 	}
 	.logo {
 		width: 290px;
-		margin: 240px auto 130px;
+		margin: 200px auto 130px;
 		display: block;
 		opacity: 0;
 		transform: translate(0, 50px);
@@ -365,9 +377,19 @@
 		.hero-slideshow-controls {
 		}
 		.hero-right {
+		}
+	}
+
+	.product-header {
+		top: -2.08vw;
+		margin-bottom: -2.08vw;
+		padding-left: 25vw;
+		@include down-sm {
+		}
+		&.single-product-header {
 			.next-product-link {
 				right: 3.13vw;
-				bottom: 3.65vw;
+				top: 3.65vw;
 				@include down-sm {
 				}
 				a {
@@ -397,16 +419,6 @@
 				&.init {
 				}
 			}
-		}
-	}
-
-	.product-header {
-		top: -2.08vw;
-		margin-bottom: -2.08vw;
-		padding-left: 25vw;
-		@include down-sm {
-		}
-		&.single-product-header {
 			@include down-sm {
 				.product-header-container {
 					h1 {
@@ -424,7 +436,7 @@
 			&:before {
 			}
 			h1 {
-				font: 400 6.41vw/4.17vw $font-rail;
+				font: 400 4.68vw/4.17vw $font-rail;
 				letter-spacing: 0.18vw;
 			}
 			h3 {
@@ -515,7 +527,7 @@
 		}
 		.logo {
 			width: 15.1vw;
-			margin: 12.5vw auto 6.77vw;
+			margin: 10.41vw auto 6.77vw;
 			transform: translate(0, 2.6vw);
 			@include down-sm {
 			}

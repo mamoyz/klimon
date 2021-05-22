@@ -3,7 +3,7 @@ get_header(); ?>
 
 	<section class="products-hero about-hero klimon-hero contact-hero">
 			<div class="hero-left yz-animate auto">
-				<h1 class="page-h1"><a href="<?php echo get_template_directory_uri();?>/flavors">PRODUCTS</a></h1>
+				<h1 class="page-h1"><a href="<?php echo get_site_url();?>/flavors">FLAVORS</a></h1>
                 <?php wp_nav_menu( array( 'theme_location' => 'flavors-menu' , 'container'=> false, 'menu_class'=>'products-menu') ); ?>
 
 				<!-- <ul class="products-menu">
@@ -32,7 +32,11 @@ get_header(); ?>
 					<img class="hidden-mobile" src="<?php echo $flavor_hero['desktop_image']; ?>" alt="" />
 					<img class="mobile-only" src="<?php echo $flavor_hero['about_hero_image_mobile']; ?>" alt="" />
 				</div>
-				<div class="next-product-link yz-animate auto">
+
+			</div>
+		</section>
+		<section class="product-header single-product-header">
+							<div class="next-product-link yz-animate auto">
 
 <?php
 $nextTemplate = '<span>NEXT FLAVOR</span>
@@ -40,10 +44,7 @@ $nextTemplate = '<span>NEXT FLAVOR</span>
 next_post_link( '%link', $nextTemplate); ?>
 						
 				</div>
-			</div>
-		</section>
-		<section class="product-header single-product-header">
-			<div class="product-header-container slide-in">
+			<div class="product-header-container slide-in auto">
 				<h1 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_title(); ?></h1>
 				<h3><?php the_field('flavor_short_description',get_the_ID()); ?></h3>
 			</div>
@@ -96,7 +97,7 @@ next_post_link( '%link', $nextTemplate); ?>
 							</div>
 						</div>
 						<div class="swiper-btn-next hidden-mobile">
-							<img src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 						<div class="swiper-btn-next mobile-only">
 							<img src="<?php echo get_template_directory_uri();?>/assets/img/products/arrow-right-black.png" alt="" />
@@ -105,7 +106,7 @@ next_post_link( '%link', $nextTemplate); ?>
 							<img src="<?php echo get_template_directory_uri();?>/assets/img/products/arrow-left-black.png" alt="" />
 						</div>
 							<div class="swiper-btn-prev">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 						<!-- <div class="swiper-btn-prev mobile-only">
               <img src="assets/img/arrow-left.svg" alt="" />

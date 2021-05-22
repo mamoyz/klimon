@@ -58,6 +58,9 @@
 		position: relative;
 		padding: 0;
 		top: -40px;
+		&:before {
+			// transition-delay:s;
+		}
 		&.about-page {
 			top: -160px;
 			margin-bottom: -160px;
@@ -78,6 +81,7 @@
 			}
 			h1 {
 				font: 400 102px/98px $font-rail;
+				text-transform: lowercase;
 				letter-spacing: 2px;
 				@include down-sm {
 					font: 400 9.5vw/10vw $font-rail;

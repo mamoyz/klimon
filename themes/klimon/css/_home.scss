@@ -40,6 +40,11 @@
 			left: 0;
 			right: 0;
 			text-align: center;
+			opacity: 0;
+			&.init {
+				opacity: 1;
+				transition: 1s all 2s;
+			}
 			@include down-sm {
 				bottom: 5vw;
 			}
@@ -317,12 +322,13 @@
 						}
 					}
 				}
-				.swiper-btn-next,
-				.swiper-btn-prev {
+				.swiper-btn-next {
 					@include down-sm {
 						width: 10vw;
 						height: 10vw;
 						right: 4vw;
+						display: block !important;
+						top: 19vw;
 					}
 				}
 			}

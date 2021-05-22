@@ -37,7 +37,7 @@
 				top: 0;
 				left: 0;
 				width: 100vw;
-				height: 100vh;
+				height: calc(var(--vh) * 100);
 				background: #fff;
 				right: 0;
 				bottom: 0;
@@ -410,7 +410,7 @@ transform-origin:top;
 				</svg>
 			</button>
 			<div class="mobile-only logo-mobile">
-				<img src="<?php the_field('main_logo','options'); ?>" alt="" />
+				<a href="<?php echo get_site_url(); ?>"><img src="<?php the_field('main_logo','options'); ?>" alt="" /></a>
 			</div>
 
 			<span class="header-banner">DAIRY FREE</span>

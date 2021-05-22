@@ -71,10 +71,12 @@ footer {
 						}
 					}
 				}
-				p {
-					max-width: 380px;
-					font-size: 13px;
-					letter-spacing: 0;
+				.footer-tagline {
+					font: 400 48px/60px $font-rail;
+					margin: 0;
+					@include down-sm {
+						font: 400 7vw/10vw $font-rail;
+					}
 				}
 			}
 			&.footer-menu {
@@ -217,9 +219,8 @@ footer {
 							}
 						}
 					}
-					p {
-						max-width: 19.79vw;
-						font-size: 0.68vw;
+					.footer-tagline {
+						font: 400 2.5vw/3.13vw $font-rail;
 					}
 				}
 				&.footer-menu {

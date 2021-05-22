@@ -11,7 +11,7 @@
 								<img src="<?php echo get_template_directory_uri();?>/assets/img/fb-icon.png" alt="" />
 							</a>
 						</div>
-						<p class="hidden-mobile"><?php the_field('footer_text','options'); ?></p>
+						<p class="footer-tagline hidden-mobile"><?php the_field('footer_text','options'); ?></p>
 					</div>
 					<div class="col footer-menu">
 					                <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' , 'container'=> false) ); ?>
@@ -25,7 +25,7 @@
 				</div>
 
 				<div class="footer-copyright">
-					<p class="mobile-only"><?php the_field('footer_text','options'); ?></p>
+					<p class="mobile-only footer-tagline"><?php the_field('footer_text','options'); ?></p>
 					<p>
 						<?php the_field('copyright_text','options'); ?>
 						<a href="#">Terms & Conditions</a>

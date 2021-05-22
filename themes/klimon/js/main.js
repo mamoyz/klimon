@@ -3,9 +3,14 @@ $(function () {
 		slidesPerView: "auto",
 		freeMode: true,
 		false: true,
+		speed: 1000,
 		navigation: {
 			nextEl: ".swiper-btn-next",
 			prevEl: ".swiper-btn-prev",
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: true,
 		},
 	});
 	let autoSlide;
@@ -21,7 +26,12 @@ $(function () {
 	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
 		animationTriggerPoint = 80;
 	}
-
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty("--vh", `${vh}px`);
+	window.addEventListener("resize", function () {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+	});
 	$(window).on("load", function () {
 		console.error(`
 		
@@ -94,16 +104,16 @@ $(function () {
 				});
 			}
 		}
-		if ($(".home-content.about .home-content-img").length > 0) {
-			if ($(window).innerWidth() > 960) {
-				if (wTop + wHeight * 0.7 > $(".home-content.about .home-content-img").offset().top && wTop < $(".home-content.about .home-content-img").offset().top + $(".home-content.about .home-content-img").innerHeight()) {
-					$(".home-content.about .home-content-img > div img").css({
-						// transform: "translate(0," + parseInt((wTop / $(".home-content.about .home-content-img").innerHeight()) * 150) + "px)",
-						top: parseFloat((wTop / $(".home-content.about .home-content-img").innerHeight()) * -5) + "vw",
-					});
-				}
-			}
-		}
+		// if ($(".home-content .home-content-img").length > 0) {
+		// 	if ($(window).innerWidth() > 960) {
+		// 		if (wTop + wHeight * 0.7 > $(".home-content .home-content-img").offset().top && wTop < $(".home-content .home-content-img").offset().top + $(".home-content .home-content-img").innerHeight()) {
+		// 			$(".home-content .home-content-img > div img").css({
+		// 				// transform: "translate(0," + parseInt((wTop / $(".home-content .home-content-img").innerHeight()) * 150) + "px)",
+		// 				top: parseFloat((wTop / $(".home-content .home-content-img").innerHeight()) * -5) + "vw",
+		// 			});
+		// 		}
+		// 	}
+		// }
 		$.each($(".slide-in"), function () {
 			let thisTop = $(this).offset().top;
 			if (thisTop < offset) {

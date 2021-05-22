@@ -21,7 +21,7 @@ get_header(); ?>
 			<div class="klimon-decor about left">
 				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black-inverse.png" alt="" />
 			</div>
-			<div class="product-header-container slide-in">
+			<div class="product-header-container slide-in auto">
 				<div>
 					<h1>
 						<?php

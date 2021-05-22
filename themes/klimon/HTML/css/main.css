@@ -977,7 +977,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .products-hero .hero-right .next-product-link { position: absolute; right: 60px; bottom: 70px; opacity: 0; -webkit-transition: 0.5s opacity 1.5s; transition: 0.5s opacity 1.5s; }
 
-@media (max-width: 960px) and (orientation: portrait) { .products-hero .hero-right .next-product-link { right: 2vw; bottom: 3vw; } }
+@media (max-width: 960px) and (orientation: portrait) { .products-hero .hero-right .next-product-link { right: 2vw; top: 12vw; } }
 
 .products-hero .hero-right .next-product-link a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-decoration: none; color: #000; padding: 0px 10px 10px 10px; border-bottom: 4px solid #000; }
 

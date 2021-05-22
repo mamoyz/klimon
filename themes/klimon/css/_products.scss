@@ -54,15 +54,16 @@
 				width: 100%;
 				padding: 0 4vw;
 				&::-webkit-scrollbar-track {
-					background: transparent !important;
+					background-color: transparent !important;
 				}
 
 				&::-webkit-scrollbar-thumb {
-					background: transparent !important;
+					background-color: transparent !important;
 				}
 				&::-webkit-scrollbar {
 					width: 0;
 					height: 0;
+					background-color: transparent !important;
 				}
 			}
 		}
@@ -176,12 +177,21 @@
 					height: 4.5vw;
 					right: -5vw;
 					top: 50%;
+					&.mobile-only {
+						display: block !important;
+					}
 				}
 				.swiper-btn-prev {
 					width: 2.8vw;
 					height: 4.5vw;
 					left: -5vw;
 					top: 50%;
+					&.mobile-only {
+						display: block !important;
+						img {
+							transform: none !important;
+						}
+					}
 				}
 			}
 		}
@@ -339,11 +349,11 @@
 					box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
 				}
 				h3 {
-					font: 400 50px/70px $font-rail;
+					font: 400 60px/80px $font-rail;
 					margin: 0;
-					text-transform: uppercase;
+					text-transform: lowercase;
 					@include down-sm {
-						font: 400 7.5vw/9vw $font-rail;
+						font: 400 8.5vw/9.5vw $font-rail;
 						margin-bottom: 1vw;
 					}
 				}
@@ -663,7 +673,7 @@
 						box-shadow: 1px 1px 2.6vw 1px rgba(0, 0, 0, 0.05);
 					}
 					h3 {
-						font: 400 2.6vw/3.65vw $font-rail;
+						font: 400 3.13vw/4.17vw $font-rail;
 						@include down-sm {
 						}
 					}

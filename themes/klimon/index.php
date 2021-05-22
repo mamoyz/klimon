@@ -21,7 +21,7 @@
 				
 				
 				</div>
-				<div class="slideshow-dots"></div>
+				<div class="slideshow-dots yz-animate auto"></div>
 				<!-- <div class="hero-slideshow-controls yz-animate auto">
 					<button class="prev">
 						<img src="assets/img/arrow-left.svg" alt="" />
@@ -58,11 +58,11 @@
 							</div>
 						</div>
 						<div class="swiper-btn-next">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 
 						</div>
 							<div class="swiper-btn-prev">
-							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.svg" alt="" />
+							<img class="hidden-mobile" src="<?php echo get_template_directory_uri();?>/assets/img/swiper-next.png" alt="" />
 						</div>
 					</div>
 				</div>
