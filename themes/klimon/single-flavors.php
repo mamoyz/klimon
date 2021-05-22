@@ -3,7 +3,7 @@ get_header(); ?>
 
 	<section class="products-hero about-hero klimon-hero contact-hero">
 			<div class="hero-left yz-animate auto">
-				<h1 class="page-h1">PRODUCTS</h1>
+				<h1 class="page-h1"><a href="<?php echo get_template_directory_uri();?>/flavors">PRODUCTS</a></h1>
                 <?php wp_nav_menu( array( 'theme_location' => 'flavors-menu' , 'container'=> false, 'menu_class'=>'products-menu') ); ?>
 
 				<!-- <ul class="products-menu">
@@ -29,7 +29,7 @@ get_header(); ?>
 					<?php 
 					$flavor_hero = get_field('flavor_hero',get_the_ID());
 					?>
-					<img class="hidden-mobile" src="<?php echo $flavor_hero['about_hero_image']; ?>" alt="" />
+					<img class="hidden-mobile" src="<?php echo $flavor_hero['desktop_image']; ?>" alt="" />
 					<img class="mobile-only" src="<?php echo $flavor_hero['about_hero_image_mobile']; ?>" alt="" />
 				</div>
 				<div class="next-product-link yz-animate auto">
