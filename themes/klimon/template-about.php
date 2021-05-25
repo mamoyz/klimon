@@ -76,6 +76,9 @@ get_header(); ?>
 				<?php the_field('about_sec3_description_text'); ?>
 				<a href="<?php the_field('about_sec3_cta_url'); ?>" class="btn-view-more"><?php the_field('about_sec3_cta_title'); ?></a>
 			</div>
+				<div class="decor-black klimon-decor last about">
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black.png" alt="" />
+			</div>
 		</section>
 		<!-- <section class="about-bottom hidden-mobile">
 			<div class="hidden-mobile decor-white klimon-decor about">

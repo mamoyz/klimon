@@ -18,7 +18,7 @@
 
 					</div>
 					<div class="col products-menu">
-						<h3 class="h3">FLAVORS</h3>
+						<h3 class="h3"><a href="<?php echo get_site_url();?>/flavors">FLAVORS</a></h3>
 					                <?php wp_nav_menu( array( 'theme_location' => 'flavors-menu' , 'container'=> false) ); ?>
 
 					</div>
