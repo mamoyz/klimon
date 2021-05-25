@@ -41,7 +41,16 @@ get_header(); ?>
 <?php
 $nextTemplate = '<span>NEXT FLAVOR</span>
 						<img src="'.get_template_directory_uri().'/assets/img/next-flavor-arrow.png" alt="" />';
-next_post_link( '%link', $nextTemplate); ?>
+						    
+if( get_adjacent_post(false, '', false) ) { 
+	next_post_link('%link', $nextTemplate);
+} else { 
+	$last = new WP_Query('post_type=flavors&posts_per_page=1&order=ASC'); $last->the_post();
+    	echo '<a href="' . get_permalink() . '">'.$nextTemplate.'</a>';
+    wp_reset_query();
+}; 
+
+// next_post_link( '%link', $nextTemplate); ?>
 						
 				</div>
 			<div class="product-header-container slide-in auto">

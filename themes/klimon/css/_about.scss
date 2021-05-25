@@ -204,7 +204,7 @@
 		padding-top: 330px;
 		overflow: visible;
 		background: #fff;
-		padding-bottom: 210px;
+		padding-bottom: 400px;
 		position: relative;
 		@include down-sm {
 			padding-top: 37vw;
@@ -231,7 +231,7 @@
 				left: 10vw;
 			}
 		}
-		.klimon-decor {
+		.klimon-decor.down {
 			position: absolute;
 			width: 706px;
 			height: 292px;
@@ -241,6 +241,14 @@
 				width: 100%;
 				opacity: 0.1;
 			}
+			@include down-sm {
+				display: none;
+			}
+		}
+		.klimon-decor.last {
+			position: absolute;
+			top: unset !important;
+			bottom: 70px !important;
 			@include down-sm {
 				display: none;
 			}
@@ -537,7 +545,7 @@
 		}
 		&.about-flavors {
 			padding-top: 17.19vw;
-			padding-bottom: 10.94vw;
+			padding-bottom: 22vw;
 			@include down-sm {
 			}
 			.page-h1 {
@@ -547,7 +555,7 @@
 				@include down-sm {
 				}
 			}
-			.klimon-decor {
+			.klimon-decor.down {
 				width: 36.77vw;
 				height: 15.21vw;
 				left: -22.4vw;
@@ -557,6 +565,10 @@
 				@include down-sm {
 				}
 			}
+			.klimon-decor.last {
+				bottom: 3.64vw !important;
+			}
+
 			.home-content-img {
 				@include down-sm {
 					img {

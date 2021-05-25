@@ -662,7 +662,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) and (orientation: portrait) { .home-content.about .no-dairy { display: none; } }
 
-.home-content.about-flavors { padding-top: 330px; overflow: visible; background: #fff; padding-bottom: 210px; position: relative; }
+.home-content.about-flavors { padding-top: 330px; overflow: visible; background: #fff; padding-bottom: 400px; position: relative; }
 
 @media (max-width: 960px) and (orientation: portrait) { .home-content.about-flavors { padding-top: 37vw; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-bottom: 5vw; background: #fff; }
   .home-content.about-flavors:before { content: " "; background: #f2f3f4; position: absolute; top: 0; left: 0; right: 0; height: 38vw; } }
@@ -671,11 +671,15 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) and (orientation: portrait) { .home-content.about-flavors .page-h1 { top: 19vw; left: 10vw; } }
 
-.home-content.about-flavors .klimon-decor { position: absolute; width: 706px; height: 292px; left: -430px; top: -50px; }
+.home-content.about-flavors .klimon-decor.down { position: absolute; width: 706px; height: 292px; left: -430px; top: -50px; }
 
-.home-content.about-flavors .klimon-decor img { width: 100%; opacity: 0.1; }
+.home-content.about-flavors .klimon-decor.down img { width: 100%; opacity: 0.1; }
 
-@media (max-width: 960px) and (orientation: portrait) { .home-content.about-flavors .klimon-decor { display: none; } }
+@media (max-width: 960px) and (orientation: portrait) { .home-content.about-flavors .klimon-decor.down { display: none; } }
+
+.home-content.about-flavors .klimon-decor.last { position: absolute; top: unset !important; bottom: 70px !important; }
+
+@media (max-width: 960px) and (orientation: portrait) { .home-content.about-flavors .klimon-decor.last { display: none; } }
 
 .home-content.about-flavors .home-content-img { -webkit-box-flex: 0; -ms-flex: 0 1 52%; flex: 0 1 52%; }
 
@@ -752,9 +756,10 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .home-content.about .home-content-desc { -webkit-box-flex: 0; -ms-flex: 0 1 43.23vw; flex: 0 1 43.23vw; margin-left: -5.73vw; padding-top: 0.89vw; }
   .home-content.about .home-content-desc h1 { margin-bottom: 1.82vw; }
   .home-content.about .no-dairy { margin-top: 3.65vw; }
-  .home-content.about-flavors { padding-top: 17.19vw; padding-bottom: 10.94vw; }
+  .home-content.about-flavors { padding-top: 17.19vw; padding-bottom: 22vw; }
   .home-content.about-flavors .page-h1 { top: 10.42vw; letter-spacing: 0.21vw; left: 4.95vw; }
-  .home-content.about-flavors .klimon-decor { width: 36.77vw; height: 15.21vw; left: -22.4vw; top: -2.6vw; }
+  .home-content.about-flavors .klimon-decor.down { width: 36.77vw; height: 15.21vw; left: -22.4vw; top: -2.6vw; }
+  .home-content.about-flavors .klimon-decor.last { bottom: 3.64vw !important; }
   .home-content.about-flavors .home-content-desc { padding-top: 5.21vw; padding-right: 2.6vw; }
   .home-content.about-flavors .home-content-desc h1 { top: -2.86vw; margin-bottom: -1.04vw; }
   .home-content.about-flavors .home-content-desc p { max-width: 44.27vw; }
@@ -1019,7 +1024,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .product-header .product-header-container:before { background: #fff; }
 
-.product-header .product-header-container h1 { font: 400 90px/80px "third_rail"; text-transform: uppercase; margin: 0; letter-spacing: 3.5px; }
+.product-header .product-header-container h1 { font: 400 110px/100px "third_rail"; text-transform: lowercase; margin: 0; letter-spacing: 3.5px; }
 
 .product-header .product-header-container h3 { font: 400 18.5px/30px "lemon_regular"; margin: 30px 0 0 0; letter-spacing: 0.5px; max-width: 80%; }
 
@@ -1102,7 +1107,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .product-header.single-product-header .next-product-link a span { font: 400 1.56vw/1.56vw "third_rail"; letter-spacing: 1px; }
   .product-header.single-product-header .next-product-link a:hover img { right: -0.78vw; }
   .product-header .product-header-container { width: 50.52vw; padding: 4.69vw 5.21vw; }
-  .product-header .product-header-container h1 { font: 400 4.68vw/4.17vw "third_rail"; letter-spacing: 0.18vw; }
+  .product-header .product-header-container h1 { font: 400 5.73vw/5.21vw "third_rail"; letter-spacing: 0.18vw; }
   .product-header .product-header-container h3 { font: 400 0.96vw/1.56vw "lemon_regular"; margin: 1.56vw 0 0 0; letter-spacing: 1px; }
   .product-info > h2 { margin-top: 4.17vw; letter-spacing: 0.1vw; }
   .product-info .row { width: 65.63vw; padding-top: 11.46vw; }
