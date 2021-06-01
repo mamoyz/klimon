@@ -1,4 +1,6 @@
 $(function () {
+	$("#preloader").addClass("loaded");
+	$("#preloader").fadeOut(0);
 	var mySwiper = new Swiper(".swiper-container", {
 		slidesPerView: "auto",
 		freeMode: true,
