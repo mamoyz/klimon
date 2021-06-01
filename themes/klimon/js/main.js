@@ -47,11 +47,11 @@ $(function () {
 		var preloaderVisited = localStorage.getItem("preloaderVisited");
 		var slideshowDelay, introDelay, preloaderDuration;
 		if (preloaderVisited) {
-			console.log("visited");
-
 			introDelay = 100;
 			slideshowDelay = 1200;
 			setTimeout(function () {
+				console.log("loaded");
+
 				$(window).scrollTop(0);
 				$("#preloader").addClass("loaded");
 				$("#preloader").fadeOut(0);
@@ -61,6 +61,8 @@ $(function () {
 			preloaderDuration = 3000;
 			slideshowDelay = 4000;
 			setTimeout(function () {
+				console.log("loaded");
+
 				$(window).scrollTop(0);
 				$(window).scrollTop(0);
 				$("#preloader").addClass("loaded");
