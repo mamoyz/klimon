@@ -1,18 +1,4 @@
 $(function () {
-	var mySwiper = new Swiper(".swiper-container", {
-		slidesPerView: "auto",
-		freeMode: true,
-		false: true,
-		speed: 1000,
-		navigation: {
-			nextEl: ".swiper-btn-next",
-			prevEl: ".swiper-btn-prev",
-		},
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: true,
-		},
-	});
 	let autoSlide;
 	let animationTriggerPoint = 70;
 	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
@@ -188,6 +174,21 @@ $(function () {
 				// $(this).removeClass("init");
 			}
 		});
+	});
+
+	var mySwiper = new Swiper(".swiper-container", {
+		slidesPerView: "auto",
+		freeMode: true,
+		false: true,
+		speed: 1000,
+		navigation: {
+			nextEl: ".swiper-btn-next",
+			prevEl: ".swiper-btn-prev",
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: true,
+		},
 	});
 	// $(".home-hero .hero-right.home-hero-slideshow .slideshow-container").onSwipe(function (e, autoSlide) {
 	// 	if (e.right == true) {
