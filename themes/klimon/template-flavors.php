@@ -26,7 +26,7 @@ get_header(); ?>
 							<img src="assets/img/view-more.svg" alt="" />
 						</a> -->
 					</div>
-					<div class="instagram-gallery">
+					<div class="instagram-gallery nohover">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php
@@ -59,7 +59,7 @@ get_header(); ?>
 					<div class="gallery-title">
 						<h2 class="page-h1">FLAVORS</h2>
 					</div>
-					<div class="instagram-gallery">
+					<div class="instagram-gallery nohover">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 							
@@ -143,8 +143,8 @@ if ( $query->have_posts() ) {
 						</div>
 					</div>
 					<div class="item-content">
-						<h3 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_field('flavor_name',get_the_ID()); 
-							?></h3>
+						<h3 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php echo str_replace(    array("Û","É"),
+    array("<em>û</em>", "<em>é</em>"),get_the_title()); ?></h3>
 						<p><?php the_field('flavor_short_description',get_the_ID()); ?></p>
 						<a href="<?php
 						 the_permalink(); 

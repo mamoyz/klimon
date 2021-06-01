@@ -33,7 +33,7 @@ $(function () {
 		document.documentElement.style.setProperty("--vh", `${vh}px`);
 	});
 	$(window).on("load", function () {
-		console.error(`
+		console.log(`
 		
 		
 

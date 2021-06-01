@@ -95,13 +95,19 @@ h6 {
 }
 .swiper-slide {
 	position: relative;
-	&:hover {
-		img {
-			transform: scale(1.05);
-			transition: all 3s;
+}
+.instagram-gallery {
+	&:not(.nohover) {
+		.swiper-slide {
+			&:hover {
+				img {
+					transform: scale(1.05);
+					transition: transform 3s;
+				}
+			}
+			img {
+				transition: transform 1s;
+			}
 		}
-	}
-	img {
-		transition: all 1s;
 	}
 }

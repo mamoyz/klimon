@@ -55,9 +55,9 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 .swiper-slide { position: relative; }
 
-.swiper-slide:hover img { -webkit-transform: scale(1.05); transform: scale(1.05); -webkit-transition: all 3s; transition: all 3s; }
+.instagram-gallery:not(.nohover) .swiper-slide:hover img { -webkit-transform: scale(1.05); transform: scale(1.05); -webkit-transition: -webkit-transform 3s; transition: -webkit-transform 3s; transition: transform 3s; transition: transform 3s, -webkit-transform 3s; }
 
-.swiper-slide img { -webkit-transition: all 1s; transition: all 1s; }
+.instagram-gallery:not(.nohover) .swiper-slide img { -webkit-transition: -webkit-transform 1s; transition: -webkit-transform 1s; transition: transform 1s; transition: transform 1s, -webkit-transform 1s; }
 
 @-webkit-keyframes heroZoomOut { 0% { min-width: 0; }
   100% { min-width: 100%; } }
@@ -889,6 +889,10 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) and (orientation: portrait) { .product-flavors .flavors-list .flavors-list-item .item-content h3 { font: 400 8.5vw/9.5vw "third_rail"; margin-bottom: 1vw; } }
 
+.product-flavors .flavors-list .flavors-list-item .item-content h3 em { font-style: normal; display: inline-block; font-size: 50px; text-transform: uppercase !important; -webkit-transform: translateY(-3px); transform: translateY(-3px); }
+
+@media (max-width: 960px) and (orientation: portrait) { .product-flavors .flavors-list .flavors-list-item .item-content h3 em { font-size: 7vw; -webkit-transform: translateY(-0.4vw); transform: translateY(-0.4vw); } }
+
 .product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 17px/32px "lemon_regular"; letter-spacing: 0.5px; margin: 0; }
 
 @media (max-width: 960px) and (orientation: portrait) { .product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 3.2vw/5vw "lemon_regular"; } }
@@ -959,6 +963,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) { .product-flavors .flavors-list .flavors-list-item .item-content:hover { -webkit-box-shadow: 1px 1px 2.6vw 1px rgba(0, 0, 0, 0.05); box-shadow: 1px 1px 2.6vw 1px rgba(0, 0, 0, 0.05); }
   .product-flavors .flavors-list .flavors-list-item .item-content h3 { font: 400 3.13vw/4.17vw "third_rail"; }
+  .product-flavors .flavors-list .flavors-list-item .item-content h3 em { font-size: 2.6vw; -webkit-transform: translateY(-0.16vw); transform: translateY(-0.16vw); }
   .product-flavors .flavors-list .flavors-list-item .item-content p { font: 400 0.89vw/1.67vw "lemon_regular"; letter-spacing: 1px; }
   .product-flavors .flavors-list .flavors-list-item .item-content a { margin-top: 4.17vw; padding-bottom: 0.26vw; font: 400 0.89vw/1.25vw "lemon_milkbold"; letter-spacing: 0.1vw; } }
 
@@ -1022,9 +1027,13 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 @media (max-width: 960px) and (orientation: portrait) { .product-header .product-header-container { width: 91%; } }
 
-.product-header .product-header-container:before { background: #fff; }
+.product-header .product-header-container:before { background: #fff; z-index: 10; }
 
 .product-header .product-header-container h1 { font: 400 110px/100px "third_rail"; text-transform: lowercase; margin: 0; letter-spacing: 3.5px; }
+
+.product-header .product-header-container h1 em { font-style: normal; text-transform: uppercase !important; font-size: 88px; display: inline-block; -webkit-transform: translateY(-3px); transform: translateY(-3px); }
+
+@media (max-width: 960px) and (orientation: portrait) { .product-header .product-header-container h1 em { -webkit-transform: translateY(-0.2vw); transform: translateY(-0.2vw); font-size: 6.2vw; } }
 
 .product-header .product-header-container h3 { font: 400 18.5px/30px "lemon_regular"; margin: 30px 0 0 0; letter-spacing: 0.5px; max-width: 80%; }
 
@@ -1108,6 +1117,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .product-header.single-product-header .next-product-link a:hover img { right: -0.78vw; }
   .product-header .product-header-container { width: 50.52vw; padding: 4.69vw 5.21vw; }
   .product-header .product-header-container h1 { font: 400 5.73vw/5.21vw "third_rail"; letter-spacing: 0.18vw; }
+  .product-header .product-header-container h1 em { font-size: 4.5vw; -webkit-transform: translateY(-0.2vw); transform: translateY(-0.2vw); }
   .product-header .product-header-container h3 { font: 400 0.96vw/1.56vw "lemon_regular"; margin: 1.56vw 0 0 0; letter-spacing: 1px; }
   .product-info > h2 { margin-top: 4.17vw; letter-spacing: 0.1vw; }
   .product-info .row { width: 65.63vw; padding-top: 11.46vw; }
@@ -1226,3 +1236,17 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .contact-form .form-group .kinjabang-select:after { top: calc(50% - 0.52vw); right: 1.56vw; width: 1.56vw; height: 1.04vw; }
   .contact-form .form-group input[type="submit"] { border: 0.31vw solid #000; border-radius: 0.42vw; padding: 1.77vw 1.3vw 1.2vw 1.3vw; font: 400 1.46vw/1.46vw "lemon_milkbold"; }
   .contact-form .form-group textarea { height: 11.98vw; } }
+
+.page-hero .hero-left .page-h1 { font: 400 37px/48px "lemon_milkbold"; }
+
+.page-header .page-header-container h1 { font: 400 80px/90px "third_rail" !important; }
+
+@media (max-width: 960px) and (orientation: portrait) { .page-header .page-header-container h1 { font: 400 9.5vw/10vw "third_rail" !important; letter-spacing: 0.3vw; } }
+
+.page-content { font: 400 16.5px/30px "lemon_regular"; }
+
+@media (max-width: 960px) and (orientation: portrait) { .page-content { font: 400 3.5vw/6vw "lemon_regular"; } }
+
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) { .page-hero .hero-left .page-h1 { font: 400 1.93vw/2.5vw "lemon_milkbold"; }
+  .page-header .page-header-container h1 { font: 400 4.17vw/4.69vw "third_rail" !important; }
+  .page-content { font: 400 0.86vw/1.56vw "lemon_regular"; } }
