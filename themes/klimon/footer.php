@@ -35,5 +35,68 @@
 			</div>
 		</footer>
         <?php wp_footer(); ?>
+		<script>
+		$(window).on("load", function () {
+		console.log(`
+		
+		
+
+			█▄▀ █░░ █ █▀▄▀█ █▀█ █▄░█
+			█░█ █▄▄ █ █░▀░█ █▄█ █░▀█		
+		
+		
+
+		`);
+
+		let preloaderVisited = localStorage.getItem("preloaderVisited");
+		let slideshowDelay, introDelay, preloaderDuration;
+		if (preloaderVisited && window.location.pathname != "/") {
+			introDelay = 100;
+			slideshowDelay = 1200;
+			setTimeout(function () {
+				$(window).scrollTop(0);
+				$("#preloader").addClass("loaded");
+				$("#preloader").fadeOut(0);
+			}, 0);
+		} else {
+			introDelay = 3000;
+			preloaderDuration = 3000;
+			slideshowDelay = 4000;
+			setTimeout(function () {
+				$(window).scrollTop(0);
+				$(window).scrollTop(0);
+				$("#preloader").addClass("loaded");
+			}, 10);
+			setTimeout(function () {
+				$("#preloader").fadeOut(500);
+			}, preloaderDuration);
+			localStorage.setItem("preloaderVisited", true);
+		}
+
+		setTimeout(function () {
+			$(".slide-in.auto").addClass("show");
+			if ($(window).innerWidth() < 961) {
+				$(".slide-in.auto-mobile").addClass("show");
+			}
+			$(".yz-animate.auto").addClass("init");
+		}, introDelay);
+		setTimeout(function () {
+			let slides = $(".home-hero .hero-right .slideshow-item").length;
+			let dots = "";
+			for (let i = 0; i < slides; i++) {
+				if (i == 0) {
+					dots += "<span class='active'></span>";
+				} else {
+					dots += "<span></span>";
+				}
+			}
+			$(".slideshow-dots").html(dots);
+			$(".home-hero .hero-right .slideshow-item").eq(0).addClass("active show");
+			autoSlide = setInterval(() => {
+				slideShowNext();
+			}, 5200);
+		}, slideshowDelay);
+	});
+		</script>
 	</body>
 </html>
