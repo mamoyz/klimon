@@ -1,6 +1,4 @@
 $(function () {
-	$("#preloader").addClass("loaded");
-	$("#preloader").fadeOut(0);
 	var mySwiper = new Swiper(".swiper-container", {
 		slidesPerView: "auto",
 		freeMode: true,
@@ -15,11 +13,25 @@ $(function () {
 			disableOnInteraction: true,
 		},
 	});
-	var autoSlide;
-	var animationTriggerPoint = 70;
+	let autoSlide;
+	let animationTriggerPoint = 70;
+	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
+	if (typeof tresholdX === "undefined" || tresholdX === null) tresholdX = 30; //px
+	if (typeof tresholdY === "undefined" || tresholdY === null) tresholdY = 30; //px
+	var startX, startY;
+	var endX, endY;
 
-	console.log("loaded");
-
+	var time;
+	var totalTime = 0;
+	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
+		animationTriggerPoint = 80;
+	}
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty("--vh", `${vh}px`);
+	window.addEventListener("resize", function () {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+	});
 	$(window).on("load", function () {
 		console.log(`
 		
@@ -32,9 +44,9 @@ $(function () {
 
 		`);
 
-		var preloaderVisited = localStorage.getItem("preloaderVisited");
-		var slideshowDelay, introDelay, preloaderDuration;
-		if (preloaderVisited) {
+		let preloaderVisited = localStorage.getItem("preloaderVisited");
+		let slideshowDelay, introDelay, preloaderDuration;
+		if (preloaderVisited && window.location.pathname != "/") {
 			introDelay = 100;
 			slideshowDelay = 1200;
 			setTimeout(function () {
@@ -65,9 +77,9 @@ $(function () {
 			$(".yz-animate.auto").addClass("init");
 		}, introDelay);
 		setTimeout(function () {
-			var slides = $(".home-hero .hero-right .slideshow-item").length;
-			var dots = "";
-			for (var i = 0; i < slides; i++) {
+			let slides = $(".home-hero .hero-right .slideshow-item").length;
+			let dots = "";
+			for (let i = 0; i < slides; i++) {
 				if (i == 0) {
 					dots += "<span class='active'></span>";
 				} else {
@@ -82,9 +94,9 @@ $(function () {
 		}, slideshowDelay);
 	});
 	$(window).scroll(function (e) {
-		var wTop = $(this).scrollTop();
-		var wHeight = $(this).innerHeight();
-		var offset = wTop + wHeight;
+		let wTop = $(this).scrollTop();
+		let wHeight = $(this).innerHeight();
+		let offset = wTop + wHeight;
 		if ($(".home-hero.klimon-hero").length > 0) {
 			if (wTop < $(".home-hero.klimon-hero").offset().top + $(".home-hero.klimon-hero").innerHeight()) {
 				$(".home-hero .hero-right .slideshow-container").css({
@@ -103,14 +115,14 @@ $(function () {
 		// 	}
 		// }
 		$.each($(".slide-in"), function () {
-			var thisTop = $(this).offset().top;
+			let thisTop = $(this).offset().top;
 			if (thisTop < offset) {
 				$(this).addClass("show");
 			}
 		});
 		$.each($(".parallax-bg.parallax"), function () {
-			var parallaxTop = $(this).offset().top;
-			var scale = $(this).data("scale") || 150;
+			let parallaxTop = $(this).offset().top;
+			let scale = $(this).data("scale") || 150;
 			if (parallaxTop < offset) {
 				if ($(window).innerWidth() < 961) {
 					$(this).css({
@@ -125,7 +137,7 @@ $(function () {
 			}
 		});
 		$.each($(".home-content .home-content-decor"), function () {
-			var decorTop = $(this).offset().top;
+			let decorTop = $(this).offset().top;
 			if (decorTop < offset) {
 				if ($(this).hasClass("down")) {
 					$(this).css({
@@ -139,7 +151,7 @@ $(function () {
 			}
 		});
 		$.each($(".klimon-decor.about, .klimon-decor.product-decor"), function () {
-			var decorTop = $(this).offset().top;
+			let decorTop = $(this).offset().top;
 			if (decorTop < offset) {
 				$(this).css({
 					transform: "translateY(" + ((offset - decorTop) / wHeight) * 15 + "%)",
@@ -149,7 +161,7 @@ $(function () {
 		if ($(".home-content .home-content-desc h2, .about-no-dairy-mobile h2").length > 0) {
 			$.each($(".home-content .home-content-desc h2,.about-no-dairy-mobile h2"), function () {
 				if ($(this).offset().top < offset) {
-					var asasd = offset - $(this).offset().top;
+					let asasd = offset - $(this).offset().top;
 					$(this).css({
 						transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
 					});
@@ -158,11 +170,11 @@ $(function () {
 		}
 		if ($(".products-no-dairy h2").length > 0) {
 			$.each($(".products-no-dairy h2"), function () {
-				var trigger = $(window).innerWidth() > 960 ? 300 : 0;
+				let trigger = $(window).innerWidth() > 960 ? 300 : 0;
 				if ($(this).offset().top < offset - trigger) {
 					console.log(trigger);
 
-					var asasd = offset - $(this).offset().top;
+					let asasd = offset - $(this).offset().top;
 					$(this).css({
 						transform: "translateX(" + (asasd / wHeight) * -100 + "%)",
 					});
@@ -177,25 +189,6 @@ $(function () {
 			}
 		});
 	});
-
-	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
-	if (typeof tresholdX === "undefined" || tresholdX === null) tresholdX = 30; //px
-	if (typeof tresholdY === "undefined" || tresholdY === null) tresholdY = 30; //px
-	var startX, startY;
-	var endX, endY;
-
-	var time;
-	var totalTime = 0;
-	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
-		animationTriggerPoint = 80;
-	}
-	var vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty("--vh", `${vh}px`);
-	window.addEventListener("resize", function () {
-		var vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty("--vh", `${vh}px`);
-	});
-
 	// $(".home-hero .hero-right.home-hero-slideshow .slideshow-container").onSwipe(function (e, autoSlide) {
 	// 	if (e.right == true) {
 	// 	}
@@ -227,7 +220,7 @@ $(function () {
 		clearInterval(time); //Let's stop calculating time and free up resources.
 
 		if (totalTime >= timeTreshold) {
-			var activeSlideIndex = $(".home-hero .hero-right .slideshow-dots span.active").index();
+			let activeSlideIndex = $(".home-hero .hero-right .slideshow-dots span.active").index();
 			if (startX > endX && startX - endX >= tresholdX) {
 				//swipe left
 				if (activeSlideIndex != $(".home-hero .hero-right .slideshow-dots span").length - 1)
@@ -262,7 +255,7 @@ $(function () {
 		}
 	});
 	$(document).on("click", ".slideshow-dots span", function () {
-		var index = $(this).index();
+		let index = $(this).index();
 		goToSlide(index);
 	});
 	$(".menu-toggle").click(function (e) {
@@ -273,9 +266,9 @@ $(function () {
 	});
 
 	function slideShowNext() {
-		var totalSlides = $(".home-hero .hero-right .slideshow-item").length;
-		var activeSlide = $(".home-hero .hero-right .slideshow-item.active");
-		var activeSlideIndex = $(".home-hero .hero-right .slideshow-item.active").index();
+		let totalSlides = $(".home-hero .hero-right .slideshow-item").length;
+		let activeSlide = $(".home-hero .hero-right .slideshow-item.active");
+		let activeSlideIndex = $(".home-hero .hero-right .slideshow-item.active").index();
 		// console.log(activeSlideIndex, totalSlides);
 		$(activeSlide).removeClass("show");
 		setTimeout(() => {
@@ -294,9 +287,9 @@ $(function () {
 		}
 	}
 	function slideShowPrev() {
-		var totalSlides = $(".home-hero .hero-right .slideshow-item").length;
-		var activeSlide = $(".home-hero .hero-right .slideshow-item.active");
-		var activeSlideIndex = $(".home-hero .hero-right .slideshow-item.active").index();
+		let totalSlides = $(".home-hero .hero-right .slideshow-item").length;
+		let activeSlide = $(".home-hero .hero-right .slideshow-item.active");
+		let activeSlideIndex = $(".home-hero .hero-right .slideshow-item.active").index();
 		$(".slideshow-dots span").removeClass("active");
 		// console.log(activeSlideIndex, totalSlides);
 		$(activeSlide).removeClass("show").removeClass("active");
@@ -311,7 +304,7 @@ $(function () {
 		$(".slideshow-dots span").eq($(".home-hero .hero-right .slideshow-item.active").index()).addClass("active");
 	}
 	function goToSlide(index) {
-		var activeSlide = $(".home-hero .hero-right .slideshow-item.active");
+		let activeSlide = $(".home-hero .hero-right .slideshow-item.active");
 		$(".slideshow-dots span").removeClass("active");
 		$(".slideshow-dots span").eq(index).addClass("active");
 		$(activeSlide).removeClass("show");
