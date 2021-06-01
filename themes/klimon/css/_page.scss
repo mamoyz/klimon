@@ -1,0 +1,40 @@
+.page-hero {
+	.hero-left {
+		.page-h1 {
+			font: 400 37px/48px $font-lemon;
+		}
+	}
+}
+
+.page-header .page-header-container h1 {
+	font: 400 80px/90px $font-rail !important;
+	@include down-sm {
+		font: 400 9.5vw/10vw $font-rail !important;
+		letter-spacing: 0.3vw;
+	}
+}
+
+.page-content {
+	font: 400 16.5px/30px $font-regular;
+	@include down-sm {
+		font: 400 3.5vw/6vw $font-regular;
+	}
+}
+
+@media (min-width: 961px) and (max-width: 1919px), (orientation: landscape) and (max-width: 960px) {
+	.page-hero {
+		.hero-left {
+			.page-h1 {
+				font: 400 1.93vw/2.5vw $font-lemon;
+			}
+		}
+	}
+
+	.page-header .page-header-container h1 {
+		font: 400 4.17vw/4.69vw $font-rail !important;
+	}
+
+	.page-content {
+		font: 400 0.86vw/1.56vw $font-regular;
+	}
+}

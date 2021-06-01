@@ -141,12 +141,25 @@
 		}
 		&:before {
 			background: #fff;
+			z-index: 10;
 		}
 		h1 {
 			font: 400 110px/100px $font-rail;
 			text-transform: lowercase;
 			margin: 0;
 			letter-spacing: 3.5px;
+			em {
+				font-style: normal;
+				text-transform: uppercase !important;
+				font-size: 88px;
+				display: inline-block;
+				transform: translateY(-3px);
+				@include down-sm {
+					transform: translateY(-0.2vw);
+
+					font-size: 6.2vw;
+				}
+			}
 		}
 		h3 {
 			font: 400 18.5px/30px $font-regular;
@@ -438,6 +451,10 @@
 			h1 {
 				font: 400 5.73vw/5.21vw $font-rail;
 				letter-spacing: 0.18vw;
+				em {
+					font-size: 4.5vw;
+					transform: translateY(-0.2vw);
+				}
 			}
 			h3 {
 				font: 400 0.96vw/1.56vw $font-regular;

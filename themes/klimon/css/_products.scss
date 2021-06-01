@@ -356,6 +356,17 @@
 						font: 400 8.5vw/9.5vw $font-rail;
 						margin-bottom: 1vw;
 					}
+					em {
+						font-style: normal;
+						display: inline-block;
+						font-size: 50px;
+						text-transform: uppercase !important;
+						transform: translateY(-3px);
+						@include down-sm {
+							font-size: 7vw;
+							transform: translateY(-0.4vw);
+						}
+					}
 				}
 				p {
 					font: 400 17px/32px $font-regular;
@@ -674,6 +685,10 @@
 					}
 					h3 {
 						font: 400 3.13vw/4.17vw $font-rail;
+						em {
+							font-size: 2.6vw;
+							transform: translateY(-0.16vw);
+						}
 						@include down-sm {
 						}
 					}

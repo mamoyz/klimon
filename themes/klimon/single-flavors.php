@@ -54,7 +54,8 @@ if( get_adjacent_post(false, '', false) ) {
 						
 				</div>
 			<div class="product-header-container slide-in auto">
-				<h1 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_field('flavor_name',get_the_ID()); ?></h1>
+				<h1 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php echo str_replace(    array("Û","É"),
+    array("<em>û</em>", "<em>é</em>"),get_the_title()); ?></h1>
 				<h3><?php the_field('flavor_short_description',get_the_ID()); ?></h3>
 			</div>
 		</section>
@@ -88,7 +89,7 @@ if( get_adjacent_post(false, '', false) ) {
 					<div class="gallery-title">
 						<h2 class="page-h1">FLAVORS</h2>
 					</div>
-					<div class="instagram-gallery">
+					<div class="instagram-gallery nohover">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 							<?php
