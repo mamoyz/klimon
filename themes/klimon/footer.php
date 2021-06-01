@@ -28,7 +28,7 @@
 					<p class="mobile-only footer-tagline"><?php the_field('footer_text','options'); ?></p>
 					<p>
 						<?php the_field('copyright_text','options'); ?>
-						<a href="#">Terms & Conditions</a>
+						<a href="<?php echo get_site_url();?>/terms-conditions">Terms & Conditions</a>
 						<br />
 					</p>
 				</div>

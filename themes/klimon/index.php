@@ -50,7 +50,9 @@
                                  foreach ($home_gallery_images as $item) {
                                     ?>
                                 <div class="swiper-slide">
-									<a href="<?php the_field('instagram_url','options'); ?>"><img src="<?php echo $item; ?>" alt="" /></a>
+									<!-- <a href="<?php the_field('instagram_url','options'); ?>"> -->
+									<img src="<?php echo $item; ?>" alt="" />
+									<!-- </a> -->
 								</div>
                                     <?php
                                  } 

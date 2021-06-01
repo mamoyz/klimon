@@ -54,7 +54,7 @@ if( get_adjacent_post(false, '', false) ) {
 						
 				</div>
 			<div class="product-header-container slide-in auto">
-				<h1 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_title(); ?></h1>
+				<h1 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_field('flavor_name',get_the_ID()); ?></h1>
 				<h3><?php the_field('flavor_short_description',get_the_ID()); ?></h3>
 			</div>
 		</section>

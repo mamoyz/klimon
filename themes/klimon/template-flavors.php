@@ -143,9 +143,8 @@ if ( $query->have_posts() ) {
 						</div>
 					</div>
 					<div class="item-content">
-						<h3 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php
-						 the_title(); 
-						?></h3>
+						<h3 style="color: <?php the_field('flavor_color',get_the_ID()); ?>"><?php the_field('flavor_name',get_the_ID()); 
+							?></h3>
 						<p><?php the_field('flavor_short_description',get_the_ID()); ?></p>
 						<a href="<?php
 						 the_permalink(); 
