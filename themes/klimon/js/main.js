@@ -32,7 +32,7 @@ $(function () {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty("--vh", `${vh}px`);
 	});
-	$(window).on("load", function () {
+	$(window).load(function () {
 		console.log(`
 		
 		
