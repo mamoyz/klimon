@@ -15,23 +15,7 @@ $(function () {
 	});
 	var autoSlide;
 	var animationTriggerPoint = 70;
-	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
-	if (typeof tresholdX === "undefined" || tresholdX === null) tresholdX = 30; //px
-	if (typeof tresholdY === "undefined" || tresholdY === null) tresholdY = 30; //px
-	var startX, startY;
-	var endX, endY;
 
-	var time;
-	var totalTime = 0;
-	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
-		animationTriggerPoint = 80;
-	}
-	var vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty("--vh", `${vh}px`);
-	window.addEventListener("resize", function () {
-		var vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty("--vh", `${vh}px`);
-	});
 	console.log("loaded");
 
 	$(window).on("load", function () {
@@ -191,6 +175,25 @@ $(function () {
 			}
 		});
 	});
+
+	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms
+	if (typeof tresholdX === "undefined" || tresholdX === null) tresholdX = 30; //px
+	if (typeof tresholdY === "undefined" || tresholdY === null) tresholdY = 30; //px
+	var startX, startY;
+	var endX, endY;
+
+	var time;
+	var totalTime = 0;
+	if ($(window).innerWidth() / $(window).innerHeight() < 1.25) {
+		animationTriggerPoint = 80;
+	}
+	var vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty("--vh", `${vh}px`);
+	window.addEventListener("resize", function () {
+		var vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+	});
+
 	// $(".home-hero .hero-right.home-hero-slideshow .slideshow-container").onSwipe(function (e, autoSlide) {
 	// 	if (e.right == true) {
 	// 	}
