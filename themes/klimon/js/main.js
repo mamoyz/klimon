@@ -46,7 +46,9 @@ $(function () {
 
 		let preloaderVisited = localStorage.getItem("preloaderVisited");
 		let slideshowDelay, introDelay, preloaderDuration;
-		if (preloaderVisited && window.location.pathname != "/") {
+		if (preloaderVisited) {
+			console.log("visited");
+
 			introDelay = 100;
 			slideshowDelay = 1200;
 			setTimeout(function () {
