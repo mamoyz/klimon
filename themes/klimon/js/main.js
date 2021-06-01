@@ -32,6 +32,8 @@ $(function () {
 		var vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty("--vh", `${vh}px`);
 	});
+	console.log("loaded");
+
 	$(window).on("load", function () {
 		console.log(`
 		
@@ -50,8 +52,6 @@ $(function () {
 			introDelay = 100;
 			slideshowDelay = 1200;
 			setTimeout(function () {
-				console.log("loaded");
-
 				$(window).scrollTop(0);
 				$("#preloader").addClass("loaded");
 				$("#preloader").fadeOut(0);
@@ -61,8 +61,6 @@ $(function () {
 			preloaderDuration = 3000;
 			slideshowDelay = 4000;
 			setTimeout(function () {
-				console.log("loaded");
-
 				$(window).scrollTop(0);
 				$(window).scrollTop(0);
 				$("#preloader").addClass("loaded");
