@@ -18,7 +18,7 @@ function mandomo_scripts()
     /* ----------- Stylesheets --------------- */
 
     /* ----------- Javascripts --------------- */
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, false);
+    wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, false);
     wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('main', get_theme_file_uri('js/main.js'), array(), "1.0", true);
     /* ----------- Javascripts --------------- */
