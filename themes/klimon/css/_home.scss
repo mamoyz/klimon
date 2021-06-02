@@ -518,7 +518,7 @@
 		}
 	}
 }
-.home-ads {
+.home-sda {
 	position: relative;
 	background: linear-gradient(90deg, #f2f3f4 50%, white 0);
 	.grid {
@@ -538,7 +538,7 @@
 			padding-top: 3vw;
 		}
 	}
-	.home-ad-item {
+	.home-da-item {
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 35px;
@@ -879,7 +879,7 @@
 			}
 		}
 	}
-	.home-ads {
+	.home-sda {
 		.grid {
 		}
 		.page-h1 {
@@ -888,7 +888,7 @@
 			@include down-sm {
 			}
 		}
-		.home-ad-item {
+		.home-da-item {
 			margin-bottom: 1.82vw;
 			@include down-sm {
 			}

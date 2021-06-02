@@ -16,7 +16,9 @@
 
 .page-content {
 	font: 400 16.5px/30px $font-regular;
+	max-width: 90%;
 	@include down-sm {
+		max-width: 100%;
 		font: 400 3.5vw/6vw $font-regular;
 	}
 }

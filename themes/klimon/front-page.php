@@ -96,7 +96,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-ads">
+		<section class="home-sda">
 			<h2 class="page-h1">ADS</h2>
 			<div class="grid">
 
@@ -104,7 +104,7 @@
              $ads_images = get_field('ads_images') ;
              foreach ($ads_images as $ad) {
                 ?>
-            	<div class="home-ad-item yz-animate">
+            	<div class="home-da-item yz-animate">
 					<img class="bg" src="<?php echo $ad; ?>" alt="" />
 					<div><img src="<?php echo $ad; ?>" alt="" /></div>
 				</div>

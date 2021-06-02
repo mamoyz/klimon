@@ -35,7 +35,9 @@ get_header(); ?>
 					</p>
 				</div>
 			</div>
-		
+			<div class="decor-white klimon-decor about right filter">
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black-2.png" alt="" />
+			</div>
 		</section>
 
 		<section class="home-content contact">

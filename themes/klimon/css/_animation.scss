@@ -24,3 +24,14 @@
 		}
 	}
 }
+
+@keyframes galleryZoomIn {
+	to {
+		transform: scale(1.05);
+	}
+}
+@keyframes galleryZoomOut {
+	to {
+		transform: scale(1);
+	}
+}
