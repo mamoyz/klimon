@@ -18,7 +18,7 @@
 			height: 825px;
 			@include down-sm {
 				margin-top: 18vw;
-				height: 115vw;
+				height: 130vw;
 				max-height: 100%;
 			}
 			.slideshow-container {
@@ -30,7 +30,7 @@
 		}
 		&.slideshow-homepage {
 			@include down-sm() {
-				height: 115vw;
+				height: 130vw;
 			}
 		}
 		.slideshow-dots {
@@ -89,7 +89,7 @@
 				@include down-sm() {
 					position: relative;
 					width: 100vw;
-					height: 115vw;
+					height: 130vw;
 				}
 			}
 			&.active {
