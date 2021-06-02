@@ -59,7 +59,7 @@ get_header(); ?>
 		</section> -->
 		
 		<section class="parallax-bg parallax about-parallax-bg hidden-mobile" data-scale="100" style="background-image: url('<?php echo get_field('about_parallax')['home_parallax_image']; ?>')"></section>
-		<section class="parallax-bg parallax about-parallax-bg mobile-only" data-scale="100" style="background-image: url('<?php echo get_field('about_parallax')['home_parallax_image_mobile']; ?>')"></section>
+		<section class="parallax-bg parallax about-parallax-bg mobile-only" data-scale="150" style="background-image: url('<?php echo get_field('about_parallax')['home_parallax_image_mobile']; ?>')"></section>
 		<section class="home-content about-flavors yz-animate">
 			<div class="decor-black klimon-decor home-content-decor down">
 				<img src="<?php echo get_template_directory_uri();?>/assets/img/decor-black.png" alt="" />

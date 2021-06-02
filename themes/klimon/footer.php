@@ -149,7 +149,7 @@
 		});
 		$.each($(".parallax-bg.parallax"), function () {
 			let parallaxTop = $(this).offset().top;
-			let scale = $(this).data("scale") || 150;
+			let scale = parseInt($(this).data("scale")) || 150;
 			if (parallaxTop < offset) {
 				if ($(window).innerWidth() < 961) {
 					$(this).css({
