@@ -96,17 +96,25 @@ h6 {
 .swiper-slide {
 	position: relative;
 }
+
 .instagram-gallery {
 	&:not(.nohover) {
 		.swiper-slide {
+			overflow: hidden;
 			&:hover {
 				img {
+					-webkit-transform: scale(1.05);
+					-ms-transform: scale(1.05);
 					transform: scale(1.05);
-					transition: transform 3s;
+					-webkit-transition: all 0.6s;
+					-o-transition: all 0.6s;
+					transition: all 0.6s;
 				}
 			}
 			img {
-				transition: transform 1s;
+				-webkit-transition: all 0.4s;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
 			}
 		}
 	}

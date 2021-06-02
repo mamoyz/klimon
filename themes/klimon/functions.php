@@ -20,7 +20,8 @@ function mandomo_scripts()
     /* ----------- Javascripts --------------- */
     wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, false);
     wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
-    // wp_enqueue_script('main', get_theme_file_uri('js/main.js'), array(), null, true);
+    // wp_enqueue_script('anime', get_theme_file_uri('js/anime.min.js'), array(), null, true);
+    wp_enqueue_script('main', get_theme_file_uri('js/main.js'), array(), mt_rand(), true);
     /* ----------- Javascripts --------------- */
 }
 add_action('wp_enqueue_scripts', 'mandomo_scripts');		
