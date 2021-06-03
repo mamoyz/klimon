@@ -1,4 +1,13 @@
 $(document).ready(function () {
+	window.addEventListener("orientationchange", function (event) {
+		if (event.target.screen.orientation.angle == 0) {
+			window.location.reload();
+		}
+	});
+	if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
+		$(".instagram-gallery").addClass("nohover");
+		console.log("FireFox Detected!");
+	}
 	let autoSlide;
 	let animationTriggerPoint = 70;
 	if (typeof timeTreshold === "undefined" || timeTreshold === null) timeTreshold = 100; //ms

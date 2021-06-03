@@ -89,7 +89,7 @@ if( get_adjacent_post(false, '', false) ) {
 					<div class="gallery-title">
 						<h2 class="page-h1">FLAVORS</h2>
 					</div>
-					<div class="instagram-gallery nohover">
+					<div class="instagram-gallery">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 							<?php

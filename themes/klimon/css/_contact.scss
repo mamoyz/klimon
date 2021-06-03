@@ -169,9 +169,10 @@
 			border-radius: 8px;
 			width: 100%;
 			padding: 34px 25px 23px 25px;
-			font: 400 28px/28px $font-lemon;
+			font: 400 28px/32px $font-lemon;
 			text-transform: uppercase;
 			-webkit-appearance: none;
+			appearance: none;
 			@include down-sm {
 				min-height: 14vw;
 			}
@@ -200,6 +201,8 @@
 				position: relative;
 				z-index: 2;
 				background: transparent;
+				-webkit-appearance: none;
+				appearance: none;
 				@include down-sm {
 					min-height: 14vw;
 				}
@@ -357,7 +360,7 @@
 				border: 0.31vw solid #000;
 				border-radius: 0.42vw;
 				padding: 1.77vw 1.3vw 1.2vw 1.3vw;
-				font: 400 1.46vw/1.46vw $font-lemon;
+				font: 400 1.46vw/1.66vw $font-lemon;
 				@include down-sm {
 				}
 			}

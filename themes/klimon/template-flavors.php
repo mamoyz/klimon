@@ -26,7 +26,7 @@ get_header(); ?>
 							<img src="assets/img/view-more.svg" alt="" />
 						</a> -->
 					</div>
-					<div class="instagram-gallery nohover">
+					<div class="instagram-gallery">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php
@@ -59,7 +59,7 @@ get_header(); ?>
 					<div class="gallery-title">
 						<h2 class="page-h1">FLAVORS</h2>
 					</div>
-					<div class="instagram-gallery nohover">
+					<div class="instagram-gallery">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 							
