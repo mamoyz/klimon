@@ -4,6 +4,7 @@ header {
 	position: fixed !important;
 	top: 0;
 	left: 0;
+	overflow: visible !important;
 	z-index: 99999;
 	&:before {
 		background: #f2f3f4;

@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 @keyframes galleryZoomOut { to { -webkit-transform: scale(1); transform: scale(1); } }
 
-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; position: fixed !important; top: 0; left: 0; z-index: 99999; }
+header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; position: fixed !important; top: 0; left: 0; overflow: visible !important; z-index: 99999; }
 
 header:before { background: #f2f3f4; z-index: 1000; }
 
