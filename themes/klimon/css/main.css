@@ -526,7 +526,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .home-sda .grid { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.home-sda .page-h1 { position: relative; top: -60px; left: 100px; }
+.home-sda .page-h1 { position: relative; visibility: hidden; opacity: 0; top: -60px; left: 100px; }
 
 @media (max-width: 960px) and (orientation: portrait) { .home-sda .page-h1 { position: relative; top: -5vw; left: 8vw; padding-top: 3vw; } }
 

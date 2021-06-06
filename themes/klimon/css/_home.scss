@@ -529,6 +529,8 @@
 	}
 	.page-h1 {
 		position: relative;
+		visibility: hidden;
+		opacity: 0;
 		top: -60px;
 		left: 100px;
 		@include down-sm {
