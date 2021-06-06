@@ -66,6 +66,7 @@
 			margin-bottom: -160px;
 			@include down-sm {
 				top: -8vw;
+				margin-bottom: -8vw;
 			}
 		}
 		@include down-sm {
@@ -145,7 +146,24 @@
 		}
 	}
 }
-
+.wpcf7-not-valid-tip {
+	font: 400 22px/26px $font-lemon;
+	margin-top: 15px;
+	text-transform: uppercase;
+	@include down-sm {
+		font: 400 3vw/3.5vw $font-lemon;
+		margin-top: 2vw;
+	}
+}
+.wpcf7-response-output {
+	font: 400 28px/30px $font-lemon;
+	padding: 50px !important;
+	text-transform: uppercase;
+	@include down-sm {
+		font: 400 3.65vw/6vw $font-lemon;
+		padding: 8vw !important;
+	}
+}
 .contact-form {
 	position: relative;
 	padding: 0;
@@ -294,6 +312,7 @@
 			top: -2.08vw;
 			&.about-page {
 				top: -8.33vw;
+				margin-bottom: -8.33vw;
 				@include down-sm {
 				}
 			}
@@ -344,7 +363,14 @@
 			}
 		}
 	}
-
+	.wpcf7-not-valid-tip {
+		font: 400 1.15vw/1.35vw $font-lemon;
+		margin-top: 0.78vw;
+	}
+	.wpcf7-response-output {
+		font: 400 1.46vw/1.56vw $font-lemon;
+		padding: 2.6vw !important;
+	}
 	.contact-form {
 		@include down-sm {
 		}

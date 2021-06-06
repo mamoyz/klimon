@@ -180,7 +180,7 @@
 		height: 57%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 0 0;
+		background-position: right center;
 		@include down-sm {
 			width: 100%;
 			height: 20%;
@@ -449,7 +449,7 @@
 			&:before {
 			}
 			h1 {
-				font: 400 5.73vw/5.21vw $font-rail;
+				font: 400 5.5vw/5.21vw $font-rail;
 				letter-spacing: 0.18vw;
 				em {
 					font-size: 4.5vw;

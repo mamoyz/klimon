@@ -1051,7 +1051,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .product-info { position: relative; }
 
-.product-info .product-info-bg { position: absolute; width: 63%; left: 0; bottom: 0; height: 57%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; }
+.product-info .product-info-bg { position: absolute; width: 63%; left: 0; bottom: 0; height: 57%; background-size: cover; background-repeat: no-repeat; background-position: right center; }
 
 @media (max-width: 960px) and (orientation: portrait) { .product-info .product-info-bg { width: 100%; height: 20%; top: 52%; bottom: auto; } }
 
@@ -1128,7 +1128,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .product-header.single-product-header .next-product-link a span { font: 400 1.56vw/1.56vw "third_rail"; letter-spacing: 1px; }
   .product-header.single-product-header .next-product-link a:hover img { right: -0.78vw; }
   .product-header .product-header-container { width: 50.52vw; padding: 4.69vw 5.21vw; }
-  .product-header .product-header-container h1 { font: 400 5.73vw/5.21vw "third_rail"; letter-spacing: 0.18vw; }
+  .product-header .product-header-container h1 { font: 400 5.5vw/5.21vw "third_rail"; letter-spacing: 0.18vw; }
   .product-header .product-header-container h1 em { font-size: 4.5vw; -webkit-transform: translateY(-0.2vw); transform: translateY(-0.2vw); }
   .product-header .product-header-container h3 { font: 400 0.96vw/1.56vw "lemon_regular"; margin: 1.56vw 0 0 0; letter-spacing: 1px; }
   .product-info > h2 { margin-top: 4.17vw; letter-spacing: 0.1vw; }
@@ -1165,7 +1165,7 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 
 .contact-header .product-header-container.about-page { top: -160px; margin-bottom: -160px; }
 
-@media (max-width: 960px) and (orientation: portrait) { .contact-header .product-header-container.about-page { top: -8vw; } }
+@media (max-width: 960px) and (orientation: portrait) { .contact-header .product-header-container.about-page { top: -8vw; margin-bottom: -8vw; } }
 
 @media (max-width: 960px) and (orientation: portrait) { .contact-header .product-header-container { width: 91%; top: -8vw; } }
 
@@ -1194,6 +1194,14 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
 @media (max-width: 960px) and (orientation: portrait) { .home-content.contact .logo { width: 30vw; margin: 0 auto; } }
 
 .home-content.contact .logo.init { opacity: 1; -webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: all 0.5s; transition: all 0.5s; }
+
+.wpcf7-not-valid-tip { font: 400 22px/26px "lemon_milkbold"; margin-top: 15px; text-transform: uppercase; }
+
+@media (max-width: 960px) and (orientation: portrait) { .wpcf7-not-valid-tip { font: 400 3vw/3.5vw "lemon_milkbold"; margin-top: 2vw; } }
+
+.wpcf7-response-output { font: 400 28px/30px "lemon_milkbold"; padding: 50px !important; text-transform: uppercase; }
+
+@media (max-width: 960px) and (orientation: portrait) { .wpcf7-response-output { font: 400 3.65vw/6vw "lemon_milkbold"; padding: 8vw !important; } }
 
 .contact-form { position: relative; padding: 0; background: transparent; }
 
@@ -1235,13 +1243,15 @@ footer .copyright-menu a:first-child { margin-right: 5vw; }
   .contact-header:before { height: calc(100% - 2.08vw); }
   .contact-header .klimon-decor.left { width: 43.54vw; height: 18.85vw; left: -26.56vw; top: -6.77vw; }
   .contact-header .product-header-container { top: -2.08vw; }
-  .contact-header .product-header-container.about-page { top: -8.33vw; }
+  .contact-header .product-header-container.about-page { top: -8.33vw; margin-bottom: -8.33vw; }
   .contact-header .product-header-container > div { padding: 4.17vw 5.21vw 6.51vw 5.21vw; width: 53.65vw; }
   .contact-header .product-header-container > div h1 { font: 400 5.31vw/5.1vw "third_rail"; letter-spacing: 0.1vw; }
   .contact-header .product-header-container > div p { margin-top: 2.08vw; font: 400 0.86vw/1.56vw "lemon_regular"; }
   .contact-header .klimon-decor.right { width: 15.21vw; height: 27.29vw; }
   .home-content.contact { padding-top: 6.25vw; padding-bottom: 6.77vw; }
   .home-content.contact .logo { width: 15.1vw; margin: 0 auto 6.25vw; -webkit-transform: translate(0, 2.6vw); transform: translate(0, 2.6vw); }
+  .wpcf7-not-valid-tip { font: 400 1.15vw/1.35vw "lemon_milkbold"; margin-top: 0.78vw; }
+  .wpcf7-response-output { font: 400 1.46vw/1.56vw "lemon_milkbold"; padding: 2.6vw !important; }
   .contact-form .form-group { margin-bottom: 3.18vw; }
   .contact-form .form-group > label { font: 400 1.46vw/1.56vw "lemon_milkbold"; margin-bottom: 1.3vw; }
   .contact-form .form-group .kinjabang-input { border: 0.31vw solid #000; border-radius: 0.42vw; padding: 1.77vw 1.3vw 1.2vw 1.3vw; font: 400 1.46vw/1.66vw "lemon_milkbold"; }
